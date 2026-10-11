@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <title>Noticia — Combo Mix</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><text y='32' font-size='32'>🍿</text></svg>"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .noticia-page { padding: 60px 5% 80px; max-width: 760px; }
+    .noticia-back {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: var(--gris); font-size: 0.8rem; text-decoration: none;
+      letter-spacing: 0.06em; text-transform: uppercase; font-weight: 500;
+      margin-bottom: 2rem; transition: color 0.2s;
+    }
+    .noticia-back:hover { color: var(--amarillo); }
+    .noticia-cat {
+      font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.12em; color: var(--amarillo);
+      border-left: 3px solid var(--amarillo); padding-left: 10px;
+      display: block; margin-bottom: 1rem;
+    }
+    .noticia-titulo-grande {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1; letter-spacing: 0.02em; margin-bottom: 1rem;
+    }
+    .noticia-fecha-grande {
+      font-size: 0.8rem; color: var(--gris);
+      padding-bottom: 1.6rem; border-bottom: 1px solid var(--gris-linea); margin-bottom: 2rem;
+    }
+    .noticia-cuerpo { font-size: 1rem; color: #ccc; line-height: 1.9; }
+    .noticia-cuerpo p + p { margin-top: 1.2rem; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <svg viewBox="0 0 80 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8 40 Q6 8 28 6 Q40 2 52 6 Q72 4 74 28 Q80 8 80 28 Q80 40 70 40 Z" fill="#F5C842"/>
+      <rect x="6" y="41" width="68" height="5" fill="#F5C842"/>
+      <text x="6" y="90" font-family="Arial Black, sans-serif" font-size="46" font-weight="900" fill="#F5C842">CM</text>
+    </svg>
+    <span class="nav-logo-text">COMBO MIX</span>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="resenas.html">Reseñas</a></li>
+    <li><a href="noticias.html">Noticias</a></li>
+    <li><a href="festivales.html">Festivales</a></li>
+    <li><a href="cartelera.html">Cartelera</a></li>
+    <li><a href="equipo.html">Equipo</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="page" id="contenido"></div>
+
+<footer>
+  <span class="footer-brand">COMBO MIX</span>
+  <span class="footer-copy">© 2026 Combo Mix · Proyecto escolar · Todos los derechos reservados</span>
+</footer>
+
+<script src="datos.js"></script>
+<script src="nav.js"></script>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const id = parseInt(params.get('id'));
+  const noticia = NOTICIAS.find(n => n.id === id);
+  const contenido = document.getElementById('contenido');
+
+  if (!noticia) {
+    contenido.innerHTML = `<div style="padding:60px 5%;text-align:center"><h2 style="font-family:'Bebas Neue',sans-serif;font-size:3rem;color:var(--gris)">Noticia no encontrada</h2><a href="noticias.html" class="btn-primary" style="margin-top:2rem;display:inline-block">Ver todas las noticias</a></div>`;
+  } else {
+    document.title = `${noticia.titulo} — Combo Mix`;
+    contenido.innerHTML = `
+      <div class="noticia-page">
+        <a href="noticias.html" class="noticia-back">← Volver a noticias</a>
+        <span class="noticia-cat">${noticia.categoria}</span>
+        <h1 class="noticia-titulo-grande">${noticia.titulo}</h1>
+        <div class="noticia-fecha-grande">${noticia.fecha}</div>
+        <div class="noticia-cuerpo"><p>${noticia.contenido}</p></div>
+      </div>`;
+  }
+</script>
+</body>
+</html>

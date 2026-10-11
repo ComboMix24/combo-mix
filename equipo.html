@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <title>Equipo — Combo Mix</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><text y='32' font-size='32'>🍿</text></svg>"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .equipo-container { padding: 40px 5% 80px; }
+    .equipo-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.5px; background: var(--gris-linea); border: 1.5px solid var(--gris-linea);
+    }
+    .miembro-card {
+      background: var(--negro-card); padding: 36px 28px;
+      display: flex; flex-direction: column; gap: 10px;
+      transition: background 0.2s;
+    }
+    .miembro-card:hover { background: #222; }
+    .miembro-avatar {
+      width: 62px; height: 62px; border-radius: 50%;
+      background: var(--gris-linea);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem;
+      color: var(--amarillo); margin-bottom: 6px; border: 2px solid var(--gris-linea);
+    }
+    .miembro-nombre { font-weight: 600; font-size: 1rem; }
+    .miembro-rol {
+      font-size: 0.72rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.08em; color: var(--amarillo);
+    }
+    .miembro-bio { font-size: 0.82rem; color: var(--gris); line-height: 1.6; margin-top: 4px; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <svg viewBox="0 0 80 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8 40 Q6 8 28 6 Q40 2 52 6 Q72 4 74 28 Q80 8 80 28 Q80 40 70 40 Z" fill="#F5C842"/>
+      <rect x="6" y="41" width="68" height="5" fill="#F5C842"/>
+      <text x="6" y="90" font-family="Arial Black, sans-serif" font-size="46" font-weight="900" fill="#F5C842">CM</text>
+    </svg>
+    <span class="nav-logo-text">COMBO MIX</span>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="resenas.html">Reseñas</a></li>
+    <li><a href="noticias.html">Noticias</a></li>
+    <li><a href="festivales.html">Festivales</a></li>
+    <li><a href="cartelera.html">Cartelera</a></li>
+    <li><a href="equipo.html">Equipo</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="page">
+  <div class="page-hero">
+    <span class="section-label">El equipo</span>
+    <h1>QUIÉNES<br>SOMOS</h1>
+  </div>
+  <div class="equipo-container">
+    <div class="equipo-grid">
+      <div class="miembro-card">
+        <div class="miembro-avatar">CM</div>
+        <span class="miembro-nombre">Nombre Apellido</span>
+        <span class="miembro-rol">Director editorial</span>
+        <p class="miembro-bio">Estudiante de comunicación con debilidad por el cine de autor y el popcorn de mantequilla.</p>
+      </div>
+      <div class="miembro-card">
+        <div class="miembro-avatar">NR</div>
+        <span class="miembro-nombre">Nombre Apellido</span>
+        <span class="miembro-rol">Crítica de cine</span>
+        <p class="miembro-bio">Cree que cada película merece al menos una segunda oportunidad. Especialista en terror y ciencia ficción.</p>
+      </div>
+      <div class="miembro-card">
+        <div class="miembro-avatar">JS</div>
+        <span class="miembro-nombre">Nombre Apellido</span>
+        <span class="miembro-rol">Redactor</span>
+        <p class="miembro-bio">Fanático del cine latinoamericano y de los créditos al final. Nunca se levanta antes de que terminen.</p>
+      </div>
+      <div class="miembro-card">
+        <div class="miembro-avatar">AP</div>
+        <span class="miembro-nombre">Nombre Apellido</span>
+        <span class="miembro-rol">Diseño y redes</span>
+        <p class="miembro-bio">Convierte ideas en contenido visual. Dice que el cartel de una película ya es una obra de arte.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span class="footer-brand">COMBO MIX</span>
+  <span class="footer-copy">© 2026 Combo Mix · Proyecto escolar · Todos los derechos reservados</span>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>

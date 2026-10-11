@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <title>Cartelera — Combo Mix</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><text y='32' font-size='32'>🍿</text></svg>"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .cartelera-container { padding: 40px 5% 80px; }
+    .cartelera-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+    }
+    .pelicula-card {
+      position: relative; aspect-ratio: 2/3;
+      background: var(--negro-card); overflow: hidden; cursor: default;
+    }
+    .pelicula-placeholder {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(145deg, #1E1E1E, #141414);
+    }
+    .pelicula-placeholder svg { opacity: 0.12; }
+    .pelicula-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, transparent 55%);
+      display: flex; align-items: flex-end; padding: 16px;
+    }
+    .badge {
+      position: absolute; top: 10px; left: 10px;
+      font-size: 0.6rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.08em; padding: 3px 8px;
+    }
+    .badge-new { background: var(--amarillo); color: var(--negro); }
+    .badge-soon { border: 1px solid rgba(255,255,255,0.6); color: var(--blanco); }
+    .pelicula-titulo {
+      font-family: 'Bebas Neue', sans-serif; font-size: 1.15rem;
+      letter-spacing: 0.03em; display: block;
+    }
+    .pelicula-meta { font-size: 0.7rem; color: #aaa; }
+
+    .seccion-titulo {
+      font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem;
+      letter-spacing: 0.04em; color: var(--amarillo);
+      margin-bottom: 1.2rem; padding-bottom: 8px;
+      border-bottom: 1px solid var(--gris-linea);
+    }
+    .bloque { margin-bottom: 3rem; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <svg viewBox="0 0 80 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8 40 Q6 8 28 6 Q40 2 52 6 Q72 4 74 28 Q80 8 80 28 Q80 40 70 40 Z" fill="#F5C842"/>
+      <rect x="6" y="41" width="68" height="5" fill="#F5C842"/>
+      <text x="6" y="90" font-family="Arial Black, sans-serif" font-size="46" font-weight="900" fill="#F5C842">CM</text>
+    </svg>
+    <span class="nav-logo-text">COMBO MIX</span>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="resenas.html">Reseñas</a></li>
+    <li><a href="noticias.html">Noticias</a></li>
+    <li><a href="festivales.html">Festivales</a></li>
+    <li><a href="cartelera.html">Cartelera</a></li>
+    <li><a href="equipo.html">Equipo</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="page">
+  <div class="page-hero">
+    <span class="section-label">Cartelera</span>
+    <h1>EN PANTALLA<br>ESTA SEMANA</h1>
+  </div>
+  <div class="cartelera-container" id="cartelera"></div>
+</div>
+
+<footer>
+  <span class="footer-brand">COMBO MIX</span>
+  <span class="footer-copy">© 2026 Combo Mix · Proyecto escolar · Todos los derechos reservados</span>
+</footer>
+
+<script src="datos.js"></script>
+<script src="nav.js"></script>
+<script>
+  const icono = `<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.2"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="m7 2 0 20M17 2l0 20M2 12l20 0M2 7l5 0M2 17l5 0M17 17l5 0M17 7l5 0"/></svg>`;
+
+  const enCartelera = CARTELERA.filter(p => p.estado === 'En cartelera');
+  const proximamente = CARTELERA.filter(p => p.estado === 'Próximamente');
+
+  function renderGrid(lista) {
+    return lista.map(p => `
+      <div class="pelicula-card">
+        <div class="pelicula-placeholder">${icono}</div>
+        <span class="badge ${p.estado === 'En cartelera' ? 'badge-new' : 'badge-soon'}">${p.estado}</span>
+        <div class="pelicula-overlay">
+          <div>
+            <span class="pelicula-titulo">${p.titulo}</span>
+            <span class="pelicula-meta">${p.año} · ${p.genero}</span>
+          </div>
+        </div>
+      </div>`).join('');
+  }
+
+  document.getElementById('cartelera').innerHTML = `
+    <div class="bloque">
+      <div class="seccion-titulo">En cartelera</div>
+      <div class="cartelera-grid">${renderGrid(enCartelera)}</div>
+    </div>
+    <div class="bloque">
+      <div class="seccion-titulo">Próximamente</div>
+      <div class="cartelera-grid">${renderGrid(proximamente)}</div>
+    </div>`;
+</script>
+</body>
+</html>
