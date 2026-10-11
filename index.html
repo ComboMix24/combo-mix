@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Combo Mix</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --negro: #0D0D0D;
+      --negro-medio: #161616;
+      --negro-card: #1C1C1C;
+      --amarillo: #F5C842;
+      --amarillo-oscuro: #C9A020;
+      --blanco: #F0F0F0;
+      --gris: #888888;
+      --gris-linea: #2A2A2A;
+      box-sizing: border-box;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+    *, *::before, *::after { box-sizing: inherit; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+      background: var(--negro);
+      color: var(--blanco);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      scroll-padding-top: env(safe-area-inset-top, 0px);
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: env(safe-area-inset-top, 0px);
+      left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5%;
+      height: 64px;
+      background: rgba(13,13,13,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--gris-linea);
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .nav-logo svg {
+      width: 36px;
+      height: 36px;
+    }
+    .nav-logo-text {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      letter-spacing: 0.04em;
+      color: var(--amarillo);
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--gris);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--amarillo); }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--blanco);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    /* ── HERO ── */
+    #inicio {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 0 5%;
+      padding-top: calc(64px + env(safe-area-inset-top, 0px));
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 70% at 70% 50%, rgba(245,200,66,0.07) 0%, transparent 65%),
+        repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 3px,
+          rgba(255,255,255,0.015) 3px,
+          rgba(255,255,255,0.015) 4px
+        );
+      pointer-events: none;
+    }
+    .hero-filmstrip {
+      position: absolute;
+      top: 0; right: 0;
+      height: 100%;
+      width: 120px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      opacity: 0.06;
+      overflow: hidden;
+    }
+    .film-hole {
+      width: 100%;
+      flex: 1;
+      border-top: 2px solid var(--blanco);
+      border-bottom: 2px solid var(--blanco);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .film-hole::before, .film-hole::after {
+      content: '';
+      width: 18px; height: 14px;
+      background: var(--blanco);
+      border-radius: 3px;
+    }
+    .film-hole::after { margin-left: auto; }
+
+    .hero-content {
+      position: relative;
+      max-width: 680px;
+    }
+    .hero-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--amarillo);
+      margin-bottom: 1.2rem;
+      border-left: 3px solid var(--amarillo);
+      padding-left: 10px;
+    }
+    .hero-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(4rem, 10vw, 8rem);
+      line-height: 0.92;
+      letter-spacing: 0.02em;
+      color: var(--blanco);
+      margin-bottom: 1.2rem;
+    }
+    .hero-title span { color: var(--amarillo); }
+    .hero-sub {
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--gris);
+      max-width: 440px;
+      line-height: 1.7;
+      margin-bottom: 2.4rem;
+    }
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--amarillo);
+      color: var(--negro);
+      padding: 13px 28px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover { background: var(--amarillo-oscuro); transform: translateY(-1px); }
+    .btn-ghost {
+      border: 1px solid var(--gris-linea);
+      color: var(--blanco);
+      padding: 13px 28px;
+      font-weight: 400;
+      font-size: 0.88rem;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-ghost:hover { border-color: var(--amarillo); color: var(--amarillo); }
+
+    /* ── SECCIONES GENERALES ── */
+    section { padding: 80px 5%; }
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--amarillo);
+      border-left: 3px solid var(--amarillo);
+      padding-left: 10px;
+      margin-bottom: 1rem;
+    }
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      line-height: 1;
+      letter-spacing: 0.02em;
+      margin-bottom: 2.4rem;
+    }
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: var(--gris-linea);
+    }
+
+    /* ── RESEÑAS ── */
+    #reseñas { background: var(--negro); }
+    .resenas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5px;
+      background: var(--gris-linea);
+      border: 1.5px solid var(--gris-linea);
+    }
+    .resena-card {
+      background: var(--negro-card);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: background 0.2s;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+    .resena-card::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      height: 2px;
+      width: 0;
+      background: var(--amarillo);
+      transition: width 0.3s;
+    }
+    .resena-card:hover { background: #222; }
+    .resena-card:hover::before { width: 100%; }
+    .resena-genero {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--amarillo);
+    }
+    .resena-titulo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: 0.02em;
+      line-height: 1.1;
+    }
+    .resena-desc {
+      font-size: 0.85rem;
+      color: var(--gris);
+      line-height: 1.65;
+    }
+    .resena-rating {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .stars { color: var(--amarillo); font-size: 0.85rem; letter-spacing: 2px; }
+    .rating-num { font-size: 0.78rem; color: var(--gris); }
+
+    /* ── NOTICIAS ── */
+    #noticias { background: var(--negro-medio); }
+    .noticias-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border: 1.5px solid var(--gris-linea);
+    }
+    .noticia-item {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 28px;
+      padding: 24px 28px;
+      border-bottom: 1px solid var(--gris-linea);
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .noticia-item:last-child { border-bottom: none; }
+    .noticia-item:hover { background: rgba(245,200,66,0.04); }
+    .noticia-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      color: var(--gris-linea);
+      min-width: 32px;
+      text-align: right;
+    }
+    .noticia-content { display: flex; flex-direction: column; gap: 4px; }
+    .noticia-titulo {
+      font-weight: 500;
+      font-size: 0.97rem;
+      line-height: 1.35;
+    }
+    .noticia-fecha {
+      font-size: 0.75rem;
+      color: var(--gris);
+    }
+    .noticia-tag {
+      font-size: 0.68rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--amarillo);
+      background: rgba(245,200,66,0.1);
+      padding: 4px 10px;
+      white-space: nowrap;
+    }
+
+    /* ── CARTELERA ── */
+    #cartelera { background: var(--negro); }
+    .cartelera-intro {
+      font-size: 0.9rem;
+      color: var(--gris);
+      margin-bottom: 2.4rem;
+      max-width: 520px;
+    }
+    .cartelera-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 16px;
+    }
+    .pelicula-card {
+      position: relative;
+      aspect-ratio: 2/3;
+      background: var(--negro-card);
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .pelicula-poster {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+    }
+    .pelicula-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: linear-gradient(145deg, #1E1E1E, #141414);
+    }
+    .pelicula-placeholder svg { opacity: 0.15; }
+    .pelicula-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity 0.25s;
+      display: flex;
+      align-items: flex-end;
+      padding: 16px;
+    }
+    .pelicula-card:hover .pelicula-overlay { opacity: 1; }
+    .pelicula-info { width: 100%; }
+    .pelicula-titulo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.03em;
+      display: block;
+    }
+    .pelicula-year {
+      font-size: 0.72rem;
+      color: var(--gris);
+    }
+    /* Estado de estreno */
+    .badge {
+      position: absolute;
+      top: 10px; left: 10px;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 3px 8px;
+    }
+    .badge-new { background: var(--amarillo); color: var(--negro); }
+    .badge-soon { background: transparent; border: 1px solid var(--blanco); color: var(--blanco); }
+
+    /* ── EQUIPO ── */
+    #equipo { background: var(--negro-medio); }
+    .equipo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.5px;
+      background: var(--gris-linea);
+      border: 1.5px solid var(--gris-linea);
+    }
+    .miembro-card {
+      background: var(--negro-card);
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: background 0.2s;
+    }
+    .miembro-card:hover { background: #222; }
+    .miembro-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: var(--gris-linea);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      color: var(--amarillo);
+      margin-bottom: 4px;
+    }
+    .miembro-nombre {
+      font-weight: 600;
+      font-size: 0.97rem;
+    }
+    .miembro-rol {
+      font-size: 0.75rem;
+      color: var(--amarillo);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .miembro-bio {
+      font-size: 0.8rem;
+      color: var(--gris);
+      line-height: 1.6;
+    }
+
+    /* ── CONTACTO ── */
+    #contacto { background: var(--negro); }
+    .contacto-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+      max-width: 900px;
+    }
+    .contacto-info p {
+      font-size: 0.9rem;
+      color: var(--gris);
+      line-height: 1.7;
+      max-width: 380px;
+    }
+    .contacto-social {
+      margin-top: 1.6rem;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--gris);
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+    .social-link:hover { color: var(--amarillo); }
+    .social-icon {
+      width: 34px; height: 34px;
+      border: 1px solid var(--gris-linea);
+      display: flex; align-items: center; justify-content: center;
+      transition: border-color 0.2s;
+    }
+    .social-link:hover .social-icon { border-color: var(--amarillo); }
+
+    .contacto-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .form-group label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gris);
+    }
+    .form-group input,
+    .form-group textarea {
+      background: var(--negro-card);
+      border: 1px solid var(--gris-linea);
+      color: var(--blanco);
+      padding: 12px 16px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.2s;
+      resize: none;
+      border-radius: 0;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus { border-color: var(--amarillo); }
+    .form-group textarea { min-height: 120px; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--negro);
+      border-top: 1px solid var(--gris-linea);
+      padding: 32px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-brand {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.3rem;
+      letter-spacing: 0.05em;
+      color: var(--amarillo);
+    }
+    .footer-copy {
+      font-size: 0.75rem;
+      color: var(--gris);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: calc(64px + env(safe-area-inset-top, 0px));
+        left: 0; right: 0;
+        background: var(--negro-medio);
+        padding: 1.5rem 5%;
+        gap: 1.2rem;
+        border-bottom: 1px solid var(--gris-linea);
+      }
+      .contacto-inner { grid-template-columns: 1fr; gap: 40px; }
+      .hero-filmstrip { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#inicio" class="nav-logo">
+    <!-- Logo CM palomitas (inline SVG simplificado) -->
+    <svg viewBox="0 0 80 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Palomitas -->
+      <path d="M10 42 Q10 10 30 8 Q40 4 50 8 Q68 6 68 30 Q72 10 78 26 Q80 42 68 42 Z" fill="#F5C842"/>
+      <!-- Cuerpo cubeta -->
+      <rect x="8" y="44" width="64" height="4" fill="#F5C842"/>
+      <!-- C -->
+      <path d="M12 54 L12 96 L48 96 L48 84 L26 84 L26 66 L48 66 L48 54 Z" fill="#F5C842"/>
+      <!-- M -->
+      <path d="M50 54 L50 96 L62 96 L62 72 L68 84 L74 72 L74 96 L86 96 L86 54 L74 54 L68 72 L62 54 Z" fill="#F5C842" transform="scale(0.76) translate(18,0)"/>
+    </svg>
+    <span class="nav-logo-text">COMBO MIX</span>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#reseñas">Reseñas</a></li>
+    <li><a href="#noticias">Noticias</a></li>
+    <li><a href="#cartelera">Cartelera</a></li>
+    <li><a href="#equipo">Equipo</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section id="inicio">
+  <div class="hero-bg"></div>
+  <div class="hero-filmstrip">
+    <div class="film-hole"></div><div class="film-hole"></div>
+    <div class="film-hole"></div><div class="film-hole"></div>
+    <div class="film-hole"></div><div class="film-hole"></div>
+    <div class="film-hole"></div><div class="film-hole"></div>
+  </div>
+  <div class="hero-content">
+    <span class="hero-tag">Tu medio de cine en español</span>
+    <h1 class="hero-title">COMBO<br><span>MIX</span></h1>
+    <p class="hero-sub">Reseñas, noticias y cartelera para los que el cine no es solo un pasatiempo — es un idioma.</p>
+    <div class="hero-ctas">
+      <a href="#reseñas" class="btn-primary">Ver reseñas</a>
+      <a href="#cartelera" class="btn-ghost">Cartelera</a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- RESEÑAS -->
+<section id="reseñas">
+  <div class="section-label">Reseñas</div>
+  <h2 class="section-title">LO QUE<br>VIMOS</h2>
+  <div class="resenas-grid">
+
+    <article class="resena-card">
+      <span class="resena-genero">Drama · 2024</span>
+      <h3 class="resena-titulo">Anora</h3>
+      <p class="resena-desc">Sean Baker captura Nueva York con la misma honestidad cruda que distingue su filmografía. Una actuación que no puedes ignorar.</p>
+      <div class="resena-rating">
+        <span class="stars">★★★★★</span>
+        <span class="rating-num">5.0 / 5</span>
+      </div>
+    </article>
+
+    <article class="resena-card">
+      <span class="resena-genero">Acción · 2024</span>
+      <h3 class="resena-titulo">Alien: Romulus</h3>
+      <p class="resena-desc">Fede Álvarez rescata la tensión claustrofóbica de la saga original. El terror espacial vuelve a sentirse real.</p>
+      <div class="resena-rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-num">4.0 / 5</span>
+      </div>
+    </article>
+
+    <article class="resena-card">
+      <span class="resena-genero">Animación · 2024</span>
+      <h3 class="resena-titulo">El Conde de Montecristo</h3>
+      <p class="resena-desc">Una adaptación que entiende que la venganza, para ser épica, necesita tiempo. Y esta película se toma todo el que merece.</p>
+      <div class="resena-rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rating-num">4.2 / 5</span>
+      </div>
+    </article>
+
+    <article class="resena-card">
+      <span class="resena-genero">Terror · 2024</span>
+      <h3 class="resena-titulo">Longlegs</h3>
+      <p class="resena-desc">Nicolas Cage en modo desquiciado total. El diseño sonoro hace más daño que cualquier jumpcare.</p>
+      <div class="resena-rating">
+        <span class="stars">★★★☆☆</span>
+        <span class="rating-num">3.5 / 5</span>
+      </div>
+    </article>
+
+    <article class="resena-card">
+      <span class="resena-genero">Comedia · 2024</span>
+      <h3 class="resena-titulo">A Real Pain</h3>
+      <p class="resena-desc">Jesse Eisenberg escribe y dirige con una sensibilidad sorprendente. Kieran Culkin se roba cada escena sin esfuerzo.</p>
+      <div class="resena-rating">
+        <span class="stars">★★★★★</span>
+        <span class="rating-num">4.8 / 5</span>
+      </div>
+    </article>
+
+    <article class="resena-card">
+      <span class="resena-genero">Ciencia ficción · 2024</span>
+      <h3 class="resena-titulo">Dune: Parte Dos</h3>
+      <p class="resena-desc">Villeneuve entrega uno de los espectáculos visuales de la década. El desierto nunca se vio tan amenazante ni tan bello.</p>
+      <div class="resena-rating">
+        <span class="stars">★★★★★</span>
+        <span class="rating-num">4.9 / 5</span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- NOTICIAS -->
+<section id="noticias">
+  <div class="section-label">Noticias</div>
+  <h2 class="section-title">LO QUE<br>PASA</h2>
+  <div class="noticias-list">
+
+    <div class="noticia-item">
+      <span class="noticia-num">01</span>
+      <div class="noticia-content">
+        <span class="noticia-titulo">Cannes 2025 anuncia su selección oficial con 5 directoras latinas en competencia</span>
+        <span class="noticia-fecha">Octubre 2026</span>
+      </div>
+      <span class="noticia-tag">Festival</span>
+    </div>
+
+    <div class="noticia-item">
+      <span class="noticia-num">02</span>
+      <div class="noticia-content">
+        <span class="noticia-titulo">Guillermo del Toro confirma que su próxima película será completamente en español</span>
+        <span class="noticia-fecha">Octubre 2026</span>
+      </div>
+      <span class="noticia-tag">Industria</span>
+    </div>
+
+    <div class="noticia-item">
+      <span class="noticia-num">03</span>
+      <div class="noticia-content">
+        <span class="noticia-titulo">Los Óscar 2027 cambian su regla de elegibilidad para películas de streaming</span>
+        <span class="noticia-fecha">Septiembre 2026</span>
+      </div>
+      <span class="noticia-tag">Premios</span>
+    </div>
+
+    <div class="noticia-item">
+      <span class="noticia-num">04</span>
+      <div class="noticia-content">
+        <span class="noticia-titulo">Netflix adquiere los derechos de la novela gráfica "Karmagedón" para adaptación animada</span>
+        <span class="noticia-fecha">Septiembre 2026</span>
+      </div>
+      <span class="noticia-tag">Streaming</span>
+    </div>
+
+    <div class="noticia-item">
+      <span class="noticia-num">05</span>
+      <div class="noticia-content">
+        <span class="noticia-titulo">El cine mexicano rompe récord de taquilla nacional con tres películas simultáneas en el Top 10</span>
+        <span class="noticia-fecha">Septiembre 2026</span>
+      </div>
+      <span class="noticia-tag">México</span>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CARTELERA -->
+<section id="cartelera">
+  <div class="section-label">Cartelera</div>
+  <h2 class="section-title">EN PANTALLA<br>ESTA SEMANA</h2>
+  <p class="cartelera-intro">Lo que está corriendo, lo que llega y lo que no deberías perderte.</p>
+  <div class="cartelera-grid">
+
+    <div class="pelicula-card">
+      <div class="pelicula-placeholder">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+          <rect x="2" y="2" width="20" height="20" rx="2"/><path d="m7 2 0 20M17 2l0 20M2 12l20 0M2 7l5 0M2 17l5 0M17 17l5 0M17 7l5 0"/>
+        </svg>
+      </div>
+      <span class="badge badge-new">En cartelera</span>
+      <div class="pelicula-overlay">
+        <div class="pelicula-info">
+          <span class="pelicula-titulo">Wicked</span>
+          <span class="pelicula-year">2024 · Musical</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pelicula-card">
+      <div class="pelicula-placeholder">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+          <rect x="2" y="2" width="20" height="20" rx="2"/><path d="m7 2 0 20M17 2l0 20M2 12l20 0M2 7l5 0M2 17l5 0M17 17l5 0M17 7l5 0"/>
+        </svg>
+      </div>
+      <span class="badge badge-new">En cartelera</span>
+      <div class="pelicula-overlay">
+        <div class="pelicula-info">
+          <span class="pelicula-titulo">Gladiator II</span>
+          <span class="pelicula-year">2024 · Acción</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pelicula-card">
+      <div class="pelicula-placeholder">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+          <rect x="2" y="2" width="20" height="20" rx="2"/><path d="m7 2 0 20M17 2l0 20M2 12l20 0M2 7l5 0M2 17l5 0M17 17l5 0M17 7l5 0"/>
+        </svg>
+      </div>
+      <span class="badge badge-soon">Próximamente</span>
+      <div class="pelicula-overlay">
+        <div class="pelicula-info">
+          <span class="pelicula-titulo">Mickey 17</span>
+          <span class="pelicula-year">2025 · Sci-fi</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pelicula-card">
+      <div class="pelicula-placeholder">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+          <rect x="2" y="2" width="20" height="20" rx="2"/><path d="m7 2 0 20M17 2l0 20M2 12l20 0M2 7l5 0M2 17l5 0M17 17l5 0M17 7l5 0"/>
+        </svg>
+      </div>
+      <span class="badge badge-new">En cartelera</span>
+      <div class="pelicula-overlay">
+        <div class="pelicula-info">
+          <span class="pelicula-titulo">Emilia Pérez</span>
+          <span class="pelicula-year">2024 · Drama</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pelicula-card">
+      <div class="pelicula-placeholder">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+          <rect x="2" y="2" width="20" height="20" rx="2"/><path d="m7 2 0 20M17 2l0 20M2 12l20 0M2 7l5 0M2 17l5 0M17 17l5 0M17 7l5 0"/>
+        </svg>
+      </div>
+      <span class="badge badge-soon">Próximamente</span>
+      <div class="pelicula-overlay">
+        <div class="pelicula-info">
+          <span class="pelicula-titulo">The Brutalist</span>
+          <span class="pelicula-year">2024 · Drama</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pelicula-card">
+      <div class="pelicula-placeholder">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+          <rect x="2" y="2" width="20" height="20" rx="2"/><path d="m7 2 0 20M17 2l0 20M2 12l20 0M2 7l5 0M2 17l5 0M17 17l5 0M17 7l5 0"/>
+        </svg>
+      </div>
+      <span class="badge badge-new">En cartelera</span>
+      <div class="pelicula-overlay">
+        <div class="pelicula-info">
+          <span class="pelicula-titulo">Conclave</span>
+          <span class="pelicula-year">2024 · Suspenso</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- EQUIPO -->
+<section id="equipo">
+  <div class="section-label">El equipo</div>
+  <h2 class="section-title">QUIÉNES<br>SOMOS</h2>
+  <div class="equipo-grid">
+
+    <div class="miembro-card">
+      <div class="miembro-avatar">CM</div>
+      <span class="miembro-nombre">Nombre Apellido</span>
+      <span class="miembro-rol">Director editorial</span>
+      <p class="miembro-bio">Estudiante de comunicación con debilidad por el cine de autor y el popcorn de mantequilla.</p>
+    </div>
+
+    <div class="miembro-card">
+      <div class="miembro-avatar">NR</div>
+      <span class="miembro-nombre">Nombre Apellido</span>
+      <span class="miembro-rol">Crítica de cine</span>
+      <p class="miembro-bio">Cree que cada película merece al menos una segunda oportunidad. Especialista en terror y ciencia ficción.</p>
+    </div>
+
+    <div class="miembro-card">
+      <div class="miembro-avatar">JS</div>
+      <span class="miembro-nombre">Nombre Apellido</span>
+      <span class="miembro-rol">Redactor</span>
+      <p class="miembro-bio">Fanático del cine latinoamericano y de los créditos al final. Nunca se levanta antes de que terminen.</p>
+    </div>
+
+    <div class="miembro-card">
+      <div class="miembro-avatar">AP</div>
+      <span class="miembro-nombre">Nombre Apellido</span>
+      <span class="miembro-rol">Diseño y redes</span>
+      <p class="miembro-bio">Convierte ideas en contenido visual. Dice que el cartel de una película ya es una obra de arte.</p>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="section-label">Contacto</div>
+  <h2 class="section-title">HABLEMOS<br>DE CINE</h2>
+  <div class="contacto-inner">
+    <div class="contacto-info">
+      <p>¿Quieres colaborar, mandarnos una reseña, o simplemente discutir por qué Dune merece más premios? Escríbenos.</p>
+      <div class="contacto-social">
+        <a href="#" class="social-link">
+          <div class="social-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/></svg>
+          </div>
+          @combomix
+        </a>
+        <a href="#" class="social-link">
+          <div class="social-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </div>
+          @combomix
+        </a>
+        <a href="#" class="social-link">
+          <div class="social-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15.3a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V9.18a8.27 8.27 0 0 0 4.84 1.56V7.3a4.85 4.85 0 0 1-1.08-.61z"/></svg>
+          </div>
+          @combomix
+        </a>
+        <a href="mailto:hola@combomix.com" class="social-link">
+          <div class="social-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </div>
+          hola@combomix.com
+        </a>
+      </div>
+    </div>
+
+    <div class="contacto-form">
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" placeholder="¿Cómo te llamas?" />
+      </div>
+      <div class="form-group">
+        <label for="email">Correo</label>
+        <input type="email" id="email" placeholder="tu@correo.com" />
+      </div>
+      <div class="form-group">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" placeholder="¿De qué película quieres hablar?"></textarea>
+      </div>
+      <button class="btn-primary" style="cursor:pointer; border:none; width:fit-content;" onclick="alert('¡Mensaje enviado! (Esta es una demo — conecta tu backend para envíos reales)')">Enviar mensaje</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-brand">COMBO MIX</span>
+  <span class="footer-copy">© 2026 Combo Mix · Proyecto escolar · Todos los derechos reservados</span>
+</footer>
+
+<script>
+  // Menú móvil
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+  // Cerrar al dar click en un link
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => navLinks.classList.remove('open'));
+  });
+</script>
+
+</body>
+</html>
