@@ -100,6 +100,7 @@
     contenido.innerHTML = `
       <div class="resena-page">
         <a href="resenas.html" class="resena-back">← Volver a reseñas</a>
+        ${resena.poster ? `<img src="${resena.poster}" style="width:100%;max-height:400px;object-fit:cover;margin-bottom:2rem;"/>` : ''}
         <span class="resena-genero-badge">${resena.genero} · ${resena.año}</span>
         <h1 class="resena-titulo-grande">${resena.titulo}</h1>
         <div class="resena-meta">
