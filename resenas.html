@@ -80,10 +80,11 @@
   const grid = document.getElementById('resenasGrid');
   const estrellas = n => '★'.repeat(n) + '☆'.repeat(5 - n);
   RESENAS.forEach(r => {
-    grid.innerHTML += `
-      <a class="resena-card" href="resena.html?id=${r.id}">
-        <span class="resena-genero">${r.genero} · ${r.año}</span>
-        <span class="resena-titulo">${r.titulo}</span>
+grid.innerHTML += `
+      <a class="resena-card" href="resena.html?id=${r.id}" style="position:relative;overflow:hidden;">
+        ${r.poster ? `<img src="${r.poster}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.15;"/>` : ''}
+        <span class="resena-genero" style="position:relative">${r.genero} · ${r.año}</span>
+        <span class="resena-titulo" style="position:relative">${r.titulo}</span>
         <span class="resena-director">Dir. ${r.director}</span>
         <p class="resena-desc">${r.resumen}</p>
         <div class="resena-rating">
