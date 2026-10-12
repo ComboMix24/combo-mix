@@ -120,8 +120,8 @@ const FESTIVALES = [
   }
 ];
 
-const CARTELERA = [{ titulo: 'Street Fighter', año: 1994, genero: 'Acción', estado: 'Próximamente', poster: 'imagenes/poster-pelicula1.jpg' },
-  { titulo: 'Feliz Día de tu Muerte', año: 2017, genero: 'Terror', estado: 'Próximamente (Re-Estreno)', poster: 'imagenes/poster-pelicula2.jpg' },
-  { titulo: 'Feliz Día de tu Muerte 2', año: 2019, genero: 'Terror', estado: 'Próximamente (Re-Estreno)', poster: 'imagenes/poster-pelicula3.jpg' },
-  { titulo: 'El Cadáver de la Novia', año: 2005, genero: 'Animación', estado: 'Próximamente (Re-Estreno)', poster: 'imagenes/poster-pelicula4.jpg' },
+const CARTELERA = [{ titulo: 'Street Fighter', año: 2026, genero: 'Acción', estado: 'Próximamente', poster: 'imagenes/poster-pelicula1.jpg' },
+  { titulo: 'Feliz Día de tu Muerte', año: 2017, genero: 'Terror', estado: 'Próximamente', poster: 'imagenes/poster-pelicula2.jpg' },
+  { titulo: 'Feliz Día de tu Muerte 2', año: 2019, genero: 'Terror', estado: 'Próximamente', poster: 'imagenes/poster-pelicula3.jpg' },
+  { titulo: 'El Cadáver de la Novia', año: 2005, genero: 'Animación', estado: 'Próximamente', poster: 'imagenes/poster-pelicula4.jpg' },
 ];
