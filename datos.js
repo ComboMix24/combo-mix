@@ -70,5 +70,5 @@ const CARTELERA = [{ titulo: 'Street Fighter', año: 2026, genero: 'Acción', es
   { titulo: 'Feliz Día de tu Muerte 2', año: 2019, genero: 'Terror', estado: 'Próximamente', poster: 'imagenes/poster-pelicula3.jpg' },
   { titulo: 'El Cadáver de la Novia', año: 2005, genero: 'Animación', estado: 'Próximamente', poster: 'imagenes/poster-pelicula4.jpg' },
   { titulo: 'Digger', año: 2026, genero: 'Comedia Oscura', estado: 'En cartelera', poster: 'imagenes/poster-pelicula5.jpg' },
-  { titulo: 'Madre Siniestra', año: 2025, genero: 'Terror', estado: 'En cartelera', poster: 'imagenes/poster-pelicula6.jpg' },
+  { titulo: 'Madre Siniestra', año: 2026, genero: 'Terror', estado: 'En cartelera', poster: 'imagenes/poster-pelicula6.jpg' },
 ];
