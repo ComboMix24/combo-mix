@@ -98,31 +98,10 @@ const NOTICIAS = [];
 
 const FESTIVALES = [
   {
-    nombre: 'Festival de Cannes',
-    lugar: 'Cannes, Francia',
-    fecha: 'Mayo 2025',
-    descripcion: 'El festival de cine más prestigioso del mundo. Palma de Oro como máximo galardón.',
-    categoria: 'Internacional'
-  },
-  {
     nombre: 'Festival Internacional de Cine de Morelia',
     lugar: 'Morelia, México',
     fecha: 'Octubre 2026',
     descripcion: 'El festival más importante de México, con enfoque en cine latinoamericano y mexicano independiente.',
-    categoria: 'México'
-  },
-  {
-    nombre: 'Sundance Film Festival',
-    lugar: 'Park City, Utah',
-    fecha: 'Enero 2026',
-    descripcion: 'El festival de cine independiente más influyente de Estados Unidos. Trampolín para el cine de autor.',
-    categoria: 'Internacional'
-  },
-  {
-    nombre: 'Festival Internacional de Cine de Guadalajara',
-    lugar: 'Guadalajara, México',
-    fecha: 'Marzo 2026',
-    descripcion: 'Una de las muestras más importantes de cine iberoamericano con presencia de figuras del cine mundial.',
     categoria: 'México'
   },
   {
