@@ -94,7 +94,7 @@
   function renderGrid(lista) {
     return lista.map(p => `
       <div class="pelicula-card">
-        <div class="pelicula-placeholder">${icono}</div>
+        <img src="${p.poster}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"/>
         <span class="badge ${p.estado === 'En cartelera' ? 'badge-new' : 'badge-soon'}">${p.estado}</span>
         <div class="pelicula-overlay">
           <div>
