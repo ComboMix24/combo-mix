@@ -120,11 +120,8 @@ const FESTIVALES = [
   }
 ];
 
-const CARTELERA = [
-  { titulo: 'Wicked', año: 2024, genero: 'Musical', estado: 'En cartelera' },
-  { titulo: 'Gladiator II', año: 2024, genero: 'Acción', estado: 'En cartelera' },
-  { titulo: 'Emilia Pérez', año: 2024, genero: 'Drama', estado: 'En cartelera' },
-  { titulo: 'Conclave', año: 2024, genero: 'Suspenso', estado: 'En cartelera' },
-  { titulo: 'Mickey 17', año: 2025, genero: 'Sci-fi', estado: 'Próximamente' },
-  { titulo: 'The Brutalist', año: 2024, genero: 'Drama', estado: 'Próximamente' },
+const CARTELERA = [{ titulo: 'Street Fighter', año: 1994, genero: 'Acción', estado: 'Próximamente', poster: 'imagenes/poster-pelicula1.jpg' },
+  { titulo: 'Feliz Día de tu Muerte', año: 2017, genero: 'Terror', estado: 'Próximamente (Re-Estreno)', poster: 'imagenes/poster-pelicula2.jpg' },
+  { titulo: 'Feliz Día de tu Muerte 2', año: 2019, genero: 'Terror', estado: 'Próximamente (Re-Estreno)', poster: 'imagenes/poster-pelicula3.jpg' },
+  { titulo: 'El Cadáver de la Novia', año: 2005, genero: 'Animación', estado: 'Próximamente (Re-Estreno)', poster: 'imagenes/poster-pelicula4.jpg' },
 ];
