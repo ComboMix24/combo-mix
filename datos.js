@@ -94,43 +94,7 @@ const RESENAS = [
   }
 ];
 
-const NOTICIAS = [
-  {
-    id: 1,
-    titulo: 'Cannes 2025 anuncia su selección oficial con 5 directoras latinas en competencia',
-    fecha: 'Octubre 2026',
-    categoria: 'Festival',
-    contenido: 'La selección oficial de Cannes 2025 marca un hito histórico para el cine latinoamericano con cinco directoras en competencia oficial. Una representación sin precedentes que refleja el creciente reconocimiento internacional del talento regional.'
-  },
-  {
-    id: 2,
-    titulo: 'Guillermo del Toro confirma que su próxima película será completamente en español',
-    fecha: 'Octubre 2026',
-    categoria: 'Industria',
-    contenido: 'El cineasta mexicano anunció en una entrevista exclusiva que su siguiente proyecto será enteramente en español, marcando un regreso a sus raíces después de varios proyectos en Hollywood. Del Toro describió el proyecto como "algo muy personal".'
-  },
-  {
-    id: 3,
-    titulo: 'Los Óscar 2027 cambian su regla de elegibilidad para películas de streaming',
-    fecha: 'Septiembre 2026',
-    categoria: 'Premios',
-    contenido: 'La Academia de Artes y Ciencias Cinematográficas modificó sus reglas para la temporada 2027, ampliando los requisitos de elegibilidad para producciones originales de plataformas de streaming. El cambio refleja la nueva realidad de la distribución cinematográfica.'
-  },
-  {
-    id: 4,
-    titulo: 'El cine mexicano rompe récord de taquilla nacional con tres películas en el Top 10',
-    fecha: 'Septiembre 2026',
-    categoria: 'México',
-    contenido: 'Por primera vez en la historia reciente, tres producciones mexicanas ocupan simultáneamente posiciones en el Top 10 de taquilla nacional. Un logro que los analistas atribuyen tanto a la calidad de las producciones como a un mayor apoyo de distribución.'
-  },
-  {
-    id: 5,
-    titulo: 'Netflix adquiere los derechos de la novela gráfica "Karmagedón" para adaptación animada',
-    fecha: 'Septiembre 2026',
-    categoria: 'Streaming',
-    contenido: 'La plataforma anunció la adquisición de los derechos de adaptación de la aclamada novela gráfica latinoamericana. La producción animada estará a cargo de un equipo completamente latinoamericano y se espera para finales de 2027.'
-  }
-];
+const NOTICIAS = [];
 
 const FESTIVALES = [
   {
