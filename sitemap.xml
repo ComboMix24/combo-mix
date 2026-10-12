@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://combo-mix.barrancojulio29.workers.dev/">
+  <url>
+    <loc>https://tusitio.pages.dev/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://tusitio.pages.dev/resenas.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tusitio.pages.dev/noticias.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tusitio.pages.dev/festivales.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tusitio.pages.dev/cartelera.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tusitio.pages.dev/equipo.html</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://tusitio.pages.dev/contacto.html</loc>
+    <priority>0.5</priority>
+  </url>
+</urlset>
