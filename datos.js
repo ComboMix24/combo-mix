@@ -11,6 +11,7 @@ const RESENAS = [
     estrellas: 4,
     calificacion: '4.5',
     resumen: 'Una sátira sobre el poder y el ego de quienes creen estar por encima de las consecuencias de sus propias decisiones.',
+    poster: 'imagenes/poster-digger.jpg',
     texto: `
       <p>¿Qué sucede cuando el hombre que provoca una catástrofe se convence de que también es el único capaz de salvar a la humanidad? En <em>Digger</em> (2026), Alejandro González Iñárritu reúne su mirada provocadora con la presencia de Tom Cruise para construir una sátira sobre el poder, la ambición y el ego de quienes creen estar por encima de las consecuencias de sus propias decisiones.</p>
       <p>La película sigue a Digger Rockwell, un magnate petrolero que, después de desencadenar un desastre de proporciones globales, emprende una desesperada misión para demostrar que es el salvador del mundo. Su narrativa deliberadamente extravagante y su humor incómodo pueden resultar tan fascinantes como agotadores; la película no busca complacer al espectador, sino provocarlo.</p>
@@ -28,6 +29,7 @@ const RESENAS = [
     estrellas: 4,
     calificacion: '4.0',
     resumen: 'Un retrato crudo y honesto sobre el enamoramiento y el desgaste de una relación, protagonizado por Ryan Gosling y Michelle Williams.',
+    poster: 'imagenes/poster-blue-valentine.jpg',
     texto: `
       <p>¿Qué sucede cuando la persona que alguna vez lo fue todo comienza a convertirse en alguien con quien ya no sabemos convivir? En <em>Blue Valentine</em> (2010), Derek Cianfrance construye un retrato crudo y honesto sobre el enamoramiento y el desgaste de una relación, protagonizado por Ryan Gosling y Michelle Williams, quienes ofrecen interpretaciones tan naturales como dolorosas.</p>
       <p>A través de una narrativa que alterna entre los primeros días de Dean y Cindy y la crisis de su matrimonio, la película construye un contraste emocional que encuentra su mayor fortaleza en la fotografía de Andrij Parekh. Los recuerdos del enamoramiento están envueltos en colores cálidos y una cámara dinámica que transmite cercanía; en cambio, el presente apuesta por tonos fríos y una iluminación más rígida que refleja la distancia emocional entre ambos.</p>
