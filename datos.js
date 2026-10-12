@@ -1,95 +1,38 @@
 // ── COMBO MIX — BASE DE DATOS CENTRAL ──
 // Para agregar contenido nuevo, solo edita estos arrays.
 
-const RESENAS = [
+const RESENAS = [  
   {
-    id: 'anora',
-    titulo: 'Anora',
-    genero: 'Drama',
-    año: 2024,
-    director: 'Sean Baker',
-    estrellas: 5,
-    calificacion: '5.0',
-    resumen: 'Sean Baker captura Nueva York con la misma honestidad cruda que distingue su filmografía. Una actuación que no puedes ignorar.',
+    id: 'digger',
+    titulo: 'Digger',
+    genero: 'Comedia Oscura',
+    año: 2026,
+    director: 'Alejandro González Iñárritu',
+    estrellas: 4,
+    calificacion: '4.5',
+    resumen: 'Una sátira sobre el poder y el ego de quienes creen estar por encima de las consecuencias de sus propias decisiones.',
     texto: `
-      <p>Sean Baker lleva años documentando los márgenes de la sociedad estadounidense con una honestidad que incomoda y seduce al mismo tiempo. Con <em>Anora</em> da un salto hacia algo más grande sin perder esa mirada íntima que lo define.</p>
-      <p>La historia de Ani, una trabajadora sexual de Brighton Beach que se casa impulsivamente con el hijo de un oligarca ruso, podría haberse convertido en un cuento de hadas moderno o en una crítica social explícita. Baker elige algo más honesto: un retrato de alguien que sabe exactamente quién es, pero no puede evitar desear algo diferente.</p>
-      <p>Yura Borisov roba cada escena que comparte con Mikey Madison, y la química entre ambos actores construye la verdadera columna vertebral de la película. El tercer acto es caos en el mejor sentido posible.</p>
+      <p>¿Qué sucede cuando el hombre que provoca una catástrofe se convence de que también es el único capaz de salvar a la humanidad? En <em>Digger</em> (2026), Alejandro González Iñárritu reúne su mirada provocadora con la presencia de Tom Cruise para construir una sátira sobre el poder, la ambición y el ego de quienes creen estar por encima de las consecuencias de sus propias decisiones.</p>
+      <p>La película sigue a Digger Rockwell, un magnate petrolero que, después de desencadenar un desastre de proporciones globales, emprende una desesperada misión para demostrar que es el salvador del mundo. Su narrativa deliberadamente extravagante y su humor incómodo pueden resultar tan fascinantes como agotadores; la película no busca complacer al espectador, sino provocarlo.</p>
+      <p>Tom Cruise se aleja de la figura heroica que ha definido buena parte de su carrera para entregar una interpretación que exige una transformación física considerable: cabello canoso, abdomen prominente, prótesis faciales. Cruise no solamente modifica su rostro, utiliza su cuerpo para construir un personaje que parece ocupar demasiado espacio, incluso cuando intenta controlar el caos que él mismo ha provocado.</p>
+      <p>La fotografía de Emmanuel Lubezki, filmada íntegramente en VistaVision, aporta una dimensión visual ambiciosa. Iñárritu convierte el espectáculo en parte de su discurso: detrás de la extravagancia existe una crítica a quienes confunden su poder con la capacidad de decidir el destino de los demás.</p>
+      <p>No obstante, esa ambición también juega en su contra. La sátira puede sentirse demasiado insistente y su narrativa, por momentos, parece más interesada en exhibir sus propias ideas que en desarrollar un recorrido emocional equilibrado.</p>
     `
   },
   {
-    id: 'alien-romulus',
-    titulo: 'Alien: Romulus',
-    genero: 'Terror',
-    año: 2024,
-    director: 'Fede Álvarez',
+    id: 'blue-valentine',
+    titulo: 'Blue Valentine',
+    genero: 'Drama romántico',
+    año: 2010,
+    director: 'Derek Cianfrance',
     estrellas: 4,
     calificacion: '4.0',
-    resumen: 'Fede Álvarez rescata la tensión claustrofóbica de la saga original. El terror espacial vuelve a sentirse real.',
+    resumen: 'Un retrato crudo y honesto sobre el enamoramiento y el desgaste de una relación, protagonizado por Ryan Gosling y Michelle Williams.',
     texto: `
-      <p>Después de varios intentos fallidos por revitalizar la franquicia, Fede Álvarez regresa al horror más puro de la saga. Sin pretensiones filosóficas ni grandes arcos mitológicos: solo oscuridad, claustrofobia y xenomorfos haciendo lo que mejor saben hacer.</p>
-      <p>La decisión de ambientar la historia entre <em>Alien</em> y <em>Aliens</em> le da libertad narrativa sin traicionar la continuidad. El diseño de producción es impecable, y hay al menos tres secuencias que van a quedar en la memoria colectiva del género.</p>
-      <p>No reinventa nada, pero tampoco necesita hacerlo. A veces la mejor versión de algo es la que recuerda por qué funcionó en primer lugar.</p>
-    `
-  },
-  {
-    id: 'dune-parte-dos',
-    titulo: 'Dune: Parte Dos',
-    genero: 'Ciencia ficción',
-    año: 2024,
-    director: 'Denis Villeneuve',
-    estrellas: 5,
-    calificacion: '4.9',
-    resumen: 'Villeneuve entrega uno de los espectáculos visuales de la década. El desierto nunca se vio tan amenazante ni tan bello.',
-    texto: `
-      <p>Villeneuve completa una de las adaptaciones más ambiciosas de la historia del cine moderno. <em>Dune: Parte Dos</em> no solo termina lo que empezó — lo supera en casi todos los aspectos técnicos y narrativos.</p>
-      <p>La fotografía de Greig Fraser vuelve a ser un argumento en sí misma. Las secuencias en Giedi Prime rodadas en blanco y negro son de lo más visualmente impactante que el blockbuster ha producido en años. Y la música de Hans Zimmer sigue siendo el ancla emocional de todo el proyecto.</p>
-      <p>Lo que más sorprende es la valentía narrativa: Villeneuve no suaviza el cuestionamiento al mesianismo que Herbert construyó en la novela. Paul Atreides no es un héroe. Nunca lo fue. Y la película tiene el coraje de dejar eso muy claro.</p>
-    `
-  },
-  {
-    id: 'longlegs',
-    titulo: 'Longlegs',
-    genero: 'Terror',
-    año: 2024,
-    director: 'Oz Perkins',
-    estrellas: 3,
-    calificacion: '3.5',
-    resumen: 'Nicolas Cage en modo desquiciado total. El diseño sonoro hace más daño que cualquier jumpcare.',
-    texto: `
-      <p>Oz Perkins sabe crear atmósferas. Eso está fuera de discusión. <em>Longlegs</em> tiene momentos de terror genuino que funcionan precisamente porque no dependen de jumpscares sino de una sensación sostenida de que algo está fundamentalmente mal.</p>
-      <p>El problema es Nicolas Cage. No porque esté mal — de hecho está fascinante — sino porque su actuación vive en una frecuencia tan diferente al resto de la película que genera una disonancia difícil de ignorar.</p>
-      <p>Maika Monroe carga el peso dramático con solidez, y el diseño sonoro merece un reconocimiento especial. Vale la experiencia, aunque salgas con más preguntas de las que entraste.</p>
-    `
-  },
-  {
-    id: 'a-real-pain',
-    titulo: 'A Real Pain',
-    genero: 'Comedia dramática',
-    año: 2024,
-    director: 'Jesse Eisenberg',
-    estrellas: 5,
-    calificacion: '4.8',
-    resumen: 'Jesse Eisenberg escribe y dirige con una sensibilidad sorprendente. Kieran Culkin se roba cada escena sin esfuerzo.',
-    texto: `
-      <p>Jesse Eisenberg escribe y dirige con una madurez que no anticipabas de él. <em>A Real Pain</em> es una película pequeña en escala pero enorme en lo que se propone: hablar del duelo, la memoria y la identidad judía sin volverse didáctica ni sentimental.</p>
-      <p>Kieran Culkin entrega la actuación del año. Su Benji es irritante, encantador, roto y vivo al mismo tiempo, y hace que cada escena en la que aparece sea imposible de despegar los ojos.</p>
-      <p>El viaje a Polonia como telón de fondo es una elección arriesgada que paga. Una de las sorpresas más gratas del año.</p>
-    `
-  },
-  {
-    id: 'el-conde-de-montecristo',
-    titulo: 'El Conde de Montecristo',
-    genero: 'Aventura',
-    año: 2024,
-    director: 'Alexandre de la Patellière',
-    estrellas: 4,
-    calificacion: '4.2',
-    resumen: 'Una adaptación que entiende que la venganza, para ser épica, necesita tiempo.',
-    texto: `
-      <p>Adaptar a Dumas siempre es un reto: la novela tiene demasiado para una sola película y demasiado poco para una serie. Esta versión francesa opta por la épica clásica y casi siempre acierta.</p>
-      <p>Pierre Niney como Edmond Dantès es la elección perfecta. Transmite tanto la fragilidad del joven marinero como la frialdad calculada del Conde sin que la transición se sienta forzada.</p>
-      <p>Hay momentos donde el ritmo decae, especialmente en el segundo acto, pero la última hora compensa con creces. Una adaptación que entiende que la venganza lenta es la más satisfactoria.</p>
+      <p>¿Qué sucede cuando la persona que alguna vez lo fue todo comienza a convertirse en alguien con quien ya no sabemos convivir? En <em>Blue Valentine</em> (2010), Derek Cianfrance construye un retrato crudo y honesto sobre el enamoramiento y el desgaste de una relación, protagonizado por Ryan Gosling y Michelle Williams, quienes ofrecen interpretaciones tan naturales como dolorosas.</p>
+      <p>A través de una narrativa que alterna entre los primeros días de Dean y Cindy y la crisis de su matrimonio, la película construye un contraste emocional que encuentra su mayor fortaleza en la fotografía de Andrij Parekh. Los recuerdos del enamoramiento están envueltos en colores cálidos y una cámara dinámica que transmite cercanía; en cambio, el presente apuesta por tonos fríos y una iluminación más rígida que refleja la distancia emocional entre ambos.</p>
+      <p>Esta oposición visual no es un simple recurso estético: es una manera de contar cómo una relación puede transformarse sin que sus protagonistas sepan exactamente cuándo dejaron de reconocerse.</p>
+      <p><em>Blue Valentine</em> no idealiza el amor ni necesita villanos; muestra a dos personas que, a pesar de haberse amado genuinamente, parecen incapaces de encontrar el camino de regreso.</p>
     `
   }
 ];
