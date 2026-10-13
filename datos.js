@@ -40,6 +40,26 @@ const RESENAS = [
 ];
 
 const NOTICIAS = [
+  {
+    id: 2,
+    corresponsal: "Luisa Fernández",
+    categoria: "Noticia · Televisión",
+    titulo: "Muere RJ Mitte, actor de “Breaking Bad”, a los 34 años",
+    fecha: "Octubre 2026",
+    contenido: `
+      <p><strong>El intérprete de Walter White Jr. también fue un reconocido defensor de los derechos de las personas con discapacidad.</strong></p>
+
+      <p>RJ Mitte, conocido por interpretar a Walter Jr. en la serie <em>Breaking Bad</em>, murió a los 34 años en Brownsville, Texas, según confirmaron sus representantes el pasado lunes.</p>
+
+      <p>En un comunicado, sus representantes lamentaron el fallecimiento del actor y lo recordaron como filántropo y apasionado defensor de la inclusión. Mitte, cuyo nombre completo era Roy Frank Mitte III, alcanzó reconocimiento internacional por su participación en la producción de AMC que se emitió entre 2008 y 2013. Apareció en 56 episodios de la serie y participó también en películas como <em>The Oak Room</em> y <em>The Recall</em>.</p>
+
+      <p>Nacido el 21 de agosto de 1992, fue diagnosticado con parálisis cerebral a los 3 años y construyó su carrera desafiando estereotipos y promoviendo la inclusión de personas con discapacidad. Igual que su personaje en la serie, vivía con una forma leve de esta condición. Además, dirigía The Mitte Foundation, organización familiar que apoya proyectos de educación, salud y becas en el sur de Texas.</p>
+
+      <p>Sobre las circunstancias de su muerte, reportes indican que las autoridades creen que se trató de un suicidio, aunque este dato no ha sido confirmado oficialmente por sus representantes.</p>
+
+      <p>Más allá de la pantalla, Mitte deja un legado ligado a la visibilidad y la inclusión. Su papel en <em>Breaking Bad</em> abrió una conversación sobre la discapacidad en la televisión, y su trabajo como activista y filántropo extendió ese mensaje fuera de ella. Su muerte deja un vacío entre quienes crecieron viendo la serie y entre las comunidades a las que representó.</p>
+    `
+  },
  {
     id: 1,
     categoria: "Reestreno · Clásicos",
