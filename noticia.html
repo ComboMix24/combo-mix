@@ -80,7 +80,9 @@
         <a href="noticias.html" class="noticia-back">← Volver a noticias</a>
         <span class="noticia-cat">${noticia.categoria}</span>
         <h1 class="noticia-titulo-grande">${noticia.titulo}</h1>
-        <div class="noticia-fecha-grande">${noticia.fecha}</div>
+        <div class="noticia-fecha-grande">
+  ${noticia.fecha}${noticia.corresponsal ? `· Corresponsal: <strong style="color:var(--blanco)">${noticia.corresponsal}</strong>` : ''}
+</div>
         <div class="noticia-cuerpo">${noticia.contenido || noticia.texto}</div>
       </div>`;
   }
