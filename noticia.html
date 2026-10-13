@@ -83,6 +83,9 @@
         <div class="noticia-fecha-grande">
   ${noticia.fecha}${noticia.corresponsal ? `· Corresponsal: <strong style="color:var(--blanco)">${noticia.corresponsal}</strong>` : ''}
 </div>
+
+${noticia.imagen ? `<img src="${noticia.imagen}" alt="${noticia.titulo}" style="width:100%; max-height:420px; object-fit:cover; border-radius:4px; margin-bottom:2rem; border:1px solid var(--gris-linea);"/>` : ''}
+
         <div class="noticia-cuerpo">${noticia.contenido || noticia.texto}</div>
       </div>`;
   }
