@@ -39,7 +39,30 @@ const RESENAS = [
   }
 ];
 
-const NOTICIAS = [];
+const NOTICIAS = [
+  {
+    id: "rocky-50-aniversario",
+    categoria: "Reestreno · Clásicos",
+    titulo: "Rocky: 50 años de una película que convirtió a un boxeador en leyenda",
+    resumen: "A 50 años de su estreno, la película que presentó al mundo a Rocky Balboa regresará a los cines en versión remasterizada 4K. En México, Cinemex confirmó su proyección para noviembre de 2026.",
+    fecha: "Octubre 2026",
+    imagen: "imagenes/rocky.jpg", // Asegúrate de tener una foto con este nombre o ajusta la ruta
+    contenido: `
+      <p>Hay películas que cuentan una historia y hay otras que terminan convirtiéndose en parte de la cultura popular; <em>Rocky</em> pertenece a la segunda categoría. A 50 años de su estreno, la obra que presentó al mundo a Rocky Balboa volverá a la pantalla grande.</p>
+      
+      <p>En México, Cinemex confirmó que proyectará la cinta durante noviembre de 2026, como parte de la celebración por su medio siglo de historia. El regreso representa la oportunidad de volver a escuchar la música de Bill Conti, ver a Sylvester Stallone subir las escaleras del Museo de Arte de Filadelfia y redescubrir el origen de una de las sagas deportivas más reconocibles del cine.</p>
+      
+      <h3>Rocky vuelve al cine para celebrar medio siglo de historia</h3>
+      <p>En 1976, Sylvester Stallone interpretó por primera vez a un boxeador de Filadelfia que recibe una oportunidad prácticamente imposible: enfrentarse al campeón mundial Apollo Creed. Medio siglo después, aquella entrega regresa en una versión remasterizada en 4K. En 2006 fue incorporada al National Film Registry de la Biblioteca del Congreso de EE. UU. por su valor cultural, histórico y estético.</p>
+      
+      <h3>Rocky no necesitaba ganar para convertirse en un campeón</h3>
+      <p>La grandeza de la cinta no radica únicamente en el combate final. Rocky Balboa no comienza como una superestrella, sino como un peleador de segunda categoría y cobrador de deudas. Su objetivo nunca fue proclamarse campeón a toda costa, sino demostrar que podía llegar hasta el último asalto de pie con dignidad y autoestima.</p>
+      
+      <h3>Un millón de dólares y un fenómeno mundial</h3>
+      <p>Con un modesto presupuesto de 1 millón de dólares, recaudó más de 100 millones en Estados Unidos y convirtió a Stallone en una estrella mundial. La película obtuvo 10 nominaciones al Oscar y ganó tres: Mejor película, Mejor director y Mejor edición.</p>
+    `
+  },
+];
 
 const FESTIVALES = [
   {
