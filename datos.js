@@ -46,6 +46,7 @@ const NOTICIAS = [
     categoria: "Noticia · Televisión",
     titulo: "Muere RJ Mitte, actor de “Breaking Bad”, a los 34 años",
     fecha: "Octubre 2026",
+    imagen: "imagenesrj-mitte.jpg",
     contenido: `
       <p><strong>El intérprete de Walter White Jr. también fue un reconocido defensor de los derechos de las personas con discapacidad.</strong></p>
 
@@ -69,7 +70,7 @@ const NOTICIAS = [
     resumen: "A 50 años de su estreno, la película que presentó al mundo a Rocky Balboa regresará a los cines en versión remasterizada 4K. En México, Cinemex confirmó su proyección para noviembre de 2026.",
     fecha: "Octubre 2026",
     poster: "imagenes/rocky.jpg",
-    imagen: "imagenes/rocky.jpg",
+    imagen: "imagenesrocky.jpg",
     texto: `
       <p>Hay películas que cuentan una historia y hay otras que terminan convirtiéndose en parte de la cultura popular; <em>Rocky</em> pertenece a la segunda categoría. A 50 años de su estreno, la obra que presentó al mundo a Rocky Balboa volverá a la pantalla grande.</p>
       <p>En México, Cinemex confirmó que proyectará la cinta durante noviembre de 2026, como parte de la celebración por su medio siglo de historia. El regreso representa la oportunidad de volver a escuchar la música de Bill Conti, ver a Sylvester Stallone subir las escaleras del Museo de Arte de Filadelfia y redescubrir el origen de una de las sagas deportivas más reconocibles del cine.</p>
