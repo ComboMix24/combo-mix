@@ -41,7 +41,7 @@ const RESENAS = [
 
 const NOTICIAS = [
  {
-    id: "1",
+    id: 1,
     categoria: "Reestreno · Clásicos",
     tag: "Reestreno · Clásicos",
     titulo: "Rocky: 50 años de una película que convirtió a un boxeador en leyenda",
