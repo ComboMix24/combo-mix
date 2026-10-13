@@ -197,3 +197,16 @@ footer {
     z-index: 99;
   }
 }
+/* ── ETIQUETA / BADGE DE CINES (AMARILLO CON TEXTO NEGRO) ── */
+.badge-cine {
+  background: var(--amarillo);
+  color: var(--negro);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 7px;
+  border-radius: 2px;
+  display: inline-block;
+  line-height: 1.2;
+}
