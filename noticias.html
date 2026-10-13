@@ -13,29 +13,94 @@
       border: 1.5px solid var(--gris-linea); margin-top: 40px;
     }
     .noticia-item {
-      display: grid; grid-template-columns: 48px 1fr auto;
-      align-items: center; gap: 24px; padding: 28px;
+      display: grid; 
+      grid-template-columns: 140px 1fr auto;
+      align-items: center; 
+      gap: 24px; 
+      padding: 22px 28px;
       border-bottom: 1px solid var(--gris-linea);
-      cursor: pointer; transition: background 0.2s; text-decoration: none; color: inherit;
+      cursor: pointer; 
+      transition: background 0.2s; 
+      text-decoration: none; 
+      color: inherit;
     }
     .noticia-item:last-child { border-bottom: none; }
     .noticia-item:hover { background: rgba(245,200,66,0.04); }
-    .noticia-num {
-      font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem;
-      color: var(--gris-linea); text-align: right; line-height: 1;
+
+    /* Caja de la miniatura */
+    .noticia-thumb-wrapper {
+      width: 140px;
+      height: 90px;
+      border-radius: 4px;
+      overflow: hidden;
+      background: #181818;
+      border: 1px solid var(--gris-linea);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
     }
-    .noticia-titulo { font-weight: 500; font-size: 1rem; line-height: 1.4; margin-bottom: 4px; }
-    .noticia-preview { font-size: 0.82rem; color: var(--gris); line-height: 1.5; }
-    .noticia-fecha { font-size: 0.72rem; color: var(--gris); margin-top: 6px; }
+    .noticia-thumb {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .noticia-item:hover .noticia-thumb {
+      transform: scale(1.06);
+    }
+    .noticia-thumb-vacia {
+      font-size: 1.6rem;
+      opacity: 0.5;
+    }
+
+    .noticia-titulo { 
+      font-weight: 500; 
+      font-size: 1.05rem; 
+      line-height: 1.4; 
+      margin-bottom: 6px; 
+      color: #fff;
+    }
+    .noticia-item:hover .noticia-titulo {
+      color: var(--amarillo);
+    }
+    .noticia-preview { 
+      font-size: 0.82rem; 
+      color: var(--gris); 
+      line-height: 1.5; 
+    }
+    .noticia-fecha { 
+      font-size: 0.72rem; 
+      color: var(--gris); 
+      margin-top: 8px; 
+    }
     .noticia-tag {
-      font-size: 0.65rem; font-weight: 700; text-transform: uppercase;
-      letter-spacing: 0.08em; color: var(--amarillo);
-      background: rgba(245,200,66,0.1); padding: 4px 10px; white-space: nowrap;
+      font-size: 0.65rem; 
+      font-weight: 700; 
+      text-transform: uppercase;
+      letter-spacing: 0.08em; 
+      color: var(--amarillo);
+      background: rgba(245,200,66,0.1); 
+      padding: 4px 10px; 
+      white-space: nowrap;
       align-self: flex-start;
     }
-    @media (max-width: 600px) {
-      .noticia-item { grid-template-columns: 36px 1fr; }
+
+    /* Adaptación para pantallas de celular */
+    @media (max-width: 650px) {
+      .noticia-item { 
+        grid-template-columns: 100px 1fr; 
+        gap: 16px;
+        padding: 16px;
+      }
+      .noticia-thumb-wrapper {
+        width: 100px;
+        height: 70px;
+      }
       .noticia-tag { display: none; }
+      .noticia-titulo { font-size: 0.95rem; }
+      .noticia-preview { display: none; }
     }
   </style>
 </head>
@@ -61,7 +126,7 @@
 </nav>
 
 <div class="page">
-  <div class="page-hero" style="background-image: url('imagenes/portada-noticias.jpg'); background-size: cover; background-position: center;">
+  <div class="page-hero">
     <span class="section-label">Noticias</span>
     <h1>LO QUE<br>PASA</h1>
   </div>
@@ -79,16 +144,28 @@
 <script src="nav.js"></script>
 <script>
   const list = document.getElementById('noticiasList');
-  NOTICIAS.forEach((n, i) => {
+  NOTICIAS.forEach((n) => {
+    // Limpia etiquetas HTML (como <p>, <strong>) del resumen previo
+    const textoPlano = (n.resumen || n.contenido || n.texto || '').replace(/<[^>]*>?/gm, '');
+    const preview = textoPlano.substring(0, 120);
+
+    // Si tiene foto la muestra; si una nota no tiene foto, pone una claqueta elegante
+    const fotoSrc = n.imagen || n.poster;
+    const miniaturaHtml = fotoSrc
+      ? `<img class="noticia-thumb" src="${fotoSrc}" alt="${n.titulo}"/>`
+      : `<span class="noticia-thumb-vacia">🎬</span>`;
+
     list.innerHTML += `
       <a class="noticia-item" href="noticia.html?id=${n.id}">
-        <span class="noticia-num">${String(i+1).padStart(2,'0')}</span>
+        <div class="noticia-thumb-wrapper">
+          ${miniaturaHtml}
+        </div>
         <div>
           <div class="noticia-titulo">${n.titulo}</div>
-          <div class="noticia-preview">${n.contenido.substring(0, 120)}…</div>
+          <div class="noticia-preview">${preview}…</div>
           <div class="noticia-fecha">${n.fecha}</div>
         </div>
-        <span class="noticia-tag">${n.categoria}</span>
+        <span class="noticia-tag">${n.categoria || n.tag || 'Noticia'}</span>
       </a>`;
   });
 </script>
