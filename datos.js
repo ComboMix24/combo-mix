@@ -45,7 +45,7 @@ const NOTICIAS = [
     corresponsal: "Luisa Fernández",
     categoria: "Noticia · Televisión",
     titulo: "Muere RJ Mitte, actor de “Breaking Bad”, a los 34 años",
-    fecha: "Octubre 2026",
+    fecha: "13 octubre 2026",
     imagen: "imagenes/imagenesrj-mitte.jpg",
     contenido: `
       <p><strong>El intérprete de Walter White Jr. también fue un reconocido defensor de los derechos de las personas con discapacidad.</strong></p>
@@ -68,7 +68,7 @@ const NOTICIAS = [
     tag: "Reestreno · Clásicos",
     titulo: "Rocky: 50 años de una película que convirtió a un boxeador en leyenda",
     resumen: "A 50 años de su estreno, la película que presentó al mundo a Rocky Balboa regresará a los cines en versión remasterizada 4K. En México, Cinemex confirmó su proyección para noviembre de 2026.",
-    fecha: "Octubre 2026",
+    fecha: "13 octubre 2026",
     poster: "imagenes/rocky.jpg",
     imagen: "imagenes/imagenesrocky.jpg",
     texto: `
