@@ -66,8 +66,9 @@
 <script src="nav.js"></script>
 <script>
   const params = new URLSearchParams(window.location.search);
-  const id = parseInt(params.get('id'));
-  const noticia = NOTICIAS.find(n => n.id === id);
+  const paramId = params.get('id');
+  // Busca la noticia coincidiendo ya sea como número o como texto
+  const noticia = NOTICIAS.find(n => String(n.id) === String(paramId));
   const contenido = document.getElementById('contenido');
 
   if (!noticia) {
@@ -80,7 +81,7 @@
         <span class="noticia-cat">${noticia.categoria}</span>
         <h1 class="noticia-titulo-grande">${noticia.titulo}</h1>
         <div class="noticia-fecha-grande">${noticia.fecha}</div>
-        <div class="noticia-cuerpo"><p>${noticia.contenido}</p></div>
+        <div class="noticia-cuerpo">${noticia.contenido || noticia.texto}</div>
       </div>`;
   }
 </script>
