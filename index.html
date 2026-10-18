@@ -173,17 +173,71 @@
 <script src="datos.js"></script>
 <script src="nav.js"></script>
 <script>
-  // Mostrar las 3 reseñas más recientes como destacados
   const grid = document.getElementById('destacadosGrid');
-  const estrellas = n => '★'.repeat(n) + '☆'.repeat(5 - n);
-  RESENAS.slice(0, 3).forEach(r => {
+  const estrellas = n => '★'.repeat(n || 0) + '☆'.repeat(5 - (n || 0));
+
+  const itemsDestacados = [];
+
+  // 1. Tomar la Noticia más reciente (posición 0 de NOTICIAS)
+  if (typeof NOTICIAS !== 'undefined' && NOTICIAS.length > 0) {
+    const n = NOTICIAS[0];
+    const textoPlano = (n.resumen || n.contenido || '').replace(/<[^>]*>?/gm, '');
+    itemsDestacados.push({
+      tag: `Noticia · ${n.categoria || 'Cobertura'}`,
+      titulo: n.titulo,
+      desc: textoPlano.substring(0, 110) + '…',
+      extra: n.fecha || '',
+      link: `noticia.html?id=${n.id}`,
+      boton: 'Leer nota →'
+    });
+  }
+
+  // 2. Tomar la Reseña más reciente (posición 0 de RESENAS)
+  if (typeof RESENAS !== 'undefined' && RESENAS.length > 0) {
+    const r = RESENAS[0];
+    itemsDestacados.push({
+      tag: `Reseña · ${r.genero || 'Cine'}`,
+      titulo: r.titulo,
+      desc: r.resumen || '',
+      extra: r.calificacion ? `${estrellas(r.estrellas)} ${r.calificacion}/5` : '',
+      link: `resena.html?id=${r.id}`,
+      boton: 'Leer reseña →'
+    });
+  }
+
+  // 3. Tomar Cartelera (o si no existe, la segunda reseña para no dejar huecos)
+  if (typeof CARTELERA !== 'undefined' && CARTELERA.length > 0) {
+    const c = CARTELERA[0];
+    itemsDestacados.push({
+      tag: `Cartelera · ${c.clasificacion || c.genero || 'Estreno'}`,
+      titulo: c.titulo,
+      desc: c.sinopsis || c.resumen || 'Consulta salas y horarios disponibles en la región.',
+      extra: c.horarios || c.fecha || 'En cartelera',
+      link: `cartelera.html?id=${c.id || ''}`,
+      boton: 'Ver cartelera →'
+    });
+  } else if (typeof RESENAS !== 'undefined' && RESENAS.length > 1) {
+    const r2 = RESENAS[1];
+    itemsDestacados.push({
+      tag: `Reseña · ${r2.genero || 'Cine'}`,
+      titulo: r2.titulo,
+      desc: r2.resumen || '',
+      extra: r2.calificacion ? `${estrellas(r2.estrellas)} ${r2.calificacion}/5` : '',
+      link: `resena.html?id=${r2.id}`,
+      boton: 'Leer reseña →'
+    });
+  }
+
+  // Renderizar las 3 tarjetas automáticamente en el grid
+  grid.innerHTML = '';
+  itemsDestacados.slice(0, 3).forEach(item => {
     grid.innerHTML += `
-      <a class="card-item" href="resena.html?id=${r.id}">
-        <span class="card-tag">Reseña · ${r.genero}</span>
-        <span class="card-titulo">${r.titulo}</span>
-        <p class="card-desc">${r.resumen}</p>
-        <span style="color:var(--amarillo);font-size:0.8rem">${estrellas(r.estrellas)} ${r.calificacion}/5</span>
-        <span class="card-flecha">Leer reseña →</span>
+      <a class="card-item" href="${item.link}">
+        <span class="card-tag">${item.tag}</span>
+        <span class="card-titulo">${item.titulo}</span>
+        <p class="card-desc">${item.desc}</p>
+        <span style="color:var(--amarillo);font-size:0.8rem">${item.extra}</span>
+        <span class="card-flecha">${item.boton}</span>
       </a>`;
   });
 </script>
