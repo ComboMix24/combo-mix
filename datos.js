@@ -42,9 +42,10 @@ const RESENAS = [
 const NOTICIAS = [
   {
   id: "pan-frances-torreon",
+  corresponsal: "Julio Barranco",
   titulo: "Pan Francés: Torreón festeja a un ícono de la Laguna",
   categoria: "Noticias",
-  fecha: "17 de octubre de 2026",
+  fecha: "17 de octubre 2026",
   imagen: "imagenes/pan-frances-torreon-principal.jpg",
   resumen: "Con más de veinte negocios entre loncherías y panaderías se llevó a cabo el Festival del Pan Francés con más de quince mil personas.",
   contenido: `
