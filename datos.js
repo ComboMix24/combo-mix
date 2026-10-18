@@ -41,6 +41,56 @@ const RESENAS = [
 
 const NOTICIAS = [
   {
+    id: "ideas-en-movimiento-ual-2026",
+    corresponsal: "Liz Flores",
+    categoria: "Festivales · Cine Universitario",
+    tag: "Festivales · Cine Universitario",
+    titulo: "Estudiantes de Comunicación llevan sus producciones al cine en Torreón",
+    fecha: "17 octubre 2026",
+    imagen: "imagenes/ideas-movimiento-claquetazo-inicio.jpg",
+    resumen: "Estudiantes de Comunicación y Periodismo de la UAL proyectaron sus cortometrajes en Cinépolis Cuatro Caminos tras participar en el rally de 48 horas Ideas en Movimiento.",
+    contenido: `
+      <p class="lead-paragraph">Estudiantes de Comunicación y Periodismo de la Universidad Autónoma de La Laguna proyectaron sus cortometrajes en Cinépolis Cuatro Caminos, tras participar en un rally de 48 horas de producción audiovisual.</p>
+
+      <h2 class="section-subtitle">Una competencia de tiempo contado</h2>
+      <p>Estudiantes de Comunicación y Periodismo de la Universidad Autónoma de La Laguna (UAL) presentaron sus cortometrajes el viernes 16 de octubre en Cinépolis Cuatro Caminos, como resultado de su participación en "Ideas en Movimiento", un rally de producción audiovisual que desafía a los jóvenes a crear sus propias historias desde cero solo en 48 horas.</p>
+      
+      <p>El reto comenzó el martes 13 de octubre y puso a los estudiantes frente a una experiencia de creación audiovisual bajo la presión del tiempo. Tras el proceso de producción, los proyectos llegaron a la pantalla grande.</p>
+
+      <section class="story-gallery">
+        <figure class="gallery-item">
+          <img src="imagenes/ideas-movimiento-equipo-amarillo-maquillaje.jpg" alt="Diseño de producción equipo amarillo" loading="lazy">
+          <figcaption>El diseño de producción que el equipo amarillo usó en su cortometraje 30 DE OCTUBRE. / Foto: Hiram Ramírez</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="imagenes/ideas-movimiento-equipo-blanco-camara.jpg" alt="Equipo blanco en rodaje" loading="lazy">
+          <figcaption>El equipo blanco analiza la toma de su cortometraje SÍSIFO. / Foto: Hiram Ramírez</figcaption>
+        </figure>
+      </section>
+
+      <h2 class="section-subtitle">Presentación oficial en una sala de cine</h2>
+      <p>La proyección reunió a estudiantes, padres de familia, directivos y otros integrantes de la comunidad universitaria, quienes asistieron para conocer los proyectos realizados durante esta experiencia cinematográfica. Al finalizar la exhibición, se reconoció a los tres primeros lugares, cuyos ganadores recibieron premios económicos por sus producciones.</p>
+
+      <figure class="featured-media">
+        <img src="imagenes/ideas-movimiento-equipo-blanco-primer-lugar.jpg" alt="Equipo blanco ganador" loading="lazy">
+        <figcaption>El equipo blanco fue el ganador absoluto de Ideas en Movimiento 2026. / Foto: Hiram Ramírez</figcaption>
+      </figure>
+
+      <section class="story-gallery">
+        <figure class="gallery-item">
+          <img src="imagenes/ideas-movimiento-equipo-verde-segundo-lugar.jpg" alt="Equipo verde segundo lugar" loading="lazy">
+          <figcaption>El equipo verde se lleva el segundo lugar junto a mejor guión y actuación (compartido con equipo blanco). / Foto: Hiram Ramírez</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="imagenes/ideas-movimiento-equipo-morado-tercer-lugar.jpg" alt="Equipo morado tercer lugar" loading="lazy">
+          <figcaption>El equipo morado se queda con el tercer lugar de la competencia junto a mejor sonorización y más animado. / Foto: Hiram Ramírez</figcaption>
+        </figure>
+      </section>
+
+      <p>Con 16 años de trayectoria, "Ideas en Movimiento" se ha convertido en una tradición de la UAL que brinda a los estudiantes la oportunidad de llevar sus ideas a la realidad a través de la creación de cortometrajes. El rally busca involucrar a jóvenes de distintos semestres en un mismo proceso creativo, desde la concepción de una historia hasta su realización audiovisual.</p>
+    `
+  },
+  {
   id: "pan-frances-torreon",
   corresponsal: "Julio Barranco",
   titulo: "Pan Francés: Torreón festeja a un ícono de la Laguna",
