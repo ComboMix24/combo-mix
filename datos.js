@@ -171,10 +171,20 @@ const FESTIVALES = [
   }
 ];
 
-const CARTELERA = [{ titulo: 'Street Fighter', año: 2026, genero: 'Acción', estado: 'Próximamente', poster: 'imagenes/poster-pelicula1.jpg' },
-  { titulo: 'Feliz Día de tu Muerte', año: 2017, genero: 'Terror', estado: 'Próximamente', poster: 'imagenes/poster-pelicula2.jpg' },
-  { titulo: 'Feliz Día de tu Muerte 2', año: 2019, genero: 'Terror', estado: 'Próximamente', poster: 'imagenes/poster-pelicula3.jpg' },
-  { titulo: 'El Cadáver de la Novia', año: 2005, genero: 'Animación', estado: 'Próximamente', poster: 'imagenes/poster-pelicula4.jpg' },
+const CARTELERA = [
+  // ── EN CARTELERA ──
+  { titulo: 'Street Fighter', año: 2026, genero: 'Acción', estado: 'En cartelera', poster: 'imagenes/poster-pelicula1.jpg' },
+  { titulo: 'Feliz Día de tu Muerte', año: 2017, genero: 'Reestreno · Terror', estado: 'En cartelera', poster: 'imagenes/poster-pelicula2.jpg' },
+  { titulo: 'Feliz Día de tu Muerte 2', año: 2019, genero: 'Reestreno · Terror', estado: 'En cartelera', poster: 'imagenes/poster-pelicula3.jpg' },
+  { titulo: 'El Cadáver de la Novia', año: 2005, genero: 'Reestreno · Animación', estado: 'En cartelera', poster: 'imagenes/poster-pelicula4.jpg' },
   { titulo: 'Digger', año: 2026, genero: 'Comedia Oscura', estado: 'En cartelera', poster: 'imagenes/poster-pelicula5.jpg' },
   { titulo: 'Madre Siniestra', año: 2026, genero: 'Terror', estado: 'En cartelera', poster: 'imagenes/poster-pelicula6.jpg' },
+
+  // ── PRÓXIMAMENTE ──
+  { titulo: 'Clayface', año: 2026, genero: 'Suspenso / Terror', estado: 'Próximamente', poster: 'imagenes/poster-pelicula7.jpg' },
+  { titulo: 'El Poder de la Red', año: 2026, genero: 'Drama', estado: 'Próximamente', poster: 'imagenes/poster-pelicula8.jpg' },
+  { titulo: 'Kraken: Terror en lo profundo', año: 2026, genero: 'Terror / Monstruos', estado: 'Próximamente', poster: 'imagenes/poster-pelicula9.jpg' },
+  { titulo: 'La Venganza del Charro Negro', año: 2026, genero: 'Animación / Terror', estado: 'Próximamente', poster: 'imagenes/poster-pelicula10.jpg' },
+  { titulo: 'IT', año: 2017, genero: 'Reestreno · Terror', estado: 'Próximamente', poster: 'imagenes/poster-pelicula11.jpg' },
+  { titulo: 'IT: Capítulo 2', año: 2019, genero: 'Reestreno · Terror', estado: 'Próximamente', poster: 'imagenes/poster-pelicula12.jpg' }
 ];
