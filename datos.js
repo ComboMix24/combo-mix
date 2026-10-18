@@ -41,6 +41,58 @@ const RESENAS = [
 
 const NOTICIAS = [
   {
+  id: "pan-frances-torreon",
+  titulo: "Pan Francés: Torreón festeja a un ícono de la Laguna",
+  categoria: "Noticias",
+  fecha: "17 de octubre de 2026",
+  imagen: "assets/img/noticias/pan-frances-torreon-principal.jpg",
+  resumen: "Con más de veinte negocios entre loncherías y panaderías se llevó a cabo el Festival del Pan Francés con más de quince mil personas.",
+  contenido: `
+    <p class="lead-paragraph">Con más de veinte negocios entre loncherías y panaderías se llevó a cabo el Festival del Pan Francés con un clima frío que no detuvo al público de poder disfrutar de comida, música y dinámicas.</p>
+    <h2 class="section-subtitle">La combinación para deleitar un buen platillo</h2>
+    <p>Con una temperatura rondando los 17° centígrados arrancó la tercera edición del Festival de Pan Francés en la Plaza Mayor de Torreón con la venta por parte de las diferentes loncherías que se dieron cita del lado de la C. Galeana a la altura de la Av. Matamoros.</p>
+    <section class="story-gallery">
+      <figure class="gallery-item">
+        <img src="assets/img/noticias/lonches-ordaz-fila.jpg" alt="Fila en Lonches Ordaz" loading="lazy">
+        <figcaption>Larga fila para comprar en LONCHES ORDAZ. / Foto: Julio Barranco</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="assets/img/noticias/lonches-pepes-preparacion.jpg" alt="Preparación en Lonches Pepe's" loading="lazy">
+        <figcaption>El antojo desde la preparación en LONCHES PEPE'S. / Foto: Julio Barranco</figcaption>
+      </figure>
+    </section>
+    <p>El Municipio de Torreón informó que más de quince mil personas se dieron cita para disfrutar la diversidad gastronómica con el protagonista de la noche, el pan lagunero; la variedad de opciones se hizo presente con la presencia de estas loncherías:</p>
+    <ul class="vendors-list">
+      <li>Terraza Santa María</li>
+      <li>Lonchería Betty</li>
+      <li>Don Taco</li>
+      <li>Lonches adobada y carnitas TOBY</li>
+      <li>Lonches Panchito</li>
+      <li>El Sazón de Rocío</li>
+      <li>Lili y Noa</li>
+      <li>LONCHES "LIA"</li>
+      <li>EL PAVO LOCO</li>
+      <li>LONCHES DE ADOBADA EL SORUYO</li>
+      <li>LONCHES LOS COYOTES</li>
+      <li>LONCHES ORDAZ</li>
+      <li>EL LECHON</li>
+      <li>LONCHES PIÑA</li>
+      <li>LONCHES El Buen Sabor Lagunero</li>
+      <li>SUPER LONCHES EL CHINO</li>
+      <li>SUPER LONCHES PINZAN</li>
+      <li>LONCHES PEPE'S</li>
+      <li>La Blanquita</li>
+    </ul>
+    <p>La adobada, el jamón, aguacate, cebolla, tomate, carnitas, chorizo, queso, chile, milanesa, reliquia, mole, pastor y menudo fueron de los ingredientes con los que se podía acompañar al pan francés para una buena degustación.</p>
+    <h2 class="section-subtitle">El entretenimiento que acompañó al festival</h2>
+    <p>Además de disfrutar el arte culinario representativo de la región, la gente participó en diferentes dinámicas, vieron como SUPER LONCHES EL CHINO fue el ganador a "Lonche Favorito" y también pudieron presenciar el Show de Bely y Beto junto al ritmo que pusieron Banda Callejera y Kumbia Kings (para cerrar la noche).</p>
+    <figure class="featured-media">
+      <img src="assets/img/noticias/show-bely-beto-plaza-mayor.jpg" alt="Show en Plaza Mayor" loading="lazy">
+      <figcaption>Bely y Beto arrancaron el show en la Plaza Mayor / Foto: Julio Barranco</figcaption>
+    </figure>
+  `
+},
+  {
     id: 2,
     corresponsal: "Luisa Fernández",
     categoria: "Noticia · Televisión",
