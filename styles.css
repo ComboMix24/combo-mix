@@ -210,3 +210,137 @@ footer {
   display: inline-block;
   line-height: 1.2;
 }
+/* ── DETALLE DE ARTÍCULO / NOTICIA ── */
+.article-wrapper {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 40px 5% 80px;
+}
+
+.article-header {
+  margin-bottom: 2rem;
+}
+
+.article-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  color: var(--blanco);
+  margin: 0.8rem 0;
+}
+
+.article-metadata {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--gris);
+}
+
+.article-metadata strong {
+  color: var(--amarillo);
+}
+
+.article-metadata .separator {
+  color: var(--gris-linea);
+}
+
+/* Figuras e imágenes */
+.featured-media {
+  margin: 2rem 0;
+  background: var(--negro-card);
+  border: 1px solid var(--gris-linea);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.featured-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+figcaption {
+  padding: 10px 14px;
+  font-size: 0.8rem;
+  color: var(--gris);
+  border-top: 1px solid var(--gris-linea);
+  background: var(--negro-medio);
+}
+
+/* Cuerpo de texto */
+.article-body {
+  font-size: 1.05rem;
+  color: #d1d1d1;
+  line-height: 1.75;
+}
+
+.lead-paragraph {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--blanco);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.section-subtitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  letter-spacing: 0.03em;
+  color: var(--amarillo);
+  margin: 2.5rem 0 1rem;
+}
+
+.article-body p {
+  margin-bottom: 1.25rem;
+}
+
+/* Mosaico de 2 fotos intermedias */
+.story-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem;
+  margin: 2.5rem 0;
+}
+
+.gallery-item {
+  background: var(--negro-card);
+  border: 1px solid var(--gris-linea);
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Lista de loncherías participantes */
+.vendors-list {
+  columns: 2;
+  gap: 2rem;
+  background: var(--negro-card);
+  border: 1px solid var(--gris-linea);
+  border-left: 3px solid var(--amarillo);
+  padding: 1.5rem 2rem;
+  border-radius: 4px;
+  margin: 2rem 0;
+  font-size: 0.95rem;
+  color: var(--blanco);
+  list-style-position: inside;
+}
+
+.vendors-list li {
+  margin-bottom: 0.4rem;
+}
+
+@media (max-width: 650px) {
+  .vendors-list {
+    columns: 1;
+    padding: 1.2rem;
+  }
+}
