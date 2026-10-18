@@ -45,7 +45,7 @@ const NOTICIAS = [
   titulo: "Pan Francés: Torreón festeja a un ícono de la Laguna",
   categoria: "Noticias",
   fecha: "17 de octubre de 2026",
-  imagen: "assets/img/noticias/pan-frances-torreon-principal.jpg",
+  imagen: "imagenes/pan-frances-torreon-principal.jpg",
   resumen: "Con más de veinte negocios entre loncherías y panaderías se llevó a cabo el Festival del Pan Francés con más de quince mil personas.",
   contenido: `
     <p class="lead-paragraph">Con más de veinte negocios entre loncherías y panaderías se llevó a cabo el Festival del Pan Francés con un clima frío que no detuvo al público de poder disfrutar de comida, música y dinámicas.</p>
@@ -53,11 +53,11 @@ const NOTICIAS = [
     <p>Con una temperatura rondando los 17° centígrados arrancó la tercera edición del Festival de Pan Francés en la Plaza Mayor de Torreón con la venta por parte de las diferentes loncherías que se dieron cita del lado de la C. Galeana a la altura de la Av. Matamoros.</p>
     <section class="story-gallery">
       <figure class="gallery-item">
-        <img src="assets/img/noticias/lonches-ordaz-fila.jpg" alt="Fila en Lonches Ordaz" loading="lazy">
+        <img src="imagenes/lonches-ordaz-fila.jpg" alt="Fila en Lonches Ordaz" loading="lazy">
         <figcaption>Larga fila para comprar en LONCHES ORDAZ. / Foto: Julio Barranco</figcaption>
       </figure>
       <figure class="gallery-item">
-        <img src="assets/img/noticias/lonches-pepes-preparacion.jpg" alt="Preparación en Lonches Pepe's" loading="lazy">
+        <img src="imagenes/lonches-pepes-preparacion.jpg" alt="Preparación en Lonches Pepe's" loading="lazy">
         <figcaption>El antojo desde la preparación en LONCHES PEPE'S. / Foto: Julio Barranco</figcaption>
       </figure>
     </section>
@@ -87,7 +87,7 @@ const NOTICIAS = [
     <h2 class="section-subtitle">El entretenimiento que acompañó al festival</h2>
     <p>Además de disfrutar el arte culinario representativo de la región, la gente participó en diferentes dinámicas, vieron como SUPER LONCHES EL CHINO fue el ganador a "Lonche Favorito" y también pudieron presenciar el Show de Bely y Beto junto al ritmo que pusieron Banda Callejera y Kumbia Kings (para cerrar la noche).</p>
     <figure class="featured-media">
-      <img src="assets/img/noticias/show-bely-beto-plaza-mayor.jpg" alt="Show en Plaza Mayor" loading="lazy">
+      <img src="imagenes/show-bely-beto-plaza-mayor.jpg" alt="Show en Plaza Mayor" loading="lazy">
       <figcaption>Bely y Beto arrancaron el show en la Plaza Mayor / Foto: Julio Barranco</figcaption>
     </figure>
   `
