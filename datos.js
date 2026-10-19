@@ -41,6 +41,54 @@ const RESENAS = [
 
 const NOTICIAS = [
   {
+    id: "wildwood-laika-pelicula-stop-motion",
+    titulo: "Wildwood: la película stop motion de LAIKA que tardó 16 años en hacerse",
+    categoria: "Animación",
+    autor: "Rigo Flores",
+    fecha: "19 de octubre de 2026",
+    imagen: "imagenes/wildwood-laika-pelicula-stop-motion.jpg",
+    resumen: "LAIKA Studios prepara el estreno de Wildwood, una ambiciosa película de animación dirigida por Travis Knight con 231 semanas de producción, 233 marionetas y más de 1,000 artistas y artesanos involucrados.",
+    contenido: `
+      <p class="nota-lead">En una industria cinematográfica cada vez más acelerada por la tecnología digital, LAIKA Studios apuesta por la paciencia y el trabajo artesanal con <strong>Wildwood</strong>, una película de fantasía que busca llevar la animación stop motion a nuevas dimensiones.</p>
+
+      <p>Dirigida por Travis Knight, responsable de <em>Kubo y las dos cuerdas mágicas</em>, la producción destaca por su escala y complejidad técnica. Después de años de desarrollo, la cinta llegará a los cines el 23 de octubre de 2026, con una propuesta que combina escenarios físicos, personajes hechos a mano y una aventura fantástica.</p>
+
+      <h2>Wildwood, la nueva apuesta de LAIKA por la animación stop motion</h2>
+      <p>El estudio responsable de películas como <em>Los mundos de Coraline</em> y <em>Kubo y las dos cuerdas mágicas</em> vuelve a explorar las posibilidades de una técnica que requiere construir físicamente los escenarios y personajes, para después fotografiar sus movimientos cuadro por cuadro.</p>
+
+      <h2>Una producción de 16 años y más de 1,000 artistas</h2>
+      <p>Las dimensiones de Wildwood reflejan el nivel de detalle detrás de su realización. La película requirió <strong>231 semanas de producción, 132 decorados físicos, 142,000 rostros fabricados</strong> para dar expresividad a los personajes y <strong>233 marionetas</strong> elaboradas artesanalmente.</p>
+      <p>En el proyecto participaron más de 1,000 artistas y artesanos, una muestra de la complejidad que implica crear una película de esta escala mediante animación tradicional.</p>
+
+      <figure class="nota-figura">
+        <img src="imagenes/wildwood-prue-ave-animacion.jpg" alt="Prue junto a una criatura fantástica en Wildwood">
+        <figcaption>Crédito: LAIKA Studio</figcaption>
+      </figure>
+
+      <h2>¿De qué trata Wildwood?</h2>
+      <p>La historia sigue a Prue y Curtis, dos compañeros de clase que se adentran en un bosque mágico en Portland, Oregón, para rescatar al hermano pequeño de Prue, secuestrado por una bandada de cuervos.</p>
+
+      <h3>Un bosque mágico lleno de criaturas extraordinarias</h3>
+      <p>Durante su aventura, los protagonistas descubren un territorio poblado por animales capaces de hablar, criaturas fantásticas y personajes con intenciones peligrosas.</p>
+      <p>La película adapta el libro escrito por Colin Meloy e ilustrado por Carson Ellis, trasladando su universo literario a una producción cinematográfica que apuesta por la fantasía y el detalle visual.</p>
+
+      <figure class="nota-figura">
+        <img src="imagenes/wildwood-bosque-secuestro-hermano.jpg" alt="Silueta en el bosque durante el secuestro del hermano de Prue">
+        <figcaption>Crédito: LAIKA Studio</figcaption>
+      </figure>
+
+      <h2>Travis Knight y el desafío de llevar el stop motion más lejos</h2>
+      <p>Para el director, la magnitud del proyecto exigió desarrollar nuevas herramientas y métodos de producción. La escala de los escenarios y la complejidad de las secuencias llevaron al estudio a ampliar sus capacidades técnicas para hacer realidad la película.</p>
+
+      <h2>¿Por qué Wildwood destaca dentro del cine de animación?</h2>
+      <p>El stop motion exige un proceso minucioso: cada movimiento debe prepararse físicamente y fotografiarse de manera individual para construir la ilusión de movimiento. En Wildwood, ese procedimiento se combina con una producción de gran escala, lo que convierte su realización en uno de sus principales atractivos.</p>
+
+      <h2>Wildwood llegará a los cines en octubre de 2026</h2>
+      <p>La película tiene previsto su estreno para el <strong>23 de octubre de 2026</strong>[cite: 2, 4]. Su propuesta ha recibido elogios de medios especializados, que han destacado tanto su apartado visual como su capacidad para conectar con distintas generaciones[cite: 4].</p>
+      <p>Con Wildwood, LAIKA busca reafirmar el valor de una técnica que requiere tiempo, precisión y creatividad, en una industria donde la animación digital ocupa buena parte del mercado[cite: 4]. Más que una nueva aventura fantástica, la película representa una apuesta por el cine artesanal y por demostrar que las historias construidas fotograma a fotograma todavía tienen mucho que ofrecer en la pantalla grande[cite: 4].</p>
+    `
+  },
+  {
     id: "ideas-en-movimiento-ual-2026",
     corresponsal: "Liz Flores",
     categoria: "Festivales · Cine Universitario",
