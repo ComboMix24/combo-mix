@@ -285,4 +285,5 @@ const CARTELERA = [
   { titulo: 'La Venganza del Charro Negro', año: 2026, genero: 'Animación / Terror', estado: 'Próximamente', poster: 'imagenes/poster-pelicula10.jpg' },
   { titulo: 'IT', año: 2017, genero: 'Reestreno · Terror', estado: 'Próximamente', poster: 'imagenes/poster-pelicula11.jpg' },
   { titulo: 'IT: Capítulo 2', año: 2019, genero: 'Reestreno · Terror', estado: 'Próximamente', poster: 'imagenes/poster-pelicula12.jpg' }
+  { titulo: 'Wildwood: El Bosque Salvaje', año: 2026, genero: 'Animación / Fantasía', estado: 'Próximamente', poster: 'imagenes/poster-pelicula13.jpg' },
 ];
