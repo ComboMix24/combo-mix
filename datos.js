@@ -43,8 +43,8 @@ const NOTICIAS = [
   {
     id: "wildwood-laika-pelicula-stop-motion",
     titulo: "Wildwood: la película stop motion de LAIKA que tardó 16 años en hacerse",
+    corresponsal: "Rigo Flores",
     categoria: "Animación",
-    autor: "Rigo Flores",
     fecha: "19 de octubre de 2026",
     imagen: "imagenes/wildwood-laika-pelicula-stop-motion.jpg",
     resumen: "LAIKA Studios prepara el estreno de Wildwood, una ambiciosa película de animación dirigida por Travis Knight con 231 semanas de producción, 233 marionetas y más de 1,000 artistas y artesanos involucrados.",
@@ -84,8 +84,8 @@ const NOTICIAS = [
       <p>El stop motion exige un proceso minucioso: cada movimiento debe prepararse físicamente y fotografiarse de manera individual para construir la ilusión de movimiento. En Wildwood, ese procedimiento se combina con una producción de gran escala, lo que convierte su realización en uno de sus principales atractivos.</p>
 
       <h2>Wildwood llegará a los cines en octubre de 2026</h2>
-      <p>La película tiene previsto su estreno para el <strong>23 de octubre de 2026</strong>[cite: 2, 4]. Su propuesta ha recibido elogios de medios especializados, que han destacado tanto su apartado visual como su capacidad para conectar con distintas generaciones[cite: 4].</p>
-      <p>Con Wildwood, LAIKA busca reafirmar el valor de una técnica que requiere tiempo, precisión y creatividad, en una industria donde la animación digital ocupa buena parte del mercado[cite: 4]. Más que una nueva aventura fantástica, la película representa una apuesta por el cine artesanal y por demostrar que las historias construidas fotograma a fotograma todavía tienen mucho que ofrecer en la pantalla grande[cite: 4].</p>
+      <p>La película tiene previsto su estreno para el <strong>23 de octubre de 2026</strong>. Su propuesta ha recibido elogios de medios especializados, que han destacado tanto su apartado visual como su capacidad para conectar con distintas generaciones.</p>
+      <p>Con Wildwood, LAIKA busca reafirmar el valor de una técnica que requiere tiempo, precisión y creatividad, en una industria donde la animación digital ocupa buena parte del mercado. Más que una nueva aventura fantástica, la película representa una apuesta por el cine artesanal y por demostrar que las historias construidas fotograma a fotograma todavía tienen mucho que ofrecer en la pantalla grande.</p>
     `
   },
   {
