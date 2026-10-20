@@ -247,26 +247,29 @@ footer {
 }
 
 /* Figuras e imágenes */
-.featured-media {
-  margin: 2rem 0;
-  background: var(--negro-card);
-  border: 1px solid var(--gris-linea);
-  border-radius: 4px;
-  overflow: hidden;
+.medios-destacados {
+    margin: 2rem 0;
+    background: var(--negro-card);
+    border: 1px solid var(--gris-linea);
+    border-radius: 4px;
+    overflow: hidden;
 }
 
-.featured-media img {
-  width: 100%;
-  height: auto;
-  display: block;
+.medios-destacados img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain; /* Esto evita que se recorte y muestra el póster completo */
+    background-color: var(--negro-card); /* Rellena los espacios vacíos laterales elegantemente */
+    height: auto;
+    display: block;
 }
 
 figcaption {
-  padding: 10px 14px;
-  font-size: 0.8rem;
-  color: var(--gris);
-  border-top: 1px solid var(--gris-linea);
-  background: var(--negro-medio);
+    padding: 10px 14px;
+    font-size: 0.8rem;
+    color: var(--gris);
+    border-top: 1px solid var(--gris-linea);
+    background: var(--negro-medio);
 }
 
 /* Cuerpo de texto */
