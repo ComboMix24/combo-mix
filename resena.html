@@ -100,7 +100,7 @@
     contenido.innerHTML = `
       <div class="resena-page">
         <a href="resenas.html" class="resena-back">← Volver a reseñas</a>
-        ${resena.poster ? `<img src="${resena.poster}" style="width:100%;max-height:400px;object-fit:cover;margin-bottom:2rem;"/>` : ''}
+        ${resena.poster ? `<img src="${resena.poster}" style="width:100%;max-height:450px;object-fit:contain;background-color:var(--negro-card);height:auto;display:block;margin:0 auto 2rem auto;border-radius:4px;"/>` : ''}
         <span class="resena-genero-badge">${resena.genero} · ${resena.año}</span>
         <h1 class="resena-titulo-grande">${resena.titulo}</h1>
         <div class="resena-meta">
@@ -111,6 +111,7 @@
           <div class="resena-meta-item">Director <span>${resena.director}</span></div>
           <div class="resena-meta-item">Año <span>${resena.año}</span></div>
           <div class="resena-meta-item">Género <span>${resena.genero}</span></div>
+          ${resena.corresponsal ? `<div class="resena-meta-item">Corresponsal <span>${resena.corresponsal}</span></div>` : ''}
         </div>
         <div class="resena-cuerpo">${resena.texto}</div>
       </div>`;
