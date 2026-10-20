@@ -61,6 +61,28 @@ const RESENAS = [
 
 const NOTICIAS = [
   {
+    id: 'netflix-o-sala-de-cine',
+    titulo: '¿Netflix o una sala de cine? La batalla por nuestra atención',
+    categoria: 'Opinión',
+    fecha: '20 de octubre de 2026',
+    autor: 'Denisse García',
+    corresponsal: 'Denisse García', // Por si en tu plantilla usas "autor" o "corresponsal"
+    resumen: 'Ver películas en casa ofrece comodidad, pero ir al cine brinda una experiencia colectiva insustituible. ¿Realmente compiten o se complementan?',
+    imagen: 'imagenes/netflix-cine.jpg', // Cambia a .jpg si tu archivo es JPG
+    poster: 'imagenes/netflix-cine.jpg', // Por compatibilidad si tu script usa "poster"
+    texto: `
+      <p class="lead-paragraph">Hoy en día, ver películas y series es más fácil que nunca. Gracias a las plataformas digitales, podemos disfrutar de cientos de historias desde la comodidad de nuestra casa, sin horarios ni filas. Sin embargo, ¿realmente ver una película en el sillón es lo mismo que disfrutarla en una sala de cine?</p>
+      
+      <p>Netflix se ha convertido en una de las plataformas más populares por sus series y producciones originales. No obstante, existen otras opciones como Disney+, Max y Amazon Prime Video, que ofrecen catálogos diferentes para todos los gustos. Elegir la mejor depende de lo que buscamos, aunque contratar varios servicios puede resultar costoso y hacer que pasemos más tiempo buscando qué ver que disfrutando del contenido.</p>
+      
+      <p>La principal ventaja de las plataformas es la comodidad. Podemos pausar una película, verla a cualquier hora y compartir el espacio con nuestra familia. Sin embargo, ir al cine ofrece algo distinto: una pantalla grande, un sonido envolvente y la oportunidad de compartir las emociones de una historia con otras personas. Reírse con el público, sorprenderse con una escena o comentar la película al salir son experiencias que difícilmente se reproducen de la misma manera en casa.</p>
+      
+      <p>Desde mi punto de vista, las plataformas digitales no son enemigas del cine, sino una alternativa que ha transformado nuestros hábitos de entretenimiento. Ambas opciones tienen ventajas, pero no deberían considerarse iguales. Mientras una nos ofrece comodidad y variedad, la otra nos permite salir de la rutina y vivir una experiencia colectiva.</p>
+      
+      <p>Al final, no se trata de elegir entre Netflix o una sala de cine, sino de aprender a disfrutar ambas opciones. Porque una buena película puede emocionarnos desde el sillón, pero también puede convertirse en un recuerdo especial cuando la compartimos con alguien más frente a la pantalla grande.</p>
+    `
+  },
+  {
     id: "wildwood-laika-pelicula-stop-motion",
     titulo: "Wildwood: la película stop motion de LAIKA que tardó 16 años en hacerse",
     corresponsal: "Rigo Flores",
