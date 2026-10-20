@@ -30,6 +30,7 @@ const RESENAS = [
     director: 'Alejandro González Iñárritu',
     estrellas: 4,
     calificacion: '4.5',
+    corresponsal: 'Rigo Flores',
     resumen: 'Una sátira sobre el poder y el ego de quienes creen estar por encima de las consecuencias de sus propias decisiones.',
     poster: 'imagenes/poster-digger.jpg',
     texto: `
@@ -48,6 +49,7 @@ const RESENAS = [
     director: 'Derek Cianfrance',
     estrellas: 4,
     calificacion: '4.0',
+    corresponsal: 'Rigo Flores',
     resumen: 'Un retrato crudo y honesto sobre el enamoramiento y el desgaste de una relación, protagonizado por Ryan Gosling y Michelle Williams.',
     poster: 'imagenes/poster-blue-valentine.jpg',
     texto: `
