@@ -70,8 +70,8 @@ const NOTICIAS = [
     autor: 'Luisa Fernández',
     corresponsal: 'Luisa Fernández',
     resumen: 'Convertir libros en películas es la fórmula predilecta de Hollywood, pero una comunidad de lectores no garantiza una buena cinta. ¿Realmente todas las historias necesitan una versión en pantalla grande?',
-    imagen: 'imagenes/pelis-combo.jpg',
-    poster: 'imagenes/pelis-combo.jpg',
+    imagen: 'imagenes/pelis-cmbo.jpg',
+    poster: 'imagenes/pelis-cmbo.jpg',
     texto: `
       <p class="lead-paragraph">En los últimos años, Hollywood parece haber encontrado una estrategia que difícilmente piensa abandonar: convertir libros populares en películas. Basta con entrar a redes sociales para encontrarse con el anuncio de una nueva adaptación, incluso cuando todavía no se ha estrenado la anterior. Y aunque para muchos lectores resulta emocionante ver sus historias favoritas en la pantalla, también vale la pena preguntarse si realmente todas necesitan una versión cinematográfica.</p>
       
