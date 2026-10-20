@@ -3,6 +3,26 @@
 
 const RESENAS = [  
   {
+    id: 'hocus-pocus',
+    titulo: 'Hocus Pocus',
+    genero: 'Comedia Adolescente, Fantasía',
+    año: 1993,
+    director: 'Kenny Ortega',
+    estrellas: 4,
+    calificacion: '4.0',
+    corresponsal: 'Rigo Flores',
+    resumen: 'Una aventura de brujas, hechizos y humor que, con el paso de los años, se ha ganado un lugar indispensable en las maratones de Halloween.',
+    poster: 'imagenes/poster-hocus-pocus.webp',
+    texto: `
+      <p>Hay películas que terminan convirtiéndose en una tradición, y <em>Hocus Pocus</em> (1993) es una de ellas. Bajo la dirección de Kenny Ortega, Disney construye una aventura de brujas, hechizos y humor que, con el paso de los años, se ha ganado un lugar indispensable en las maratones de Halloween.</p>
+      <p>La historia comienza en Salem, Massachusetts, en 1693, cuando las hermanas Sanderson (Winifred, Sarah y Mary) son condenadas por brujería después de arrebatarle la vida a una niña. Antes de morir, Winifred lanza una maldición que les permitirá regresar si alguien enciende la misteriosa Vela de Llama Negra. Tres siglos después, Max Dennison comete el error de encenderla y devuelve a las brujas a un mundo que ha cambiado por completo. Ahora, junto a su hermana Dani, Allison y un gato negro inmortal llamado Thackery Binx, deberá impedir que las Sanderson cumplan su siniestro propósito.</p>
+      <p>Uno de los grandes aciertos de la película está en la mitología que construye alrededor de sus personajes. La vela, el libro de hechizos, la maldición de Binx y la obsesión de las hermanas por recuperar su juventud forman un universo fantástico que se siente lo suficientemente oscuro para despertar curiosidad, pero también divertido para mantener el espíritu familiar de Disney. Además, la tragedia de Thackery y su hermana Emily aporta un trasfondo emocional que contrasta con el tono cómico de la aventura.</p>
+      <p>Las actuaciones de Bette Midler, Sarah Jessica Parker y Kathy Najimy son fundamentales para el encanto de la cinta. Cada hermana posee una personalidad perfectamente reconocible: Winifred destaca por su temperamento y teatralidad; Sarah, por su carácter seductor y despreocupado; y Mary, por su peculiar sentido del humor. Juntas forman un trío memorable que convierte cada aparición en uno de los momentos más divertidos de la película.</p>
+      <p>Aunque sus efectos visuales pueden sentirse ingenuos frente a las producciones actuales y algunos de sus conflictos siguen las convenciones del cine familiar, su ambientación, sus canciones y su combinación de comedia con elementos sobrenaturales conservan una identidad difícil de replicar.</p>
+      <p><strong>Veredicto:</strong> Hocus Pocus es mucho más que una película de brujas: es un clásico de temporada que ha sabido transformar una historia de maldiciones y magia oscura en una tradición cinematográfica. Su mitología, sus inolvidables hermanas Sanderson y la entrañable historia de Thackery Binx la convierten en una cita obligatoria cada octubre. Porque en Halloween hay disfraces, dulces y calabazas, pero la temporada no está completa hasta que alguien enciende la Vela de Llama Negra.</p>
+    `
+  },
+  {
     id: 'digger',
     titulo: 'Digger',
     genero: 'Comedia Oscura',
