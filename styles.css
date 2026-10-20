@@ -258,8 +258,8 @@ footer {
 .medios-destacados img {
     width: 100%;
     max-height: 500px;
-    object-fit: contain; /* Esto evita que se recorte y muestra el póster completo */
-    background-color: var(--negro-card); /* Rellena los espacios vacíos laterales elegantemente */
+    object-fit: contain;
+    background-color: var(--negro-card);
     height: auto;
     display: block;
 }
