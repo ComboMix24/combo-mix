@@ -247,7 +247,7 @@ footer {
 }
 
 /* Figuras e imágenes */
-.medios-destacados {
+.featured-media {
     margin: 2rem 0;
     background: var(--negro-card);
     border: 1px solid var(--gris-linea);
@@ -255,7 +255,7 @@ footer {
     overflow: hidden;
 }
 
-.medios-destacados img {
+.featured-media img {
     width: 100%;
     max-height: 500px;
     object-fit: contain;
