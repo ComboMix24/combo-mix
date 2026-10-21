@@ -63,6 +63,36 @@ const RESENAS = [
 
 const NOTICIAS = [
   {
+    id: 'nostalgia-o-falta-de-nuevas-ideas-en-el-cine',
+    titulo: '¿Nostalgia o falta de nuevas ideas en el cine?: Los clásicos vuelven a salvar la cartelera',
+    categoria: 'Opinión',
+    fecha: '20 de octubre de 2026',
+    autor: 'Liz Flores',
+    corresponsal: 'Liz Flores',
+    resumen: 'Con ciclos como La Casa del Terror de Cinemex, los reestrenos dominan la cartelera de Halloween. ¿Apostamos a la nostalgia por comodidad o porque escasea la originalidad?',
+    imagen: 'imagenes/clasicos-cartelera.jpg',
+    poster: 'imagenes/clasicos-cartelera.jpg',
+    texto: `
+      <p class="lead-paragraph">Con la llegada de Halloween, las salas de cine mexicanas vuelven a recibir historias que marcaron a distintas generaciones. Películas como <em>Carrie</em>, <em>Scream</em>, <em>El silencio de los inocentes</em>, <em>Coraline</em>, entre otras, forman parte de la propuesta especial La Casa del Terror de Cinemex, una iniciativa que invita al público a reencontrarse con algunos de los clásicos del género. Pero, más allá de la nostalgia, vale la pena preguntarnos: ¿por qué seguimos regresando a las mismas historias para sentir miedo?</p>
+      
+      <p>Es innegable que ver una película clásica en la pantalla grande tiene un atractivo especial. El sonido, la oscuridad de la sala y las reacciones del público convierten la experiencia en algo distinto a verla desde casa. Además, estas producciones demostraron que el terror no depende exclusivamente de los efectos especiales, sino también de una buena historia, personajes complejos y una atmósfera capaz de mantenernos en tensión.</p>
+      
+      <p>Sin embargo, este regreso también pone sobre la mesa una cuestión importante: ¿la industria cinematográfica está apostando por la nostalgia porque sabe que funciona o porque cada vez resulta más difícil ofrecer historias originales que conquisten al público?</p>
+      
+      <p>En los últimos años, las secuelas, los remakes y los reestrenos se han convertido en una estrategia recurrente para atraer espectadores. Recuperar películas conocidas representa una oportunidad comercial, pues el público ya tiene un vínculo emocional con ellas. El problema aparece cuando esa fórmula parece más segura que arriesgarse con nuevas propuestas. Recordar una buena película es válido, pero depender constantemente de lo que funcionó en el pasado puede limitar las oportunidades de descubrir algo diferente.</p>
+      
+      <p>Esto no significa que los clásicos hayan perdido su valor. Al contrario, volver a ver <em>Carrie</em>, por ejemplo, permite reconocer cómo el terror también puede abordar temas como el acoso, el rechazo y el aislamiento. Asimismo, <em>Scream</em> demostró que el género puede cuestionar sus propias fórmulas y jugar con las expectativas del espectador. Son películas que permanecen vigentes no solamente por sus escenas impactantes, sino por las ideas que hay detrás de ellas.</p>
+      
+      <p>Por eso, el regreso de estos títulos debería ser una oportunidad para celebrar el cine, pero también para exigir más de él. Existen nuevas generaciones de cineastas con propuestas distintas que merecen llegar a las salas y encontrar un público dispuesto a conocerlas. La nostalgia no tendría que convertirse en una barrera para la creatividad, sino en un punto de partida para construir nuevas historias.</p>
+      
+      <p>Al final, el público también forma parte de esta dinámica. Si elegimos una y otra vez lo que ya conocemos, resulta necesario preguntarnos cuánto estamos dispuestos a arriesgar para descubrir algo nuevo. Podemos disfrutar del regreso de nuestros clásicos favoritos y, al mismo tiempo, apoyar películas que todavía no tienen una historia que las respalde ni personajes que ya formen parte de nuestra memoria.</p>
+      
+      <p>Esta temporada de Halloween, mientras las salas mexicanas recuperan algunas de las películas más representativas del terror, quizá la pregunta no sea si vale la pena volver a verlas, sino qué lugar estamos dejando para las historias que todavía no conocemos.</p>
+      
+      <p>Porque el verdadero miedo para el cine no debería ser dejar de asustarnos, sino quedarse sin ideas capaces de sorprendernos.</p>
+    `
+  },
+  {
     id: 'no-todas-las-historias-necesitan-llegar-al-cine',
     titulo: 'No todas las historias necesitan llegar al cine',
     categoria: 'Opinión',
