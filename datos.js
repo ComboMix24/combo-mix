@@ -11,6 +11,7 @@ const RESENAS = [
     estrellas: 5,
     calificacion: '4.5',
     corresponsal: 'Julio Barranco',
+    resumen: 'Una sátira visceral y despiadada sobre la obsesión por la juventud y la tiranía estética de Hollywood, protagonizada por una monumental Demi Moore.',
     poster: 'imagenes/poster-sustancia.jpg',
     texto: `
       <p class="lead-paragraph">El horror corporal no es ninguna novedad en el cine y esta producción ni siquiera fue estrenada cerca de las fechas de <em>Halloween</em>, pero pocas veces una película logra transmitir una crítica tan despiadada, frenética y visualmente deslumbrante como lo hace <em>La Sustancia</em> (2024), siendo realmente una película de terror.</p>
