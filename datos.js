@@ -3,6 +3,32 @@
 
 const RESENAS = [  
   {
+    id: 'la-sustancia',
+    titulo: 'La Sustancia',
+    genero: 'Body Horror · Sátira',
+    año: 2024,
+    director: 'Coralie Fargeat',
+    estrellas: 5,
+    calificacion: '4.5',
+    corresponsal: 'Julio Barranco',
+    poster: 'imagenes/poster-sustancia.jpg',
+    texto: `
+      <p class="lead-paragraph">El horror corporal no es ninguna novedad en el cine y esta producción ni siquiera fue estrenada cerca de las fechas de <em>Halloween</em>, pero pocas veces una película logra transmitir una crítica tan despiadada, frenética y visualmente deslumbrante como lo hace <em>La Sustancia</em> (2024), siendo realmente una película de terror.</p>
+      
+      <p>Coralie Fargeat no busca pedir permiso ni ser sutil: entrega un golpe a la mesa en contra de la tiranía estética de Hollywood y el rechazo sistemático al envejecimiento femenino.</p>
+      
+      <p>La historia nos presenta a Elisabeth Sparkle (Demi Moore), una celebridad y estrella de programas de aeróbicos televisivos que, al cumplir cincuenta años, es desechada por un productor misógino y grotesco. Devastada por la pérdida de relevancia, Elisabeth recurre a un procedimiento clandestino: "La Sustancia", un suero médico que genera una versión más joven, hermosa y perfecta de sí misma llamada Sue (Margaret Qualley).</p>
+      
+      <p>La condición de este método es muy clara desde el inicio: deben alternarse siete días cada una sin excepción, porque al final, <em>ambas son una sola</em>; sin embargo, cuando la adicción a los reflectores y la arrogancia de la juventud entran en juego, el equilibrio se rompe.</p>
+      
+      <p>Lo más fascinante de la cinta es cómo de a poco va aumentando la tensión entre ambas actitudes y tendencias de una misma persona, un diseño sonoro que eleva la intensidad de cada acción, donde cada crujido de huesos o desgarre de piel resuena con un peso físico brutal que hace incomodar al espectador.</p>
+      
+      <p>A nivel actoral, Demi Moore ofrece la interpretación más valiente, vulnerable y catártica de toda su carrera cinematográfica, demostrando cómo los estándares actuales de belleza en Hollywood tienden a ser muy crueles al desplazar con facilidad lo “viejo”. A su lado, Margaret Qualley es magnética, encarnando con una energía identificable el egoísmo de la juventud; la verdadera tragedia del relato no proviene del monstruo exterior, sino del odio interno: el horror de cómo somos capaces de convertirnos en nuestros propios verdugos para encajar en expectativas inalcanzables de la sociedad, o en este caso, la industria cinematográfica.</p>
+      
+      <p>Hacia su tercer acto, la película abraza por completo la locura desatando un baño de sangre y generando una polémica de si es necesario acabar de una manera tan explícita o abrupta la película. <em>La Sustancia</em> no es una obra para sensibles; es una de las propuestas más arriesgadas, grotescas y memorables que se han proyectado en una sala de cine en mucho tiempo, una locura cinematográfica obligatoria que te deja clavado en la butaca con cada plano, actuación, sonido y trama.</p>
+    `
+  },
+  {
     id: 'hocus-pocus',
     titulo: 'Hocus Pocus',
     genero: 'Comedia Adolescente, Fantasía',
