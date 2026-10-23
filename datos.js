@@ -3,43 +3,42 @@
 
 const RESENAS = [ 
   // Agrega este objeto dentro de tu arreglo de reseñas en datos.js
-
 {
-  id: "clayface-2026",
-  titulo: "Clayface",
-  anio: 2026,
-  genero: "Terror / Acción", //[cite: 1]
-  director: "James Watkins", //[cite: 1]
-  autor: "Julio Barranco", //[cite: 1]
-  calificacion: 3, //[cite: 1]
-  totalEstrellas: 5, //[cite: 1]
-  poster: "poster-clayface.jpg",
-  sinopsis: "DC Studios explora el terror con una propuesta peculiar que funciona por sí sola, pero que acentúa la falta de conexión con el universo compartido.",
-  parrafos: [
-    "DC Studios pone en escena una nueva cinta para enriquecer la diversidad de su Universo, y logra ese cometido pero a medias con una propuesta no sólo de un villano, sino de un personaje que explora el terror dentro de una dinámica tan cambiante en estas producciones comandadas por James Gunn.", //[cite: 1]
-    
-    "Clayface (2026) demuestra que a pesar de no tener al personaje insignia de la compañía (Batman) es posible armar un largometraje interesante, aunque en este caso es peculiar porque funciona pero a la vez no.", //[cite: 1]
-    
-    "La trama nos presenta a Matt Hagen (Tom Rhys Harries), un actor que está disfrutando de su transición hacía el estrellato tras un pasado complicado; una noche se ve envuelto en una controversia con la pareja de un capo del crimen, quién le deja el rostro desfigurado a manera de venganza y destrozando prácticamente su carrera.", //[cite: 1]
-    
-    "El protagonista encuentra una forma arriesgada de recuperar su belleza facial sin saber que esos procesos biológicos a los que fue sometido lo harán perder la cordura y convertirse en un monstruo en un viaje alimentado por la venganza y la traición, que refleja muy bien a Ciudad Gótica.", //[cite: 1]
-    
-    "La desesperación mostrada por Matt en cada escena después de la tragedia son bien reforzados por un maquillaje y efectos prácticos que van mostrando de a poco su transformación hacía esa horrorosidad que caracteriza a este personaje en muchas de sus adaptaciones y material original.", //[cite: 1]
-    
-    "La Dra. Caitlin Bates (Naomi Ackie) es quien va moldeando sin percatarse del todo a la cosa en la que Hagen se va transformando, porque los cambios no son sólo físicos, su descontrol mental hace que en un principio no sea capaz de dominarse a sí mismo, sólo con la orientación de ella; los demás personajes parecen estar sólo para cumplir con el rompecabezas (deforme) que se va construyendo en torno a Clayface.", //[cite: 1]
-    
-    "Hablando sobre la peculiaridad de esta cinta, se siente muy independiente del que se supone es un universo compartido, empezando desde que este personaje ya apareció en la serie animada Creature Commandos (2024) y de quién se aclaró desde un inicio que se trataba de la misma versión que la de la cinta, sólo que en este caso el live action cuenta el origen del personaje.", //[cite: 1]
-    
-    "Este caso de sentirse muy aparte de lo que ha sucedido en todo el DC Studios hasta este momento es lo que genera discordia, desde un inicio se prometió variedad en las historias en esta restructuración, hasta el momento se ha dado pero también ha pecado mucho de la conexión que se esperaba entre proyectos al tratarse todo de uno mismo.", //[cite: 1]
-    
-    
-    "Y aquí es dónde entra el tema de Batman, es bien sabido que esta cinta de terror narra los principios de un antagonista del Caballero de la Noche, no tenerlo a él dentro de este \"caos\" en ciudad Gótica genera inconsistencia en saber cuándo se verá a este ícono de DC y también de qué tipo de decisiones se hacen al presentar la historia de esta forma.", //[cite: 2]
-    
-    "Clayface (2026) llega a ser incluso más solitaria que el Joker (2019), aunque sea en la protagonizada por Joaquin Phoenix hay referencias directas al propio lore de Batman; en la otra cinta, se le podría quitar el nombre de todo lo relacionado a ese lore y no pasa nada, sería un body horror con nombres de personajes y ciudad cualquiera.", //[cite: 2]
-    
-    "A pesar de todo esto, en la película se logra algo interesante, funciona por sí sola sin depender necesariamente de la figura que representa el Murciélago de Gótica, aunque la narrativa no sea tan compleja, sus demás aspectos como las actuaciones, maquillaje, efectos, suspenso y ambientación la hacen posicionarse como una buena cinta con ese cuestionamiento de todo lo relacionado al universo DC." //[cite: 2]
-  ]
-},
+    id: 'clayface',
+    titulo: 'Clayface',
+    genero: 'Terror · Acción',
+    año: 2026,
+    director: 'James Watkins',
+    estrellas: 3,
+    calificacion: '3.0',
+    corresponsal: 'Julio Barranco',
+    fecha: '22 de octubre de 2026',
+    resumen: 'DC Studios se adentra en el body horror con una propuesta que funciona por sí sola gracias a sus efectos prácticos y ambientación, aunque evidencia una notable desconexión con el resto de su universo compartido.',
+    poster: 'imagenes/poster-clayface.jpg',
+    texto: `
+      <p class="lead-paragraph">DC Studios pone en escena una nueva cinta para enriquecer la diversidad de su Universo, y logra ese cometido pero a medias con una propuesta no sólo de un villano, sino de un personaje que explora el terror dentro de una dinámica tan cambiante en estas producciones comandadas por James Gunn.</p>
+      
+      <p><em>Clayface</em> (2026) demuestra que a pesar de no tener al personaje insignia de la compañía (Batman) es posible armar un largometraje interesante, aunque en este caso es peculiar porque funciona pero a la vez no.</p>
+      
+      <p>La trama nos presenta a Matt Hagen (Tom Rhys Harries), un actor que está disfrutando de su transición hacía el estrellato tras un pasado complicado; una noche se ve envuelto en una controversia con la pareja de un capo del crimen, quién le deja el rostro desfigurado a manera de venganza y destrozando prácticamente su carrera.</p>
+      
+      <p>El protagonista encuentra una forma arriesgada de recuperar su belleza facial sin saber que esos procesos biológicos a los que fue sometido lo harán perder la cordura y convertirse en un monstruo en un viaje alimentado por la venganza y la traición, que refleja muy bien a Ciudad Gótica.</p>
+      
+      <p>La desesperación mostrada por Matt en cada escena después de la tragedia son bien reforzados por un maquillaje y efectos prácticos que van mostrando de a poco su transformación hacía esa horrorosidad que caracteriza a este personaje en muchas de sus adaptaciones y material original.</p>
+      
+      <p>La Dra. Caitlin Bates (Naomi Ackie) es quien va moldeando sin percatarse del todo a la cosa en la que Hagen se va transformando, porque los cambios no son sólo físicos, su descontrol mental hace que en un principio no sea capaz de dominarse a sí mismo, sólo con la orientación de ella; los demás personajes parecen estar sólo para cumplir con el rompecabezas (deforme) que se va construyendo en torno a Clayface.</p>
+      
+      <p>Hablando sobre la peculiaridad de esta cinta, se siente muy independiente del que se supone es un universo compartido, empezando desde que este personaje ya apareció en la serie animada <em>Creature Commandos</em> (2024) y de quién se aclaró desde un inicio que se trataba de la misma versión que la de la cinta, sólo que en este caso el live action cuenta el origen del personaje.</p>
+      
+      <p>Este caso de sentirse muy aparte de lo que ha sucedido en todo el DC Studios hasta este momento es lo que genera discordia, desde un inicio se prometió variedad en las historias en esta restructuración, hasta el momento se ha dado pero también ha pecado mucho de la conexión que se esperaba entre proyectos al tratarse todo de uno mismo.</p>
+      
+      <p>Y aquí es dónde entra el tema de Batman, es bien sabido que esta cinta de terror narra los principios de un antagonista del Caballero de la Noche, no tenerlo a él dentro de este "caos" en ciudad Gótica genera inconsistencia en saber cuándo se verá a este ícono de DC y también de qué tipo de decisiones se hacen al presentar la historia de esta forma.</p>
+      
+      <p><em>Clayface</em> (2026) llega a ser incluso más solitaria que el <em>Joker</em> (2019), aunque sea en la protagonizada por Joaquin Phoenix hay referencias directas al propio lore de Batman; en la otra cinta, se le podría quitar el nombre de todo lo relacionado a ese lore y no pasa nada, sería un body horror con nombres de personajes y ciudad cualquiera.</p>
+      
+      <p>A pesar de todo esto, en la película se logra algo interesante, funciona por sí sola sin depender necesariamente de la figura que representa el Murciélago de Gótica, aunque la narrativa no sea tan compleja, sus demás aspectos como las actuaciones, maquillaje, efectos, suspenso y ambientación la hacen posicionarse como una buena cinta con ese cuestionamiento de todo lo relacionado al universo DC.</p>
+    `
+  },
   {
     id: 'the-drama',
     titulo: 'The Drama',
