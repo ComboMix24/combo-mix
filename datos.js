@@ -151,6 +151,42 @@ const RESENAS = [
 
 const NOTICIAS = [
   {
+    id: 'dc-studios-variedad-sin-rumbo-o-universo-cohesivo',
+    titulo: 'DC Studios: ¿Variedad sin rumbo o un universo cohesivo?',
+    categoria: 'Opinión',
+    fecha: '26 de octubre 2026',
+    autor: 'Julio Barranco',
+    corresponsal: 'Julio Barranco',
+    resumen: 'Tras el estreno de Clayface y el arranque de Dioses y Monstruos, el nuevo universo de James Gunn y Peter Safran divide opiniones entre la variedad de sus historias y la falta de cohesión en sus proyectos.',
+    imagen: 'imagenes/dcstudios-universo.jpg',
+    poster: 'imagenes/dcstudios-universo.jpg',
+    texto: `
+      <p class="lead-paragraph">Tras el reciente estreno de <em>Clayface</em>, el universo de DC que están dirigiendo James Gunn y Peter Safran va cumpliendo con lo que prometieron de darle una mayor variedad a las historias sin sentir esa fuerte necesidad de ver todo para entender por qué está todo situado en la misma narrativa, pero este mismo aspecto es el que genera dudas en torno a las películas y series.</p>
+      
+      <p>En general el listón de calidad de todas las producciones es positivo, al menos de las tres series y las tres cintas hasta el momento se han mantenido en un nivel que tanto habían pedido los fans desde hace años pero ¿a qué costo?</p>
+      
+      <p>Una de las cosas que pretendían los presidentes ejecutivos era la de separar o no intentar comparar de primeras todo su trabajo con lo hecho por Zack Snyder y demás involucrados en el antiguo DCEU.</p>
+      
+      <p>Entonces empezar prometiendo un Capítulo 1 llamado "Dioses y Monstruos" con proyectos que poco tenían que ver con lo mencionado anteriormente para poder presentar una variedad de personajes e historias que aún no habían sido contadas fue algo que había que dejar al tiempo poner las cosas en su lugar.</p>
+      
+      <p>Con todo lo que ha salido por parte de DC Studios de manera oficial desde <em>Creature Commandos</em> (2024) genera cuestión en si todo esto forma parte de una misma narrativa o historia, es verdad que en algunos proyectos hay personajes o menciones directas a eventos de otras producciones, no se ve un panorama claro de hacia dónde quieren llegar con lo que se ha puesto sobre la mesa.</p>
+      
+      <p>El personaje de Rick Flag Sr. aparece en <em>Creature Commandos</em>, <em>Superman</em> y <em>Peacemaker</em> (segunda temporada) con un cambio de personalidad algo cuestionable entre cada proyecto.[cite: 1] Otros que tienen participación en diferentes proyectos son Guy Gardner y Clayface, el primero en la cinta protagonizada por David Corenswet y la serie de <em>Lanterns</em> (2026); mientras el monstruo sale en la ya mencionada serie animada y su cinta de origen.</p>
+      
+      <p>En esos casos simplemente ayudan a conectar este universo pero con lo visto hasta ahora, cada uno se siente muy independiente por sí solo, salvo <em>Superman</em> que se siente una visualización de esta historia llena de superpersonas, las demás pareciera que se sirven aparte.</p>
+      
+      <p>Otro factor importante en la construcción de un lugar donde todos convergen es la ausencia de sus pilares importantes, nombres como los de Batman, Wonder Woman, Flash o Aquaman han sido muy sonados ya que la Justice League es un ente de suma importancia en la historia de DC, en este caso existe una Justice Gang, pero se siente la falta de los principales protagonistas.</p>
+      
+      <p>Más allá de que la alineación de este grupo de héroes pueda variar, su falta se nota y se seguirá esperando a ver en qué momento son introducidos.[cite: 2] Un claro ejemplo de esto es el Caballero de la Noche, quien tiene todo un tema de por medio ya que no se sabe cuál actor le dará vida o si cumplirán el sueño de unir al de Robert Pattinson al canon de esta historia.</p>
+      
+      <p>La clasificación de los proyectos es otro de los factores por los que se hace difícil seguir la continuidad y que el propio universo tenga mayor audiencia o éxito; de los seis productos sólo dos de ellos son aptos para todo público, cerrando más a la audiencia que de verdad puede seguir este universo en su totalidad.</p>
+      
+      <p>Con todo lo mencionado tampoco digo que hagan una copia de Marvel Studios, está bien tomar un rumbo distinto al de los vecinos del otro Estudio pero se deben considerar más cosas para consolidar una saga de proyectos como en este caso el único que lo ha sabido hacer son los encabezados por Kevin Feige.</p>
+      
+      <p>Con la adquisición de Warner por parte de Paramount, ojalá respeten y refuercen el rumbo que lleva este universo hasta el momento para por fin llevar al estrellato a íconos de las historietas que tanto han esperado su momento.</p>
+    `
+  },
+  {
     id: 'ramayana-el-nacimiento-de-una-leyenda-estreno',
     titulo: "'Ramayana: El nacimiento de una leyenda': Llega a las salas una de las superproducciones más ambiciosas del cine indio",
     categoria: 'Noticias',
