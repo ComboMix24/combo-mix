@@ -151,6 +151,32 @@ const RESENAS = [
 
 const NOTICIAS = [
   {
+    id: 'las-imperdibles-leyendas-anima-estudios-dia-de-muertos',
+    titulo: 'Las imperdibles: Las leyendas de Ánima Estudios en vísperas del Día de Muertos',
+    categoria: 'Especiales',
+    fecha: '26 de octubre de 2026',
+    autor: 'Mario Ramírez',
+    corresponsal: 'Mario Ramírez',
+    resumen: 'De La Leyenda de la Nahuala a La Venganza del Charro Negro, repasamos la icónica saga animada de Ánima Estudios que se convirtió en una tradición imperdible para el Día de Muertos.',
+    imagen: 'imagenes/charro-leyenda.jpg',
+    poster: 'imagenes/charro-leyenda.jpg',
+    texto: `
+      <p class="lead-paragraph">En el mes de octubre es normal ver películas relacionadas con la época del Halloween o el Día de Muertos, fechas imperdibles para cuando las hojas empiezan a caer en nuestro entorno. Pero para los que somos fanáticos de la fantasía, del terror o del misterio, no podemos dejar de lado la gran saga de películas que nos compartió el estudio que le dio vida al Chavo animado al principio de los años 2000: estamos hablando de Ánima Estudios y su famosa serie de películas donde nos cuentan las principales leyendas que unen a nuestro país.</p>
+      
+      <h3>¿Quiénes son los responsables de Ánima Estudios?</h3>
+      
+      <p>Ánima Estudios nació en el año 2002 en la Ciudad de México bajo la dirección de Fernando de Fuentes, José C. García de Letona y Federico. Su mayor característica ha sido ofrecer productos animados en 2D con la implementación de CGI, llegando a contar con más de 23 largometrajes y 9 series de animación donde superan los 500 episodios.</p>
+      
+      <p>Con el más reciente estreno de <em>La Venganza del Charro Negro</em>, el estudio anunció que no ha cerrado de manera definitiva, sino que han realizado una pausa y reestructuración dentro de sus oficinas.</p>
+      
+      <h3>Una tradición que perdura</h3>
+      
+      <p>Volviendo al punto más interesante, con el estreno de <em>La Leyenda de la Nahuala</em> la mayoría de los mexicanos adoptaron la tradición de recordar siempre esta maravillosa saga que desarrolla las mayores leyendas que tiene nuestro país. Comenzando desde la Nahuala hasta sus producciones más recientes, como <em>La leyenda de los chaneques</em> y <em>La venganza del Charro Negro</em>.</p>
+      
+      <p>Una saga que se ha convertido en un clásico del cine animado mexicano y que con el regreso de su mayor antagonista, el Charro Negro, promete darle un cierre digno a una historia que nos ha venido acompañando desde muy pequeños y que sigue sorprendiendo a propios y extraños.</p>
+    `
+  },
+  {
     id: 'dc-studios-variedad-sin-rumbo-o-universo-cohesivo',
     titulo: 'DC Studios: ¿Variedad sin rumbo o un universo cohesivo?',
     categoria: 'Opinión',
