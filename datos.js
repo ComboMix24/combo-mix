@@ -158,8 +158,8 @@ const NOTICIAS = [
     autor: 'Lizbeth Flores',
     corresponsal: 'Lizbeth Flores',
     resumen: "Considerada por muchos como 'La Odisea' de Bollywood, la cinta cuenta con un presupuesto de 500 millones de dólares para su saga, música de Hans Zimmer y efectos visuales de los creadores de 'Dune'.",
-    imagen: 'imagenes/ramayana-estreno.jpg',
-    poster: 'imagenes/ramayana-estreno.jpg',
+    imagen: 'imagenes/rayanama-estreno.jpg',
+    poster: 'imagenes/rayanama-estreno.jpg',
     texto: `
       <p class="lead-paragraph">El próximo 6 de noviembre, los cines acogerán el estreno de <em>Ramayana: El nacimiento de una leyenda</em>, una de las producciones más épicas y colosales del cine indio reciente. La película, calificada por muchos como la 'Odisea' de Bollywood, traslada a la gran pantalla el histórico poema sánscrito compuesto entre el 400 a. C. y el 400 d. C., uno de los pilares culturales y religiosos clave del hinduismo.</p>
       
