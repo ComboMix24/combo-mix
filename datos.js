@@ -151,6 +151,42 @@ const RESENAS = [
 
 const NOTICIAS = [
   {
+    id: 'ramayana-el-nacimiento-de-una-leyenda-estreno',
+    titulo: "'Ramayana: El nacimiento de una leyenda': Llega a las salas una de las superproducciones más ambiciosas del cine indio",
+    categoria: 'Noticias',
+    fecha: '26 de octubre de 2026',
+    autor: 'Lizbeth Flores',
+    corresponsal: 'Lizbeth Flores',
+    resumen: "Considerada por muchos como 'La Odisea' de Bollywood, la cinta cuenta con un presupuesto de 500 millones de dólares para su saga, música de Hans Zimmer y efectos visuales de los creadores de 'Dune'.",
+    imagen: 'imagenes/ramayana-estreno.jpg',
+    poster: 'imagenes/ramayana-estreno.jpg',
+    texto: `
+      <p class="lead-paragraph">El próximo 6 de noviembre, los cines acogerán el estreno de <em>Ramayana: El nacimiento de una leyenda</em>, una de las producciones más épicas y colosales del cine indio reciente. La película, calificada por muchos como la 'Odisea' de Bollywood, traslada a la gran pantalla el histórico poema sánscrito compuesto entre el 400 a. C. y el 400 d. C., uno de los pilares culturales y religiosos clave del hinduismo.</p>
+      
+      <p>Dirigida por Nitesh Tiwari (<em>Bawaal</em>), esta nueva versión de acción real que sucede a la clásica adaptación de animación lanzada entre 1992 y 1993 busca llevar el relato a una escala gigantesca sin perder la esencia del cine de Bollywood, integrando espectaculares números musicales con tecnología de nivel internacional.</p>
+      
+      <h3>Una producción monumental</h3>
+      
+      <p>El proyecto no escatima en recursos. Concebido como una saga de dos películas, cuenta con un presupuesto total anunciado de aproximadamente 500 millones de dólares.</p>
+      
+      <p>Entre sus elementos técnicos más destacados se encuentran:</p>
+      
+      <ul>
+        <li><strong>Efectos visuales:</strong> A cargo del estudio DNEG, ganador de ocho premios Óscar y responsable de la parte visual de títulos como <em>Dune</em>, <em>Interstellar</em> o <em>Blade Runner 2049</em>. Se calcula que la obra contiene más de 2.500 planos con efectos especiales.</li>
+        <li><strong>Banda sonora:</strong> Compuesta por el célebre músico Hans Zimmer.</li>
+        <li><strong>Equipo humano:</strong> Un despliegue de más de 10.000 profesionales de todo el mundo.</li>
+      </ul>
+      
+      <p>"Es una epopeya de proporciones colosales, con una enorme profundidad en sus personajes, mucha emoción y un espectáculo visual impresionante. Tiene algo para todo el mundo", afirmó el productor de la cinta, Namit Malhotra, en un clip exclusivo.</p>
+      
+      <h3>Una historia universal para todo el público</h3>
+      
+      <p>A pesar de adaptar un texto religioso e histórico antiguo, su equipo enfatiza que la película no requerirá de conocimientos previos para ser disfrutada. Según su director, <em>Ramayana</em> aborda temas universales: "Hay una gran trama entre un padre y un hijo, una historia de superación y una historia de amor muy valiente", con la que espectadores de cualquier parte del planeta podrán identificarse.</p>
+      
+      <p>A la espera de las críticas oficiales, las primeras reacciones tras sus pases de exhibición iniciales han elogiado con entusiasmo el diseño de personajes y criaturas, los escenarios monumentales y la ambiciosa construcción de su universo visual.</p>
+    `
+  },
+  {
     id: 'nostalgia-o-falta-de-nuevas-ideas-en-el-cine',
     titulo: '¿Nostalgia o falta de nuevas ideas en el cine?: Los clásicos vuelven a salvar la cartelera',
     categoria: 'Opinión',
