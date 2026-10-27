@@ -151,6 +151,40 @@ const RESENAS = [
 
 const NOTICIAS = [
   {
+    id: 'avengers-doomsday-entre-rumores-y-expectativas',
+    titulo: 'Avengers Doomsday: Entre rumores y expectativas',
+    categoria: 'Opinión',
+    fecha: '26 de octubre de 2026',
+    autor: 'Julio Barranco',
+    corresponsal: 'Julio Barranco',
+    resumen: 'A menos de dos meses de su estreno, la conversación en torno a Avengers Doomsday se divide entre filtraciones, el regreso de figuras clásicas y el reto de cerrar casi 20 años de historia de Marvel Studios.',
+    imagen: 'imagenes/avengers-doomsday.jpg',
+    poster: 'imagenes/avengers-doomsday.jpg',
+    texto: `
+      <p class="lead-paragraph">En aquella San Diego Comic-Con del 2024 donde Marvel Studios presentó a Robert Downey Jr. como Doctor Doom y el plan para cerrar la Saga del Multiverso se ve poco lejano, pero aún recordamos cuando en la convención de 2022 anunciaron <em>Avengers The Kang Dynasty</em> (el plan original).</p>
+      
+      <p>A pesar de esto y con el reestreno de <em>Avengers: Endgame</em> en cines, la sensación de vivir el fenómeno de los Vengadores está aquí tras casi ocho años sin ver un evento crossover de esta magnitud; cuando no sabíamos cuánto faltaba para ver de nueva ocasión a los héroes reunidos en pantalla, ahora la espera es de prácticamente menos de mes y medio.</p>
+      
+      <p>La cercanía empieza a generar conversación muy dividida acerca de lo que veremos en diciembre, pero a estas alturas de la situación, la presencia de filtraciones y rumores por saber lo que sucederá en este magno evento sobran.</p>
+      
+      <h3>Secretismo y teorías en redes sociales</h3>
+      
+      <p>Esta práctica que se lleva a cabo en redes sociales con los insiders y creadores de contenido que difunden diariamente supuesta información acerca de la trama de la película es bien sabido el secretismo que ha manejado la cinta desde su anuncio, ya que el gancho principal fue traer de vuelta a una figura como Robert Downey Jr. para después presentar el regreso del elenco de los X-Men de la primera trilogía.</p>
+      
+      <p>Tras esto, no ha habido más avances oficiales que den indicios o confirmen la cantidad tan grande de personajes que se barajan para salir en esta entrega de Avengers, siendo este el principal debate en redes. No haré mención de ninguno de estos por posible spoiler, pero no cabe duda que los grandes personajes de sagas de Marvel a lo largo de la historia en cine y televisión han sido muy comentados a lo largo de todo este camino a <em>Doomsday</em>.</p>
+      
+      <p>Hay que aclarar una cosa: ninguna de estas apariciones suena descabellada si nos basamos en que tanto esta producción como la de <em>Avengers: Secret Wars</em> (que promete ser algo mucho más grande que su antecesora) abarcan todo el tema del multiverso y parece darán conclusión no sólo a casi veinte años de Marvel Studios en las salas, también poco más de treinta de la propia franquicia en la industria cinematográfica con una diversidad de historias y versiones en las adaptaciones.</p>
+      
+      <h3>Expectativas ante el desenlace del multiverso</h3>
+      
+      <p>Entonces, hasta la comentada trama filtrada va tomando forma con los avances oficiales según los internautas, pero algunos tal vez no se han puesto a pensar que todo lo que se ha mostrado hasta el momento pertenece a una parte muy específica de la película, y aún a tener en cuenta si algunas de esas tomas o montajes no resultan ser falsos debido a cómo se suele manejar Marvel con este tipo de productos.</p>
+      
+      <p>Las dos horas con cuarenta y cinco minutos que durará esta entrega parecen poco debido a la cantidad de cosas por explicar o "arreglar" tras estos años de saga tan incomprendidos en muchas de sus películas y series, pero aún así habrá que esperar a verla para poder juzgarla bien, junto a su conclusión <em>Secret Wars</em>.</p>
+      
+      <p>Todo esto engloba lo que se está viviendo día con día con respecto a este fenómeno; sólo queda esperar para ver cómo Marvel decidió llevar a cabo todo este desorden con tantos personajes en pantalla a menos de dos meses para que llegue a todo el mundo.</p>
+    `
+  },
+  {
     id: 'guillermo-del-toro-alfonso-cuaron-festival-de-morelia-2026',
     titulo: 'Guillermo del Toro, Alfonso Cuarón y nuevas voces del cine mexicano marcan el Festival de Morelia 2026',
     categoria: 'Festivales',
