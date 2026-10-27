@@ -158,8 +158,8 @@ const NOTICIAS = [
     autor: 'Julio Barranco',
     corresponsal: 'Julio Barranco',
     resumen: 'A menos de dos meses de su estreno, la conversación en torno a Avengers Doomsday se divide entre filtraciones, el regreso de figuras clásicas y el reto de cerrar casi 20 años de historia de Marvel Studios.',
-    imagen: 'imagenes/avengers-doomsday.jpg',
-    poster: 'imagenes/avengers-doomsday.jpg',
+    imagen: 'imagenes/avengers-rumores.jpg',
+    poster: 'imagenes/avengers-rumores.jpg',
     texto: `
       <p class="lead-paragraph">En aquella San Diego Comic-Con del 2024 donde Marvel Studios presentó a Robert Downey Jr. como Doctor Doom y el plan para cerrar la Saga del Multiverso se ve poco lejano, pero aún recordamos cuando en la convención de 2022 anunciaron <em>Avengers The Kang Dynasty</em> (el plan original).</p>
       
