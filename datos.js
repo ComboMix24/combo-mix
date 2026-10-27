@@ -151,6 +151,46 @@ const RESENAS = [
 
 const NOTICIAS = [
   {
+    id: 'guillermo-del-toro-alfonso-cuaron-festival-de-morelia-2026',
+    titulo: 'Guillermo del Toro, Alfonso Cuarón y nuevas voces del cine mexicano marcan el Festival de Morelia 2026',
+    categoria: 'Festivales',
+    fecha: '26 de octubre de 2026',
+    autor: 'Luisa Fernández',
+    corresponsal: 'Luisa Fernández',
+    resumen: 'La 24.ª edición del Festival Internacional de Cine de Morelia reunió a reconocidos cineastas, estrenos nacionales e internacionales y producciones que destacaron durante diez días de actividades.',
+    imagen: 'imagenes/cine-morelia.jpg',
+    poster: 'imagenes/cine-morelia.jpg',
+    texto: `
+      <p class="lead-paragraph">El Festival Internacional de Cine de Morelia (FICM) concluyó su 24.ª edición después de diez días de proyecciones, alfombras rojas, encuentros con cineastas y premiaciones que reunieron a figuras reconocidas de la industria cinematográfica y nuevos talentos del cine mexicano.</p>
+      
+      <p>Celebrado del 16 al 25 de octubre, el encuentro contó con la participación de directores como Guillermo del Toro, Alfonso Cuarón, Juan Antonio Bayona y James Gray, además de actores como Gael García Bernal, Diego Calva, Demián Bichir y Diego Boneta.</p>
+      
+      <p>La inauguración estuvo a cargo de <em>Campeón gabacho</em>, película dirigida por Jonás Cuarón, quien asistió acompañado de su padre, el cineasta Alfonso Cuarón, productor del largometraje. Su presentación marcó el inicio de una programación que combinó producciones mexicanas con propuestas cinematográficas internacionales.</p>
+      
+      <h3>Celebración y reflexión con Guillermo del Toro</h3>
+      
+      <p>Uno de los momentos más emotivos ocurrió durante la participación de Guillermo del Toro, quien regresó al festival para celebrar el vigésimo aniversario de <em>El laberinto del fauno</em>, película que tuvo una proyección especial en su versión restaurada.</p>
+      
+      <p>Durante una clase magistral, el director reflexionó sobre los desafíos de las nuevas generaciones, el proceso creativo y la importancia del fracaso en la formación de los artistas. Su intervención también llamó la atención cuando se mostró conmovido al hablar sobre el mundo que las generaciones adultas están dejando a los jóvenes.</p>
+      
+      <p>La programación incluyó otras producciones como <em>Paper Tiger</em>, presentada por James Gray; <em>Hombre al agua</em>, de Gael García Bernal; <em>Heil Jupiter!</em>, de Carlos Reygadas; y <em>Club Kid</em>, de Jordan Firstman, con la participación del actor mexicano Diego Calva.</p>
+      
+      <p>También se presentaron <em>Killing Castro</em>, con Diego Boneta, y el documental <em>Mujer santuario</em>, acompañado por Demián Bichir, ampliando la variedad de historias y géneros que formaron parte del encuentro.</p>
+      
+      <h3>Impulso al talento nacional y palmarés</h3>
+      
+      <p>Sin embargo, más allá de las figuras reconocidas, el festival mantuvo su objetivo de impulsar a nuevas generaciones de cineastas a través de sus competencias de largometraje, documental y cortometraje mexicano.</p>
+      
+      <p>Entre las producciones más destacadas estuvo <em>Seis meses en el edificio rosa con azul</em>, de Bruno Santamaría Razo, que obtuvo el Ojo a Mejor Largometraje Mexicano y el Premio del Público en ficción nacional, convirtiéndose en una de las grandes ganadoras de esta edición.</p>
+      
+      <p>Por su parte, <em>Forensita</em>, de Pablo Vaca, recibió el reconocimiento a Mejor Largometraje Documental Mexicano, mientras que Nicolás Pereda obtuvo el premio a Mejor Dirección por <em>Lo demás es ruido</em>, producción que también le dio a Teresa Sánchez el reconocimiento a Mejor Actriz.</p>
+      
+      <p>Los cortometrajes también tuvieron un espacio importante en la premiación: <em>Cuerda manual</em>, de Gustavo Obregón, ganó en ficción; <em>Voces del bosque</em>, de Teresa Camou y Arturo López Barrera, en documental; y <em>Cuna de lobas</em>, de Emilia Schettino Bustamante, en animación.</p>
+      
+      <p>Con estos reconocimientos, el Festival Internacional de Cine de Morelia cerró una edición que combinó la presencia de grandes nombres del cine con el impulso a nuevas propuestas cinematográficas, consolidando su papel como uno de los principales espacios de exhibición y reconocimiento para el cine mexicano.</p>
+    `
+  },
+  {
     id: 'las-imperdibles-leyendas-anima-estudios-dia-de-muertos',
     titulo: 'Las imperdibles: Las leyendas de Ánima Estudios en vísperas del Día de Muertos',
     categoria: 'Especiales',
