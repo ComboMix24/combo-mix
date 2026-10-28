@@ -8,10 +8,11 @@ const RESENAS = [
     año: 2009,
     genero: 'Romance · Comedia',
     director: 'Marc Webb',
+    estrellas: 4,
+    calificacion: '4.0',
     corresponsal: 'Julio Barranco',
     fecha: '27 de octubre de 2026',
     resumen: 'Una mirada honesta sobre la idealización, las expectativas y el choque entre Tom y Summer en una relación que nunca prometió ser un cuento de hadas.',
-    estrellas: 4,
     poster: 'imagenes/poster-summer.jpg',
     texto: `
       <p class="lead-paragraph">Los más intensos se refieren a ella como una historia de terror por la profundidad de la historia en momentos casi crudos de la realidad en una relación más que compleja, incluso la cinta avisa desde un inicio "Esta es la historia de un chico que conoce una chica. Pero debes saber de antemano: esta no es una historia de amor"; sin grandes efectos o un presupuesto abrumador logra atrapar con una narrativa e interpretaciones bien llevadas en esos quinientos días con ella.</p>
