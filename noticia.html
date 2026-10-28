@@ -62,9 +62,27 @@
   <span class="footer-copy">© 2026 Combo Mix · Proyecto escolar · Todos los derechos reservados</span>
 </footer>
 
+<!-- Librerías oficiales de Firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+
 <script src="datos.js"></script>
 <script src="nav.js"></script>
 <script>
+  // ── CONFIGURACIÓN DE FIREBASE ──
+  const firebaseConfig = {
+    apiKey: "AIzaSyBumMPRO-LPLQYjlit5x_SmWMD46sUEjck",
+    authDomain: "combo-mix-667a3.firebaseapp.com",
+    projectId: "combo-mix-667a3",
+    storageBucket: "combo-mix-667a3.firebasestorage.app",
+    messagingSenderId: "162717962081",
+    appId: "1:162717962081:web:7180d4df13d1377d2e3f20"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+
+  // ── RENDERIZADO DE LA PÁGINA ──
   const params = new URLSearchParams(window.location.search);
   const paramId = params.get('id');
   const noticia = NOTICIAS.find(n => String(n.id) === String(paramId));
@@ -114,79 +132,111 @@
 
       </div>`;
 
-      inicializarInteraccion(paramId);
+    inicializarInteraccion(paramId);
   }
 
-  let liked = false;
-  const baseLikes = 0;
+  // ── SINCRONIZACIÓN EN TIEMPO REAL (NOTICIAS EN FIRESTORE) ──
 
   function inicializarInteraccion(noticiaId) {
-    const storageLikeKey = 'combo_noticia_like_' + noticiaId;
-    const storageCommentsKey = 'combo_noticia_comments_' + noticiaId;
+    const idLimpio = String(noticiaId);
+    const docRef = db.collection('noticias').doc(idLimpio);
 
-    liked = localStorage.getItem(storageLikeKey) === 'true';
+    // 1. Escuchar Likes globales en tiempo real
+    docRef.onSnapshot((doc) => {
+      const data = doc.data();
+      const count = (data && data.likes) ? Math.max(0, data.likes) : 0;
+      const likeCountEl = document.getElementById('likeCount');
+      if (likeCountEl) likeCountEl.textContent = count;
+    });
+
+    // Estado visual del botón en este dispositivo
+    const userLikeKey = 'combo_noticia_user_liked_' + idLimpio;
+    const userDioLike = localStorage.getItem(userLikeKey) === 'true';
     const likeBtn = document.getElementById('likeBtn');
-    const likeCountEl = document.getElementById('likeCount');
-    if (liked && likeBtn) {
-      likeBtn.classList.add('liked');
-      likeCountEl.textContent = baseLikes + 1;
-    } else if (likeCountEl) {
-      likeCountEl.textContent = baseLikes;
-    }
+    if (userDioLike && likeBtn) likeBtn.classList.add('liked');
 
-    const guardados = JSON.parse(localStorage.getItem(storageCommentsKey)) || [];
-    const countEl = document.getElementById('commentsCount');
-    if (countEl) countEl.textContent = guardados.length;
+    // 2. Escuchar Comentarios globales en tiempo real
+    docRef.collection('comentarios').orderBy('timestamp', 'desc').onSnapshot((snapshot) => {
+      const countEl = document.getElementById('commentsCount');
+      const list = document.getElementById('commentsList');
 
-    guardados.forEach(c => {
-      insertarComentarioEnDOM(c.autor, c.texto, c.fecha);
+      if (countEl) countEl.textContent = snapshot.size;
+      if (!list) return;
+
+      list.innerHTML = '';
+      snapshot.forEach((doc) => {
+        const c = doc.data();
+        insertarComentarioEnDOM(c.autor, c.texto, c.fecha);
+      });
+    }, (error) => {
+      console.error("Error al escuchar comentarios de noticia:", error);
     });
   }
 
-  function toggleLike(noticiaId) {
-    const storageLikeKey = 'combo_noticia_like_' + noticiaId;
-    liked = !liked;
-    localStorage.setItem(storageLikeKey, liked);
+  async function toggleLike(noticiaId) {
+    const idLimpio = String(noticiaId);
+    const userLikeKey = 'combo_noticia_user_liked_' + idLimpio;
+    let userDioLike = localStorage.getItem(userLikeKey) === 'true';
 
+    const docRef = db.collection('noticias').doc(idLimpio);
     const likeBtn = document.getElementById('likeBtn');
-    const likeCountEl = document.getElementById('likeCount');
-    if (liked) {
-      likeBtn.classList.add('liked');
-      likeCountEl.textContent = baseLikes + 1;
+
+    if (!userDioLike) {
+      userDioLike = true;
+      localStorage.setItem(userLikeKey, 'true');
+      if (likeBtn) likeBtn.classList.add('liked');
+
+      await docRef.set({
+        likes: firebase.firestore.FieldValue.increment(1)
+      }, { merge: true });
     } else {
-      likeBtn.classList.remove('liked');
-      likeCountEl.textContent = baseLikes;
+      userDioLike = false;
+      localStorage.setItem(userLikeKey, 'false');
+      if (likeBtn) likeBtn.classList.remove('liked');
+
+      await docRef.set({
+        likes: firebase.firestore.FieldValue.increment(-1)
+      }, { merge: true });
     }
   }
 
-  function agregarComentario(event, noticiaId) {
+  async function agregarComentario(event, noticiaId) {
     event.preventDefault();
-    const storageCommentsKey = 'combo_noticia_comments_' + noticiaId;
+    const idLimpio = String(noticiaId);
     const autorInput = document.getElementById('authorInput');
     const comentarioInput = document.getElementById('commentInput');
 
-    const nuevoComentario = {
-      autor: autorInput.value.trim(),
-      texto: comentarioInput.value.trim(),
-      fecha: 'Hace un momento'
-    };
+    const nombre = autorInput.value.trim() || 'Anónimo';
+    const texto = comentarioInput.value.trim();
 
-    const guardados = JSON.parse(localStorage.getItem(storageCommentsKey)) || [];
-    guardados.unshift(nuevoComentario);
-    localStorage.setItem(storageCommentsKey, JSON.stringify(guardados));
+    if (!texto) return;
 
-    insertarComentarioEnDOM(nuevoComentario.autor, nuevoComentario.texto, nuevoComentario.fecha, true);
+    const ahora = new Date();
+    const opciones = { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' };
+    const fechaTexto = ahora.toLocaleDateString('es-MX', opciones);
 
-    const countEl = document.getElementById('commentsCount');
-    if (countEl) countEl.textContent = guardados.length;
+    try {
+      await db.collection('noticias').doc(idLimpio).collection('comentarios').add({
+        autor: nombre,
+        texto: texto,
+        fecha: fechaTexto,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+      });
 
-    autorInput.value = '';
-    comentarioInput.value = '';
+      autorInput.value = '';
+      comentarioInput.value = '';
+    } catch (e) {
+      console.error("Error al publicar en Firebase:", e);
+      alert("Hubo un problema al enviar el comentario.");
+    }
   }
 
-  function insertarComentarioEnDOM(autor, texto, fecha, alInicio = false) {
+  function insertarComentarioEnDOM(autor, texto, fecha) {
     const list = document.getElementById('commentsList');
-    const inicial = autor.charAt(0).toUpperCase();
+    if (!list) return;
+
+    const nombreSeguro = String(autor || 'Anónimo');
+    const inicial = nombreSeguro.charAt(0).toUpperCase() || '?';
 
     const item = document.createElement('div');
     item.className = 'comment-item';
@@ -194,18 +244,14 @@
       <div class="comment-avatar">${inicial}</div>
       <div class="comment-content">
         <div class="comment-header">
-          <strong class="comment-author">${autor}</strong>
-          <span class="comment-date">${fecha}</span>
+          <strong class="comment-author">${nombreSeguro}</strong>
+          <span class="comment-date">${fecha || 'Hace un momento'}</span>
         </div>
         <p class="comment-text">${texto}</p>
       </div>
     `;
 
-    if (alInicio) {
-      list.prepend(item);
-    } else {
-      list.appendChild(item);
-    }
+    list.appendChild(item);
   }
 </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "7366e73724d844448a984ce2a6128988"}'></script><!-- End Cloudflare Web Analytics -->
