@@ -111,6 +111,16 @@ const RESENAS = [
     texto: `
       <p class="lead-paragraph"><em>The Drama</em> prometía bastante desde que se reveló su póster: reunir en pantalla a Robert Pattinson y Zendaya bajo la dirección y guion de Kristoffer Borgli generaba enormes expectativas sobre la historia que veríamos. Y sin duda alguna: ¡vaya drama el que nos entregan!</p>
       
+      <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 25px 0; border-radius: 8px;">
+  <iframe 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+    src="https://www.youtube.com/embed/qEoeAMEXkfk" 
+    title="Tráiler The Drama" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+</div>
+      
       <p>La película nos introduce a Emma Harwood (Zendaya) y Charlie Thompson (Robert Pattinson), una pareja que vive una etapa de ensueño a una semana de celebrar su boda. Sin embargo, lo que parecía una relación sólida se desmorona durante una cena entre amigos cuando Rachel, una amistad en común, revela eventos del pasado que fracturan la confianza y desatan un severo dilema moral: ¿realmente se debe juzgar a alguien por lo que pensó o planeó en el pasado?</p>
       
       <p>La premisa resulta sumamente interesante al poner a prueba la estabilidad de la pareja. Ante la presión, Emma confiesa haber contemplado en su juventud un plan turbio que jamás llegó a ejecutar; no obstante, Charlie se obsesiona con el tema, temiendo que esa sombra del pasado resurja justo en su boda. Las dudas y la insistencia carcomen poco a poco la relación, exponiendo la hipocresía de ambos y poniendo al espectador en una encrucijada donde resulta difícil elegir un bando.</p>
