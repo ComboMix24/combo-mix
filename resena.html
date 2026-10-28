@@ -147,7 +147,7 @@
   }
 
   let liked = false;
-  const baseLikes = 14;
+  const baseLikes = 0;
 
   function inicializarInteraccion(resenaId) {
     const storageLikeKey = 'combo_like_' + resenaId;
@@ -163,7 +163,7 @@
 
     const guardados = JSON.parse(localStorage.getItem(storageCommentsKey)) || [];
     const countEl = document.getElementById('commentsCount');
-    if (countEl) countEl.textContent = 2 + guardados.length;
+    if (countEl) countEl.textContent = guardados.length;
 
     guardados.forEach(c => {
       insertarComentarioEnDOM(c.autor, c.texto, c.fecha);
@@ -205,7 +205,7 @@
     insertarComentarioEnDOM(nuevoComentario.autor, nuevoComentario.texto, nuevoComentario.fecha, true);
 
     const countEl = document.getElementById('commentsCount');
-    if (countEl) countEl.textContent = 2 + guardados.length;
+    if (countEl) countEl.textContent = guardados.length;
 
     autorInput.value = '';
     comentarioInput.value = '';
