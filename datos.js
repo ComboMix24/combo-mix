@@ -2,7 +2,42 @@
 // Para agregar contenido nuevo, solo edita estos arrays.
 
 const RESENAS = [ 
-  // Agrega este objeto dentro de tu arreglo de reseñas en datos.js
+  {
+  id: 'la-familia-del-futuro',
+  titulo: 'La Familia del Futuro',
+  genero: 'Infantil · Comedia',
+  año: 2007,
+  director: 'Stephen J. Anderson',
+  estrellas: 4,
+  calificacion: '4.0',
+  corresponsal: 'Julio Barranco',
+  fecha: '27 de octubre de 2026',
+  resumen: 'A través de una narrativa directa y conmovedora, Disney entrega una cinta que trasciende la etiqueta infantil con un poderoso mensaje sobre soltar el pasado y caminar hacia el futuro.',
+  poster: 'imagenes/poster-robinsons.jpg',
+  texto: `
+    <p class="lead-paragraph">Disney tuvo una época en la que sus estrenos en la gran pantalla no eran rentables pero se trataba de un producto distinto y que a pesar de tener esa etiqueta de "para niños", a los más longevos también les deja un gran mensaje al analizarla desde un punto de vista más experimentado en la vida; parece que es mera nostalgia de aquellos que la veían por el canal Disney XD pero en verdad se trata de un gran acierto.</p>
+    
+    <p>Lewis es un niño abandonado por su madre que está fascinado por todo el tema de la ciencia, de hecho las parejas que han intentando adoptarlo no lo ven como alguien normal debido a su gran intelecto y gusto por algo que un niño generalmente no sigue a esa edad. Un día decide hacer un invento que puede poner imagen a momentos de la vida personal con el simple hecho de recordarlos, aclarando que siempre ha querido responder a por qué su progenitora lo dejó ese día.</p>
+    
+    <p>Este niño vive junto con otro llamado Goob, al que nunca dejó dormir por estar a toda hora armando su "memoria de scanner". Su trabajó sale mal en una feria de ciencias donde termina conociendo a Wilbur Robinson, alguien que viene del futuro para arreglar un error suyo que podría poner en riesgo su destino.</p>
+    
+    <p>Aquí otro personaje importante es el del sombrero, esta misteriosa persona busca a toda costa vengarse de Lewis, quien por cierto es trasladado al futuro y queda sorprendido de absolutamente todo, especialmente de la familia Robinson, ya que es algo que siempre ha buscado este niño.</p>
+    
+    <p>Resulta que después de un altercado, el del sombrero captura al protagonista y le cuenta la verdad, el es Goob pero del futuro que por culpa de nunca dejarlo descansar, perdió un partido importante de beisbol y decidió echar culpa de todo a Lewis en vez de aceptar cualquier otra cosa, incluso se declara que la familia Robinson es en realidad la de Lewis y que Wilbur es su hijo.</p>
+    
+    <p>Aquí el propio sombrero tiene su venganza ya que fue un invento que Lewis de adulto rechazó y lo dejó en el olvido por peligroso, esa es la motivación de Goob junto a la del sombrero pero el futuro cambia en favor al sombrero, admitiendo su error el compañero del protagonista y él enfrentan la situación para solventarlo.</p>
+    
+    <p>Todo parece resuelto pero un momento crucial de la trama es que Wilbur le prometió a Lewis llevarlo a conocer a su madre, estando en ese momento, el protagonista a punto de interferir en el día que su madre lo abandonó, decide no hacerlo y cumplir con la moraleja que la cinta estuvo recalcando en todo momento.</p>
+    
+    <p>"Te enfocaste en lo malo, cuando solo tenías que dejar ir el pasado y caminar hacia el futuro", es lo que hace Lewis para continuar con su vida, en la feria de ciencias todo sale bien y es dónde conoce a una pareja que lo ve como un niño con grandes sueños y lo adoptan para empezar así ese camino al que está destinado como alguien exitoso.</p>
+    
+    <p>La historia es clara, directa y enfocada en transmitir ese poderoso mensaje de dejar ir el pasado, no enfrascarse en él para poder tener la suficiente fuerza de voluntad para seguir el camino y caminar hacía el futuro ante los obstáculos que presenta la vida; hay que disfrutar esos momentos que son los que maravillan, haciendo valorar la vida porque sólo es una.</p>
+    
+    <p>El dilema de Lewis por conocer a su madre, junto a esa razón de haberlo dejado "a su suerte" es lo que la cinta retrata para dejar en claro por qué es importante seguir adelante, claro no se refieren a olvidar el pasado, al final del día es lo que nos construye como personas pero se debe reconocer no como una carga sino como la travesía que se ha llevado hasta el momento y continuar hacía ese gran futuro que espera.</p>
+    
+    <p>Y este es otro ejemplo de por qué un buen guion hace que una cinta sea valorada y tenga mejor vigencia con el paso del tiempo, <em>La Familia del Futuro</em> (2007) es la ejemplificación perfecta de que sin tantos reflectores se sostiene por sí sóla como una gran producción.</p>
+  `
+},
 {
     id: 'clayface',
     titulo: 'Clayface',
