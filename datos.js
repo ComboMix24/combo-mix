@@ -359,7 +359,7 @@ const NOTICIAS = [
 
     <p><small><strong>Nota metodológica:</strong> CANACINE advierte que sus cifras pueden diferir de las publicadas por el Instituto Mexicano de Cinematografía (IMCINE) debido a diferencias en los criterios metodológicos.</small></p>
   `
-}
+},
   {
   id: 'jumanji-mundo-abierto-estreno-navidad',
   titulo: '‘Jumanji: Mundo abierto’ llegará a los cines en Navidad con una nueva aventura',
