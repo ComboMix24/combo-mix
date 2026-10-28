@@ -214,10 +214,24 @@ const RESENAS = [
     resumen: 'Una sátira sobre el poder y el ego de quienes creen estar por encima de las consecuencias de sus propias decisiones.',
     poster: 'imagenes/poster-digger.jpg',
     texto: `
-      <p>¿Qué sucede cuando el hombre que provoca una catástrofe se convence de que también es el único capaz de salvar a la humanidad? En <em>Digger</em> (2026), Alejandro González Iñárritu reúne su mirada provocadora con la presencia de Tom Cruise para construir una sátira sobre el poder, la ambición y el ego de quienes creen estar por encima de las consecuencias de sus propias decisiones.</p>
+      <p class="lead-paragraph">¿Qué sucede cuando el hombre que provoca una catástrofe se convence de que también es el único capaz de salvar a la humanidad? En <em>Digger</em> (2026), Alejandro González Iñárritu reúne su mirada provocadora con la presencia de Tom Cruise para construir una sátira sobre el poder, la ambición y el ego de quienes creen estar por encima de las consecuencias de sus propias decisiones.</p>
+
+<div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 25px 0; border-radius: 8px;">
+  <iframe 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+    src="https://www.youtube.com/embed/9K9asB1KKtE" 
+    title="Tráiler Digger" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+</div>
+      
       <p>La película sigue a Digger Rockwell, un magnate petrolero que, después de desencadenar un desastre de proporciones globales, emprende una desesperada misión para demostrar que es el salvador del mundo. Su narrativa deliberadamente extravagante y su humor incómodo pueden resultar tan fascinantes como agotadores; la película no busca complacer al espectador, sino provocarlo.</p>
+      
       <p>Tom Cruise se aleja de la figura heroica que ha definido buena parte de su carrera para entregar una interpretación que exige una transformación física considerable: cabello canoso, abdomen prominente, prótesis faciales. Cruise no solamente modifica su rostro, utiliza su cuerpo para construir un personaje que parece ocupar demasiado espacio, incluso cuando intenta controlar el caos que él mismo ha provocado.</p>
+      
       <p>La fotografía de Emmanuel Lubezki, filmada íntegramente en VistaVision, aporta una dimensión visual ambiciosa. Iñárritu convierte el espectáculo en parte de su discurso: detrás de la extravagancia existe una crítica a quienes confunden su poder con la capacidad de decidir el destino de los demás.</p>
+      
       <p>No obstante, esa ambición también juega en su contra. La sátira puede sentirse demasiado insistente y su narrativa, por momentos, parece más interesada en exhibir sus propias ideas que en desarrollar un recorrido emocional equilibrado.</p>
     `
   },
