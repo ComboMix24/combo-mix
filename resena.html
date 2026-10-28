@@ -84,9 +84,9 @@
 <script>
   const params = new URLSearchParams(window.location.search);
   const id = params.get('id');
-  const resena = RESENAS.find(r => r.id === id);
+  const resena = RESENAS.find(r => String(r.id) === String(id));
   const contenido = document.getElementById('contenido');
-  const estrellas = n => '★'.repeat(n) + '☆'.repeat(5 - n);
+  const estrellas = n => '★'.repeat(Number(n) || 0) + '☆'.repeat(Math.max(0, 5 - (Number(n) || 0)));
 
   if (!resena) {
     contenido.innerHTML = `
@@ -97,17 +97,19 @@
       </div>`;
   } else {
     document.title = `${resena.titulo} — Combo Mix`;
+    const notaCalificacion = resena.calificacion || resena.estrellas || 0;
+
     contenido.innerHTML = `
       <div class="resena-page">
         <a href="resenas.html" class="resena-back">← Volver a reseñas</a>
-        ${resena.poster ? `<img src="${resena.poster}" style="width:100%;max-height:450px;object-fit:contain;background-color:var(--negro-card);height:auto;display:block;margin:0 auto 2rem auto;border-radius:4px;"/>` : ''}
+        ${resena.poster ? `<img src="${resena.poster}" alt="${resena.titulo}" style="width:100%;max-height:450px;object-fit:contain;background-color:var(--negro-card);height:auto;display:block;margin:0 auto 2rem auto;border-radius:4px;"/>` : ''}
         <span class="resena-genero-badge">${resena.genero} · ${resena.año}</span>
         <h1 class="resena-titulo-grande">${resena.titulo}</h1>
         <div class="resena-meta">
           <div>
             <span class="stars-grande">${estrellas(resena.estrellas)}</span>
           </div>
-          <span class="resena-calificacion">${resena.calificacion}<span style="font-size:1rem;color:var(--gris)">/5</span></span>
+          <span class="resena-calificacion">${notaCalificacion}<span style="font-size:1rem;color:var(--gris)">/5</span></span>
           <div class="resena-meta-item">Director <span>${resena.director}</span></div>
           <div class="resena-meta-item">Año <span>${resena.año}</span></div>
           <div class="resena-meta-item">Género <span>${resena.genero}</span></div>
@@ -115,7 +117,7 @@
         </div>
         <div class="resena-cuerpo">${resena.texto}</div>
 
-       <!-- SECCIÓN DE INTERACCIÓN: LIKES Y COMENTARIOS -->
+        <!-- SECCIÓN DE INTERACCIÓN: LIKES Y COMENTARIOS -->
         <section class="interaction-container">
           <div class="like-section">
             <button id="likeBtn" class="like-button" onclick="toggleLike('${id}')">
@@ -136,69 +138,102 @@
               <button type="submit" class="submit-comment-btn">Publicar comentario</button>
             </form>
 
-            <!-- Lista vacía esperando comentarios reales -->
             <div id="commentsList" class="comments-list"></div>
           </div>
         </section>
 
       </div>`;
 
-      inicializarInteraccion(id);
+    inicializarInteraccion(id);
   }
 
-  let liked = false;
-  const baseLikes = 0;
-
   function inicializarInteraccion(resenaId) {
-    const storageLikeKey = 'combo_like_' + resenaId;
-    const storageCommentsKey = 'combo_comments_' + resenaId;
+    const idLimpio = String(resenaId);
+    const countKey = 'combo_resena_likes_count_' + idLimpio;
+    const userLikeKey = 'combo_resena_user_liked_' + idLimpio;
+    const storageCommentsKey = 'combo_comments_' + idLimpio;
 
-    liked = localStorage.getItem(storageLikeKey) === 'true';
+    // Likes acumulativos
+    const totalLikes = parseInt(localStorage.getItem(countKey)) || 0;
+    const userDioLike = localStorage.getItem(userLikeKey) === 'true';
     const likeBtn = document.getElementById('likeBtn');
     const likeCountEl = document.getElementById('likeCount');
-    if (liked && likeBtn) {
-      likeBtn.classList.add('liked');
-      likeCountEl.textContent = baseLikes + 1;
+
+    if (likeCountEl) likeCountEl.textContent = totalLikes;
+    if (userDioLike && likeBtn) likeBtn.classList.add('liked');
+
+    // Comentarios con protección contra errores
+    try {
+      const guardados = JSON.parse(localStorage.getItem(storageCommentsKey)) || [];
+      const countEl = document.getElementById('commentsCount');
+      if (countEl) countEl.textContent = guardados.length;
+
+      const list = document.getElementById('commentsList');
+      if (list) list.innerHTML = '';
+
+      guardados.forEach(c => {
+        if (c && c.texto) {
+          insertarComentarioEnDOM(c.autor || 'Anónimo', c.texto, c.fecha || 'Reciente');
+        }
+      });
+    } catch (e) {
+      console.error('Error cargando comentarios:', e);
     }
-
-    const guardados = JSON.parse(localStorage.getItem(storageCommentsKey)) || [];
-    const countEl = document.getElementById('commentsCount');
-    if (countEl) countEl.textContent = guardados.length;
-
-    guardados.forEach(c => {
-      insertarComentarioEnDOM(c.autor, c.texto, c.fecha);
-    });
   }
 
   function toggleLike(resenaId) {
-    const storageLikeKey = 'combo_like_' + resenaId;
-    liked = !liked;
-    localStorage.setItem(storageLikeKey, liked);
+    const idLimpio = String(resenaId);
+    const countKey = 'combo_resena_likes_count_' + idLimpio;
+    const userLikeKey = 'combo_resena_user_liked_' + idLimpio;
+
+    let totalLikes = parseInt(localStorage.getItem(countKey)) || 0;
+    let userDioLike = localStorage.getItem(userLikeKey) === 'true';
 
     const likeBtn = document.getElementById('likeBtn');
     const likeCountEl = document.getElementById('likeCount');
-    if (liked) {
-      likeBtn.classList.add('liked');
-      likeCountEl.textContent = baseLikes + 1;
+
+    if (!userDioLike) {
+      totalLikes++;
+      userDioLike = true;
+      if (likeBtn) likeBtn.classList.add('liked');
     } else {
-      likeBtn.classList.remove('liked');
-      likeCountEl.textContent = baseLikes;
+      totalLikes = Math.max(0, totalLikes - 1);
+      userDioLike = false;
+      if (likeBtn) likeBtn.classList.remove('liked');
     }
+
+    localStorage.setItem(countKey, totalLikes);
+    localStorage.setItem(userLikeKey, userDioLike);
+
+    if (likeCountEl) likeCountEl.textContent = totalLikes;
   }
 
   function agregarComentario(event, resenaId) {
     event.preventDefault();
-    const storageCommentsKey = 'combo_comments_' + resenaId;
+    const idLimpio = String(resenaId);
+    const storageCommentsKey = 'combo_comments_' + idLimpio;
     const autorInput = document.getElementById('authorInput');
     const comentarioInput = document.getElementById('commentInput');
 
+    const nombre = autorInput.value.trim() || 'Anónimo';
+    const texto = comentarioInput.value.trim();
+
+    if (!texto) return;
+
     const nuevoComentario = {
-      autor: autorInput.value.trim(),
-      texto: comentarioInput.value.trim(),
+      autor: nombre,
+      texto: texto,
       fecha: 'Hace un momento'
     };
 
-    const guardados = JSON.parse(localStorage.getItem(storageCommentsKey)) || [];
+    let guardados = [];
+    try {
+      guardados = JSON.parse(localStorage.getItem(storageCommentsKey)) || [];
+      if (!Array.isArray(guardados)) guardados = [];
+    } catch (e) {
+      guardados = [];
+    }
+
     guardados.unshift(nuevoComentario);
     localStorage.setItem(storageCommentsKey, JSON.stringify(guardados));
 
@@ -213,7 +248,10 @@
 
   function insertarComentarioEnDOM(autor, texto, fecha, alInicio = false) {
     const list = document.getElementById('commentsList');
-    const inicial = autor.charAt(0).toUpperCase();
+    if (!list) return;
+
+    const nombreSeguro = String(autor || 'Anónimo');
+    const inicial = nombreSeguro.charAt(0).toUpperCase() || '?';
 
     const item = document.createElement('div');
     item.className = 'comment-item';
@@ -221,8 +259,8 @@
       <div class="comment-avatar">${inicial}</div>
       <div class="comment-content">
         <div class="comment-header">
-          <strong class="comment-author">${autor}</strong>
-          <span class="comment-date">${fecha}</span>
+          <strong class="comment-author">${nombreSeguro}</strong>
+          <span class="comment-date">${fecha || 'Hace un momento'}</span>
         </div>
         <p class="comment-text">${texto}</p>
       </div>
