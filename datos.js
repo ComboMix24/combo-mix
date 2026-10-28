@@ -758,18 +758,20 @@ const FESTIVALES = [
 
 const CARTELERA = [
   // ── EN CARTELERA ──
-  { titulo: 'Street Fighter', año: 2026, genero: 'Acción', estado: 'En cartelera', poster: 'imagenes/poster-pelicula1.jpg' },
-  { titulo: 'Feliz Día de tu Muerte', año: 2017, genero: 'Reestreno · Terror', estado: 'En cartelera', poster: 'imagenes/poster-pelicula2.jpg' },
-  { titulo: 'Feliz Día de tu Muerte 2', año: 2019, genero: 'Reestreno · Terror', estado: 'En cartelera', poster: 'imagenes/poster-pelicula3.jpg' },
-  { titulo: 'El Cadáver de la Novia', año: 2005, genero: 'Reestreno · Animación', estado: 'En cartelera', poster: 'imagenes/poster-pelicula4.jpg' },
-  { titulo: 'Digger', año: 2026, genero: 'Comedia Oscura', estado: 'En cartelera', poster: 'imagenes/poster-pelicula5.jpg' },
-  { titulo: 'Madre Siniestra', año: 2026, genero: 'Terror', estado: 'En cartelera', poster: 'imagenes/poster-pelicula6.jpg' },
   { titulo: 'Clayface', año: 2026, genero: 'Suspenso / Terror', estado: 'En cartelera', poster: 'imagenes/poster-pelicula7.jpg' },
   { titulo: 'El Poder de la Red', año: 2026, genero: 'Drama', estado: 'En cartelera', poster: 'imagenes/poster-pelicula8.jpg' },
   { titulo: 'Kraken: Terror en lo profundo', año: 2026, genero: 'Terror / Monstruos', estado: 'En cartelera', poster: 'imagenes/poster-pelicula9.jpg' },
   { titulo: 'La Venganza del Charro Negro', año: 2026, genero: 'Animación / Terror', estado: 'En cartelera', poster: 'imagenes/poster-pelicula10.jpg' },
+  { titulo: 'Street Fighter', año: 2026, genero: 'Acción', estado: 'En cartelera', poster: 'imagenes/poster-pelicula1.jpg' },
+  { titulo: 'El Cadáver de la Novia', año: 2005, genero: 'Reestreno · Animación', estado: 'En cartelera', poster: 'imagenes/poster-pelicula4.jpg' },
+  { titulo: 'Digger', año: 2026, genero: 'Comedia Oscura', estado: 'En cartelera', poster: 'imagenes/poster-pelicula5.jpg' },
+  { titulo: 'Madre Siniestra', año: 2026, genero: 'Terror', estado: 'En cartelera', poster: 'imagenes/poster-pelicula6.jpg' },
 
   // ── PRÓXIMAMENTE ──
+  { titulo: 'Ciudad de Muertos', año: 2026, genero: 'Terror · Suspenso', estado: 'Próximamente', poster: 'imagenes/poster-muertos.jpg' },
+  { titulo: 'Sensatez y Sentimiento', año: 1995, genero: 'Reestreno · Drama', estado: 'Próximamente', poster: 'imagenes/poster-sentimiento.jpg' },
+  { titulo: 'Entrega al Límite', año: 2026, genero: 'Acción · Thriller', estado: 'Próximamente', poster: 'imagenes/poster-limite.jpg' },
+  { titulo: 'Campeón Gabacho', año: 2026, genero: 'Drama · Comedia', estado: 'Próximamente', poster: 'imagenes/poster-gabacho.jpg' },
   { titulo: 'IT', año: 2017, genero: 'Reestreno · Terror', estado: 'Próximamente', poster: 'imagenes/poster-pelicula11.jpg' },
   { titulo: 'IT: Capítulo 2', año: 2019, genero: 'Reestreno · Terror', estado: 'Próximamente', poster: 'imagenes/poster-pelicula12.jpg' },
   { titulo: 'Wildwood: El Bosque Salvaje', año: 2026, genero: 'Animación / Fantasía', estado: 'Próximamente', poster: 'imagenes/poster-pelicula13.jpg' },
