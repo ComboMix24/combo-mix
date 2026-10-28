@@ -79,9 +79,27 @@
   <span class="footer-copy">© 2026 Combo Mix · Proyecto escolar · Todos los derechos reservados</span>
 </footer>
 
+<!-- Librerías oficiales de Firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+
 <script src="datos.js"></script>
 <script src="nav.js"></script>
 <script>
+  // ── CONFIGURACIÓN DE FIREBASE ──
+  const firebaseConfig = {
+    apiKey: "AIzaSyBumMPRO-LPLQYjlit5x_SmWMD46sUEjck",
+    authDomain: "combo-mix-667a3.firebaseapp.com",
+    projectId: "combo-mix-667a3",
+    storageBucket: "combo-mix-667a3.firebasestorage.app",
+    messagingSenderId: "162717962081",
+    appId: "1:162717962081:web:7180d4df13d1377d2e3f20"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+
+  // ── RENDERIZADO DE LA PÁGINA ──
   const params = new URLSearchParams(window.location.search);
   const id = params.get('id');
   const resena = RESENAS.find(r => String(r.id) === String(id));
@@ -147,71 +165,74 @@
     inicializarInteraccion(id);
   }
 
+  // ── SINCRONIZACIÓN EN TIEMPO REAL CON FIRESTORE ──
+
   function inicializarInteraccion(resenaId) {
     const idLimpio = String(resenaId);
-    const countKey = 'combo_resena_likes_count_' + idLimpio;
-    const userLikeKey = 'combo_resena_user_liked_' + idLimpio;
-    const storageCommentsKey = 'combo_comments_' + idLimpio;
+    const docRef = db.collection('resenas').doc(idLimpio);
 
-    // Likes acumulativos
-    const totalLikes = parseInt(localStorage.getItem(countKey)) || 0;
+    // 1. Escuchar Likes globales en tiempo real
+    docRef.onSnapshot((doc) => {
+      const data = doc.data();
+      const count = (data && data.likes) ? Math.max(0, data.likes) : 0;
+      const likeCountEl = document.getElementById('likeCount');
+      if (likeCountEl) likeCountEl.textContent = count;
+    });
+
+    // Estado visual del botón en este dispositivo
+    const userLikeKey = 'combo_resena_user_liked_' + idLimpio;
     const userDioLike = localStorage.getItem(userLikeKey) === 'true';
     const likeBtn = document.getElementById('likeBtn');
-    const likeCountEl = document.getElementById('likeCount');
-
-    if (likeCountEl) likeCountEl.textContent = totalLikes;
     if (userDioLike && likeBtn) likeBtn.classList.add('liked');
 
-    // Comentarios con protección contra errores
-    try {
-      const guardados = JSON.parse(localStorage.getItem(storageCommentsKey)) || [];
+    // 2. Escuchar Comentarios globales en tiempo real
+    docRef.collection('comentarios').orderBy('timestamp', 'desc').onSnapshot((snapshot) => {
       const countEl = document.getElementById('commentsCount');
-      if (countEl) countEl.textContent = guardados.length;
-
       const list = document.getElementById('commentsList');
-      if (list) list.innerHTML = '';
 
-      guardados.forEach(c => {
-        if (c && c.texto) {
-          insertarComentarioEnDOM(c.autor || 'Anónimo', c.texto, c.fecha || 'Reciente');
-        }
+      if (countEl) countEl.textContent = snapshot.size;
+      if (!list) return;
+
+      list.innerHTML = '';
+      snapshot.forEach((doc) => {
+        const c = doc.data();
+        insertarComentarioEnDOM(c.autor, c.texto, c.fecha);
       });
-    } catch (e) {
-      console.error('Error cargando comentarios:', e);
-    }
+    }, (error) => {
+      console.error("Error al escuchar comentarios:", error);
+    });
   }
 
-  function toggleLike(resenaId) {
+  async function toggleLike(resenaId) {
     const idLimpio = String(resenaId);
-    const countKey = 'combo_resena_likes_count_' + idLimpio;
     const userLikeKey = 'combo_resena_user_liked_' + idLimpio;
-
-    let totalLikes = parseInt(localStorage.getItem(countKey)) || 0;
     let userDioLike = localStorage.getItem(userLikeKey) === 'true';
 
+    const docRef = db.collection('resenas').doc(idLimpio);
     const likeBtn = document.getElementById('likeBtn');
-    const likeCountEl = document.getElementById('likeCount');
 
     if (!userDioLike) {
-      totalLikes++;
       userDioLike = true;
+      localStorage.setItem(userLikeKey, 'true');
       if (likeBtn) likeBtn.classList.add('liked');
+
+      await docRef.set({
+        likes: firebase.firestore.FieldValue.increment(1)
+      }, { merge: true });
     } else {
-      totalLikes = Math.max(0, totalLikes - 1);
       userDioLike = false;
+      localStorage.setItem(userLikeKey, 'false');
       if (likeBtn) likeBtn.classList.remove('liked');
+
+      await docRef.set({
+        likes: firebase.firestore.FieldValue.increment(-1)
+      }, { merge: true });
     }
-
-    localStorage.setItem(countKey, totalLikes);
-    localStorage.setItem(userLikeKey, userDioLike);
-
-    if (likeCountEl) likeCountEl.textContent = totalLikes;
   }
 
-  function agregarComentario(event, resenaId) {
+  async function agregarComentario(event, resenaId) {
     event.preventDefault();
     const idLimpio = String(resenaId);
-    const storageCommentsKey = 'combo_comments_' + idLimpio;
     const autorInput = document.getElementById('authorInput');
     const comentarioInput = document.getElementById('commentInput');
 
@@ -220,33 +241,27 @@
 
     if (!texto) return;
 
-    const nuevoComentario = {
-      autor: nombre,
-      texto: texto,
-      fecha: 'Hace un momento'
-    };
+    const ahora = new Date();
+    const opciones = { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' };
+    const fechaTexto = ahora.toLocaleDateString('es-MX', opciones);
 
-    let guardados = [];
     try {
-      guardados = JSON.parse(localStorage.getItem(storageCommentsKey)) || [];
-      if (!Array.isArray(guardados)) guardados = [];
+      await db.collection('resenas').doc(idLimpio).collection('comentarios').add({
+        autor: nombre,
+        texto: texto,
+        fecha: fechaTexto,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+      });
+
+      autorInput.value = '';
+      comentarioInput.value = '';
     } catch (e) {
-      guardados = [];
+      console.error("Error al publicar en Firebase:", e);
+      alert("Hubo un detalle al enviar el comentario.");
     }
-
-    guardados.unshift(nuevoComentario);
-    localStorage.setItem(storageCommentsKey, JSON.stringify(guardados));
-
-    insertarComentarioEnDOM(nuevoComentario.autor, nuevoComentario.texto, nuevoComentario.fecha, true);
-
-    const countEl = document.getElementById('commentsCount');
-    if (countEl) countEl.textContent = guardados.length;
-
-    autorInput.value = '';
-    comentarioInput.value = '';
   }
 
-  function insertarComentarioEnDOM(autor, texto, fecha, alInicio = false) {
+  function insertarComentarioEnDOM(autor, texto, fecha) {
     const list = document.getElementById('commentsList');
     if (!list) return;
 
@@ -266,11 +281,7 @@
       </div>
     `;
 
-    if (alInicio) {
-      list.prepend(item);
-    } else {
-      list.appendChild(item);
-    }
+    list.appendChild(item);
   }
 </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "7366e73724d844448a984ce2a6128988"}'></script><!-- End Cloudflare Web Analytics -->
