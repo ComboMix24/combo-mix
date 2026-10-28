@@ -67,7 +67,6 @@
 <script>
   const params = new URLSearchParams(window.location.search);
   const paramId = params.get('id');
-  // Busca la noticia coincidiendo ya sea como número o como texto
   const noticia = NOTICIAS.find(n => String(n.id) === String(paramId));
   const contenido = document.getElementById('contenido');
 
@@ -81,13 +80,132 @@
         <span class="noticia-cat">${noticia.categoria}</span>
         <h1 class="noticia-titulo-grande">${noticia.titulo}</h1>
         <div class="noticia-fecha-grande">
-  ${noticia.fecha}${noticia.corresponsal ? `· Corresponsal: <strong style="color:var(--blanco)">${noticia.corresponsal}</strong>` : ''}
-</div>
+          ${noticia.fecha}${noticia.corresponsal ? ` · Corresponsal: <strong style="color:var(--blanco)">${noticia.corresponsal}</strong>` : ''}
+        </div>
 
-${noticia.imagen ? `<img src="${noticia.imagen}" alt="${noticia.titulo}" style="width:100%; max-height:420px; object-fit:cover; border-radius:4px; margin-bottom:2rem; border:1px solid var(--gris-linea);"/>` : ''}
+        ${noticia.imagen ? `<img src="${noticia.imagen}" alt="${noticia.titulo}" style="width:100%; max-height:420px; object-fit:cover; border-radius:4px; margin-bottom:2rem; border:1px solid var(--gris-linea);"/>` : ''}
 
         <div class="noticia-cuerpo">${noticia.contenido || noticia.texto}</div>
+
+        <!-- SECCIÓN DE INTERACCIÓN: LIKES Y COMENTARIOS -->
+        <section class="interaction-container">
+          <div class="like-section">
+            <button id="likeBtn" class="like-button" onclick="toggleLike('${paramId}')">
+              <span class="like-icon">♥</span>
+              <span class="like-text">Me gusta</span>
+              <span id="likeCount" class="like-counter">0</span>
+            </button>
+          </div>
+
+          <hr class="divider">
+
+          <div class="comments-section">
+            <h3 class="comments-title">Comentarios (<span id="commentsCount">0</span>)</h3>
+
+            <form id="commentForm" class="comment-form" onsubmit="agregarComentario(event, '${paramId}')">
+              <input type="text" id="authorInput" placeholder="Tu nombre..." required class="input-field">
+              <textarea id="commentInput" rows="3" placeholder="Deja tu comentario sobre esta noticia..." required class="input-field textarea-field"></textarea>
+              <button type="submit" class="submit-comment-btn">Publicar comentario</button>
+            </form>
+
+            <div id="commentsList" class="comments-list"></div>
+          </div>
+        </section>
+
       </div>`;
+
+      inicializarInteraccion(paramId);
+  }
+
+  let liked = false;
+  const baseLikes = 0;
+
+  function inicializarInteraccion(noticiaId) {
+    const storageLikeKey = 'combo_noticia_like_' + noticiaId;
+    const storageCommentsKey = 'combo_noticia_comments_' + noticiaId;
+
+    liked = localStorage.getItem(storageLikeKey) === 'true';
+    const likeBtn = document.getElementById('likeBtn');
+    const likeCountEl = document.getElementById('likeCount');
+    if (liked && likeBtn) {
+      likeBtn.classList.add('liked');
+      likeCountEl.textContent = baseLikes + 1;
+    } else if (likeCountEl) {
+      likeCountEl.textContent = baseLikes;
+    }
+
+    const guardados = JSON.parse(localStorage.getItem(storageCommentsKey)) || [];
+    const countEl = document.getElementById('commentsCount');
+    if (countEl) countEl.textContent = guardados.length;
+
+    guardados.forEach(c => {
+      insertarComentarioEnDOM(c.autor, c.texto, c.fecha);
+    });
+  }
+
+  function toggleLike(noticiaId) {
+    const storageLikeKey = 'combo_noticia_like_' + noticiaId;
+    liked = !liked;
+    localStorage.setItem(storageLikeKey, liked);
+
+    const likeBtn = document.getElementById('likeBtn');
+    const likeCountEl = document.getElementById('likeCount');
+    if (liked) {
+      likeBtn.classList.add('liked');
+      likeCountEl.textContent = baseLikes + 1;
+    } else {
+      likeBtn.classList.remove('liked');
+      likeCountEl.textContent = baseLikes;
+    }
+  }
+
+  function agregarComentario(event, noticiaId) {
+    event.preventDefault();
+    const storageCommentsKey = 'combo_noticia_comments_' + noticiaId;
+    const autorInput = document.getElementById('authorInput');
+    const comentarioInput = document.getElementById('commentInput');
+
+    const nuevoComentario = {
+      autor: autorInput.value.trim(),
+      texto: comentarioInput.value.trim(),
+      fecha: 'Hace un momento'
+    };
+
+    const guardados = JSON.parse(localStorage.getItem(storageCommentsKey)) || [];
+    guardados.unshift(nuevoComentario);
+    localStorage.setItem(storageCommentsKey, JSON.stringify(guardados));
+
+    insertarComentarioEnDOM(nuevoComentario.autor, nuevoComentario.texto, nuevoComentario.fecha, true);
+
+    const countEl = document.getElementById('commentsCount');
+    if (countEl) countEl.textContent = guardados.length;
+
+    autorInput.value = '';
+    comentarioInput.value = '';
+  }
+
+  function insertarComentarioEnDOM(autor, texto, fecha, alInicio = false) {
+    const list = document.getElementById('commentsList');
+    const inicial = autor.charAt(0).toUpperCase();
+
+    const item = document.createElement('div');
+    item.className = 'comment-item';
+    item.innerHTML = `
+      <div class="comment-avatar">${inicial}</div>
+      <div class="comment-content">
+        <div class="comment-header">
+          <strong class="comment-author">${autor}</strong>
+          <span class="comment-date">${fecha}</span>
+        </div>
+        <p class="comment-text">${texto}</p>
+      </div>
+    `;
+
+    if (alInicio) {
+      list.prepend(item);
+    } else {
+      list.appendChild(item);
+    }
   }
 </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "7366e73724d844448a984ce2a6128988"}'></script><!-- End Cloudflare Web Analytics -->
