@@ -144,6 +144,16 @@ const RESENAS = [
     texto: `
       <p class="lead-paragraph">El horror corporal no es ninguna novedad en el cine y esta producción ni siquiera fue estrenada cerca de las fechas de <em>Halloween</em>, pero pocas veces una película logra transmitir una crítica tan despiadada, frenética y visualmente deslumbrante como lo hace <em>La Sustancia</em> (2024), siendo realmente una película de terror.</p>
       
+      <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 25px 0; border-radius: 8px;">
+  <iframe 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+    src="https://www.youtube.com/embed/LL7-o30o9ec" 
+    title="Tráiler La Sustancia" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+</div>
+      
       <p>Coralie Fargeat no busca pedir permiso ni ser sutil: entrega un golpe a la mesa en contra de la tiranía estética de Hollywood y el rechazo sistemático al envejecimiento femenino.</p>
       
       <p>La historia nos presenta a Elisabeth Sparkle (Demi Moore), una celebridad y estrella de programas de aeróbicos televisivos que, al cumplir cincuenta años, es desechada por un productor misógino y grotesco. Devastada por la pérdida de relevancia, Elisabeth recurre a un procedimiento clandestino: "La Sustancia", un suero médico que genera una versión más joven, hermosa y perfecta de sí misma llamada Sue (Margaret Qualley).</p>
