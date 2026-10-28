@@ -31,6 +31,17 @@ const RESENAS = [
     
     <p>"Te enfocaste en lo malo, cuando solo tenías que dejar ir el pasado y caminar hacia el futuro", es lo que hace Lewis para continuar con su vida, en la feria de ciencias todo sale bien y es dónde conoce a una pareja que lo ve como un niño con grandes sueños y lo adoptan para empezar así ese camino al que está destinado como alguien exitoso.</p>
     
+  <!-- Tráiler multimedia a mitad de la reseña -->
+    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 25px 0; border-radius: 8px;">
+      <iframe 
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+        src="https://www.youtube.com/embed/aHybFprZsTI" 
+        title="Tráiler La Familia del Futuro" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+    
     <p>La historia es clara, directa y enfocada en transmitir ese poderoso mensaje de dejar ir el pasado, no enfrascarse en él para poder tener la suficiente fuerza de voluntad para seguir el camino y caminar hacía el futuro ante los obstáculos que presenta la vida; hay que disfrutar esos momentos que son los que maravillan, haciendo valorar la vida porque sólo es una.</p>
     
     <p>El dilema de Lewis por conocer a su madre, junto a esa razón de haberlo dejado "a su suerte" es lo que la cinta retrata para dejar en claro por qué es importante seguir adelante, claro no se refieren a olvidar el pasado, al final del día es lo que nos construye como personas pero se debe reconocer no como una carga sino como la travesía que se ha llevado hasta el momento y continuar hacía ese gran futuro que espera.</p>
