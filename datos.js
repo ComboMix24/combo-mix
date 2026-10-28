@@ -15,7 +15,7 @@ const RESENAS = [
     resumen: 'Una mirada honesta sobre la idealización, las expectativas y el choque entre Tom y Summer en una relación que nunca prometió ser un cuento de hadas.',
     poster: 'imagenes/poster-summer.jpg',
     texto: `
-      <p class="lead-paragraph">Los más intensos se refieren a ella como una historia de terror por la profundidad de la historia en momentos casi crudos de la realidad en una relación más que compleja, incluso la cinta avisa desde un inicio "Esta es la historia de un chico que conoce una chica. Pero debes saber de antemano: esta no es una historia de amor"; sin grandes efectos o un presupuesto abrumador logra atrapar con una narrativa e interpretaciones bien llevadas en esos quinientos días con ella.</p>
+      <p class="lead-paragraph">Los más intensos se refieren a ella como una historia de terror por la profundidad de la historia en momentos casi crudos de la realidad en una relación más que compleja, incluso la cinta avisa desde un inicio "Esta es la historia de un chico que conoce una chica. Pero debes saber de antemano: esta no es una historia de amor". </p>
 
       <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin:2rem 0;border-radius:4px;border:1px solid var(--gris-linea);">
         <iframe src="https://www.youtube.com/embed/b-wEibP-xLE" title="Tráiler 500 Días con Ella" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
