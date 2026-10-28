@@ -66,6 +66,17 @@ const RESENAS = [
       
       <p><em>Clayface</em> (2026) demuestra que a pesar de no tener al personaje insignia de la compañía (Batman) es posible armar un largometraje interesante, aunque en este caso es peculiar porque funciona pero a la vez no.</p>
       
+      <!-- Tráiler oficial integrado a mitad de la reseña -->
+    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 25px 0; border-radius: 8px;">
+      <iframe 
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+        src="https://www.youtube.com/embed/0D9f0xOPvHg" 
+        title="Tráiler Clayface" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+      
       <p>La trama nos presenta a Matt Hagen (Tom Rhys Harries), un actor que está disfrutando de su transición hacía el estrellato tras un pasado complicado; una noche se ve envuelto en una controversia con la pareja de un capo del crimen, quién le deja el rostro desfigurado a manera de venganza y destrozando prácticamente su carrera.</p>
       
       <p>El protagonista encuentra una forma arriesgada de recuperar su belleza facial sin saber que esos procesos biológicos a los que fue sometido lo harán perder la cordura y convertirse en un monstruo en un viaje alimentado por la venganza y la traición, que refleja muy bien a Ciudad Gótica.</p>
