@@ -3,6 +3,41 @@
 
 const RESENAS = [ 
   {
+    id: '500-dias-con-ella',
+    titulo: '500 Días con Ella',
+    año: 2009,
+    genero: 'Romance · Comedia',
+    director: 'Marc Webb',
+    corresponsal: 'Julio Barranco',
+    estrellas: 4,
+    poster: 'imagenes/poster-summer.jpg',
+    texto: `
+      <p>Los más intensos se refieren a ella como una historia de terror por la profundidad de la historia en momentos casi crudos de la realidad en una relación más que compleja, incluso la cinta avisa desde un inicio "Esta es la historia de un chico que conoce una chica. Pero debes saber de antemano: esta no es una historia de amor"; sin grandes efectos o un presupuesto abrumador logra atrapar con una narrativa e interpretaciones bien llevadas en esos quinientos días con ella.</p>
+
+      <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin:2rem 0;border-radius:4px;border:1px solid var(--gris-linea);">
+        <iframe src="https://www.youtube.com/embed/b-wEibP-xLE" title="Tráiler 500 Días con Ella" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <p>La dirección de Marc Webb a finales de la década de los 2000 y con un presupuesto aproximado de 7.5 millones de dólares recaudó poco más de 60 millones en todo el mundo pero dejando un peso mediático dentro de la sociedad en cómo perciben la forma en que se pueden llegar a relacionar (o no) dos personas con la idealización del otro.</p>
+
+      <p>Con un montaje muy dinámico en esos saltos entre los quinientos días la película va explicando de a poco la situación de Tom (Joseph Gordon-Levitt) y Summer (Zooey Deschanel), él trabaja escribiendo tarjetas de felicitación hasta que un día la conoce a ella y la conexión se siente desde el primer contacto aquí es donde comienzan a chocar ambos casos ya que Tom es un romántico de antaño y Summer alguien que no cree completamente en el compromiso junto a la seriedad de una relación por lo que vio de sus padres en su infancia.</p>
+
+      <p>Ambos no actúan con honestidad del todo ya que la situación sigue escalando a tal punto de que ambos se terminan dando cuenta de sus errores sabiendo que no están destinados a estar juntos para vivir felices por siempre, de hecho la cinta cierra con el día uno ya que Tom puede empezar algo nuevo con una mayor madurez y enseñanza.</p>
+
+      <p>Todo se cuenta desde la perspectiva de él (por algo la cinta lleva ese título), el debate que parece nunca acabar es cuál de los dos personajes tuvo la culpa para no tener una relación estable, pero para entender la trama es necesario no tener en cuenta ese dilema debido a los problemas que se presentan por parte de ambos y que no es exactamente deja como "villano" o "antagonista" a alguno de los dos.</p>
+
+      <p>Él se dejó llevar por sus emociones y esa idea en su cabeza de que ella representaba todo lo que siempre estuvo buscando, no le veía defectos, aceptaba todo con tal de no perderla; no conocía a la persona en sí y estaba más enamorado de lo que tenía en su cabeza a lo que realmente era Summer.</p>
+
+      <p>Ella no es ninguna villana ni tuvo toda la culpa de que Tom tuviera esos pensamientos, claro que también tiene responsabilidad, a pesar de poner ese límite de no querer nada serio dejó que todo fluyera hasta que se rompió todo.</p>
+
+      <p>Cabe resaltar que Summer encontró a su verdadero amor después de dejar a Tom, dejando en claro que lo de ellos nunca iba a prosperar por más intentos que hubiera querido hacer él de su parte; es justo ese punto donde se critica a Summer sin entender lo que la historia quiere transmitir con eso.</p>
+
+      <p>A veces una relación por más "perfecta" que parezca o por más que se haga hasta lo imposible por prosperar, salir adelante e intentar de todo, simplemente no va a funcionar si ambas personas no se aman, respetan, son leales y demás; en este caso la fantasía le ganó a Tom pero aprendió a que no es así de simple el hecho de querer a una persona.</p>
+
+      <p>La forma en que ha envejecido la película es muy buena, no se siente que es de hace casi veinte años por lo directa, clara y concisa que es en contar su historia a través de interpretaciones con las que parte de la sociedad a lo largo de estos años se ha sentido identificado y sobre todo que sigue generando ese debate de quién de los dos detonó la situación, cuando a mi parecer, ese cuestionamiento no debería existir si entendiste bien la cinta.</p>
+    `
+  },
+  {
   id: 'la-familia-del-futuro',
   titulo: 'La Familia del Futuro',
   genero: 'Infantil · Comedia',
