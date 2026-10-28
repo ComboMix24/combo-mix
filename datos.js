@@ -17,6 +17,17 @@ const RESENAS = [
   texto: `
     <p class="lead-paragraph">Disney tuvo una época en la que sus estrenos en la gran pantalla no eran rentables pero se trataba de un producto distinto y que a pesar de tener esa etiqueta de "para niños", a los más longevos también les deja un gran mensaje al analizarla desde un punto de vista más experimentado en la vida; parece que es mera nostalgia de aquellos que la veían por el canal Disney XD pero en verdad se trata de un gran acierto.</p>
     
+ <!-- Tráiler multimedia a mitad de la reseña -->
+    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 25px 0; border-radius: 8px;">
+      <iframe 
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+        src="https://www.youtube.com/embed/aHybFprZsTI" 
+        title="Tráiler La Familia del Futuro" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+    
     <p>Lewis es un niño abandonado por su madre que está fascinado por todo el tema de la ciencia, de hecho las parejas que han intentando adoptarlo no lo ven como alguien normal debido a su gran intelecto y gusto por algo que un niño generalmente no sigue a esa edad. Un día decide hacer un invento que puede poner imagen a momentos de la vida personal con el simple hecho de recordarlos, aclarando que siempre ha querido responder a por qué su progenitora lo dejó ese día.</p>
     
     <p>Este niño vive junto con otro llamado Goob, al que nunca dejó dormir por estar a toda hora armando su "memoria de scanner". Su trabajó sale mal en una feria de ciencias donde termina conociendo a Wilbur Robinson, alguien que viene del futuro para arreglar un error suyo que podría poner en riesgo su destino.</p>
@@ -30,18 +41,7 @@ const RESENAS = [
     <p>Todo parece resuelto pero un momento crucial de la trama es que Wilbur le prometió a Lewis llevarlo a conocer a su madre, estando en ese momento, el protagonista a punto de interferir en el día que su madre lo abandonó, decide no hacerlo y cumplir con la moraleja que la cinta estuvo recalcando en todo momento.</p>
     
     <p>"Te enfocaste en lo malo, cuando solo tenías que dejar ir el pasado y caminar hacia el futuro", es lo que hace Lewis para continuar con su vida, en la feria de ciencias todo sale bien y es dónde conoce a una pareja que lo ve como un niño con grandes sueños y lo adoptan para empezar así ese camino al que está destinado como alguien exitoso.</p>
-    
-  <!-- Tráiler multimedia a mitad de la reseña -->
-    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 25px 0; border-radius: 8px;">
-      <iframe 
-        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
-        src="https://www.youtube.com/embed/aHybFprZsTI" 
-        title="Tráiler La Familia del Futuro" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-      </iframe>
-    </div>
-    
+        
     <p>La historia es clara, directa y enfocada en transmitir ese poderoso mensaje de dejar ir el pasado, no enfrascarse en él para poder tener la suficiente fuerza de voluntad para seguir el camino y caminar hacía el futuro ante los obstáculos que presenta la vida; hay que disfrutar esos momentos que son los que maravillan, haciendo valorar la vida porque sólo es una.</p>
     
     <p>El dilema de Lewis por conocer a su madre, junto a esa razón de haberlo dejado "a su suerte" es lo que la cinta retrata para dejar en claro por qué es importante seguir adelante, claro no se refieren a olvidar el pasado, al final del día es lo que nos construye como personas pero se debe reconocer no como una carga sino como la travesía que se ha llevado hasta el momento y continuar hacía ese gran futuro que espera.</p>
