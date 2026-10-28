@@ -88,21 +88,24 @@
           </a>
         </div>
       </div>
-      <div class="contacto-form">
+
+      <!-- SECCIÓN DEL FORMULARIO ACTUALIZADA -->
+      <form action="https://formspree.io/f/tu-codigo-aqui" method="POST" class="contacto-form">
         <div class="form-group">
           <label for="nombre">Nombre</label>
-          <input type="text" id="nombre" placeholder="¿Cómo te llamas?"/>
+          <input type="text" id="nombre" name="nombre" placeholder="¿Cómo te llamas?" required/>
         </div>
         <div class="form-group">
           <label for="email">Correo</label>
-          <input type="email" id="email" placeholder="tu@correo.com"/>
+          <input type="email" id="email" name="email" placeholder="tu@correo.com" required/>
         </div>
         <div class="form-group">
           <label for="mensaje">Mensaje</label>
-          <textarea id="mensaje" placeholder="¿De qué película quieres hablar?"></textarea>
+          <textarea id="mensaje" name="mensaje" placeholder="¿De qué película quieres hablar?" required></textarea>
         </div>
-        <button class="btn-primary" onclick="alert('¡Mensaje enviado! (Conecta tu backend para envíos reales)')">Enviar mensaje</button>
-      </div>
+        <button type="submit" class="btn-primary">Enviar mensaje</button>
+      </form>
+
     </div>
   </div>
 </div>
