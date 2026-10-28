@@ -247,9 +247,22 @@ const RESENAS = [
     resumen: 'Un retrato crudo y honesto sobre el enamoramiento y el desgaste de una relación, protagonizado por Ryan Gosling y Michelle Williams.',
     poster: 'imagenes/poster-blue-valentine.jpg',
     texto: `
-      <p>¿Qué sucede cuando la persona que alguna vez lo fue todo comienza a convertirse en alguien con quien ya no sabemos convivir? En <em>Blue Valentine</em> (2010), Derek Cianfrance construye un retrato crudo y honesto sobre el enamoramiento y el desgaste de una relación, protagonizado por Ryan Gosling y Michelle Williams, quienes ofrecen interpretaciones tan naturales como dolorosas.</p>
+      <p class="lead-paragraph">¿Qué sucede cuando la persona que alguna vez lo fue todo comienza a convertirse en alguien con quien ya no sabemos convivir? En <em>Blue Valentine</em> (2010), Derek Cianfrance construye un retrato crudo y honesto sobre el enamoramiento y el desgaste de una relación, protagonizado por Ryan Gosling y Michelle Williams, quienes ofrecen interpretaciones tan naturales como dolorosas.</p>
+
+<div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 25px 0; border-radius: 8px;">
+  <iframe 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+    src="https://www.youtube.com/embed/vYgfQyP3o2I" 
+    title="Tráiler Blue Valentine" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+</div>
+      
       <p>A través de una narrativa que alterna entre los primeros días de Dean y Cindy y la crisis de su matrimonio, la película construye un contraste emocional que encuentra su mayor fortaleza en la fotografía de Andrij Parekh. Los recuerdos del enamoramiento están envueltos en colores cálidos y una cámara dinámica que transmite cercanía; en cambio, el presente apuesta por tonos fríos y una iluminación más rígida que refleja la distancia emocional entre ambos.</p>
+      
       <p>Esta oposición visual no es un simple recurso estético: es una manera de contar cómo una relación puede transformarse sin que sus protagonistas sepan exactamente cuándo dejaron de reconocerse.</p>
+      
       <p><em>Blue Valentine</em> no idealiza el amor ni necesita villanos; muestra a dos personas que, a pesar de haberse amado genuinamente, parecen incapaces de encontrar el camino de regreso.</p>
     `
   }
