@@ -308,6 +308,59 @@ const RESENAS = [
 
 const NOTICIAS = [
   {
+  id: 'la-asistencia-al-cine-en-mexico-cae-durante-2025',
+  titulo: 'La asistencia al cine en México cae 6.86% durante 2025 y permanece por debajo de los niveles prepandemia',
+  categoria: 'Noticias',
+  fecha: '28 de octubre de 2026',
+  autor: 'Liz Flores',
+  corresponsal: 'Liz Flores',
+  imagen: 'imagenes/cine-datos.jpg',
+  resumen: 'Las salas mexicanas registraron 203 millones de boletos vendidos durante 2025, mientras que las películas nacionales recaudaron 653 millones de pesos, de acuerdo con cifras de CANACINE.',
+  contenido: `
+    <p>La asistencia a las salas de cine en México disminuyó 6.86% durante 2025 respecto al año anterior, al registrar 203 millones de boletos vendidos. La cifra también representa una reducción de 42.29% frente a los 352 millones de entradas contabilizadas en 2019, antes de la pandemia, según el informe <em>Resultados de la industria cinematográfica 2025</em>, elaborado por la Cámara Nacional de la Industria Cinematográfica (CANACINE).</p>
+
+    <p>El reporte, que presenta una serie histórica de 2016 a 2025, muestra que la recuperación de la asistencia a las salas todavía se encuentra por debajo de los niveles registrados antes de la emergencia sanitaria. En 2024 se vendieron 218 millones de boletos, frente a los 203 millones de 2025.</p>
+
+    <h3>La taquilla también registra una disminución</h3>
+
+    <p>Los ingresos totales de taquilla en México alcanzaron los 14 mil 983 millones de pesos durante 2025, lo que representa una caída de 8.45% respecto al año anterior, de acuerdo con los datos de Comscore Movies incluidos en el documento.</p>
+
+    <p>Aunque la recaudación se mantiene por debajo de la registrada en 2023 y 2024, el precio promedio del boleto continuó en aumento. Durante 2025, la entrada tuvo un costo promedio de 73.8 pesos, frente a los 71 pesos de 2024 y los 46.1 pesos de 2016.</p>
+
+    <p>Por otra parte, la asistencia promedio anual fue de 1.5 visitas al cine por habitante en 2025. Esta cifra contrasta con las 2.8 visitas registradas en 2017 y 2019, lo que representa una disminución de 46.4% respecto a esos años.</p>
+
+    <h3>El cine mexicano enfrenta una caída en asistencia y recaudación</h3>
+
+    <p>El panorama para las producciones nacionales también refleja una reducción frente a los niveles anteriores a la pandemia. Durante 2025, las películas mexicanas generaron ingresos por 653 millones de pesos en taquilla, un monto 51.54% inferior al registrado antes de la emergencia sanitaria, según CANACINE.</p>
+
+    <p>En cuanto a la asistencia, las producciones nacionales vendieron nueve millones de boletos durante el año, una disminución de 69.05% respecto a los 35 millones registrados en 2019.</p>
+
+    <p>Además, la participación del cine mexicano en los ingresos totales de taquilla fue de 4.4% en 2025. El porcentaje se encuentra por debajo del 9.2% registrado en 2019 y del 11.4% alcanzado en 2020.</p>
+
+    <h3>¿Cuáles fueron las películas mexicanas más taquilleras?</h3>
+
+    <p>A pesar de la disminución general, algunas producciones nacionales destacaron en la cartelera de 2025. <em>Mesa de Regalos</em> encabezó la lista de películas mexicanas más taquilleras, con ingresos de 136.6 millones de pesos y una asistencia de 1.9 millones de personas.</p>
+
+    <p>En segundo lugar se ubicó <em>Mirreyes vs Godínez: Las Vegas</em>, con 71.6 millones de pesos recaudados y 1.1 millones de asistentes. El tercer puesto correspondió a <em>Soy Frankelda</em>, que obtuvo 50.5 millones de pesos y registró 830 mil asistentes.</p>
+
+    <p>La lista también incluyó títulos como <em>¡Qué huevos, Sofía!</em>, con 50.2 millones de pesos, y <em>Una Pequeña Confusión</em>, con 45.1 millones.</p>
+
+    <p>En contraste, entre los estrenos internacionales, <em>Lilo y Stitch</em> ocupó el primer lugar de la taquilla nacional en 2025, al recaudar mil 291.4 millones de pesos y reunir a 17.3 millones de espectadores.</p>
+
+    <h3>Menos estrenos mexicanos en comparación con 2024</h3>
+
+    <p>El informe también muestra cambios en la producción y exhibición cinematográfica. Durante 2025 se estrenaron 112 películas mexicanas, frente a las 122 registradas en 2024.</p>
+
+    <p>En el conjunto de la cartelera, el documento contabilizó 575 estrenos durante 2025, mientras que en 2024 se registraron 580. De los estrenos de 2025, 202 correspondieron a producciones de Estados Unidos y 264 al resto del mundo, de acuerdo con la clasificación por nacionalidad presentada por CANACINE.</p>
+
+    <p>Los datos muestran que, durante 2025, tanto la asistencia general como el desempeño comercial del cine mexicano permanecieron por debajo de los niveles previos a la pandemia. La evolución de estas cifras permite observar los cambios en el consumo cinematográfico y la participación de las producciones nacionales en las salas del país.</p>
+
+    <p><small><strong>Fuente:</strong> Cámara Nacional de la Industria Cinematográfica (CANACINE), <em>Resultados de la industria cinematográfica 2025</em>. Serie histórica 2016-2025. Las estadísticas de taquilla citadas en el informe provienen de Comscore Movies, con fecha de consulta del 27 de enero de 2026. Para los datos ajustados por inflación, el documento utiliza información del INEGI; para la asistencia promedio por habitante, emplea proyecciones de población de CONAPO.</small></p>
+
+    <p><small><strong>Nota metodológica:</strong> CANACINE advierte que sus cifras pueden diferir de las publicadas por el Instituto Mexicano de Cinematografía (IMCINE) debido a diferencias en los criterios metodológicos.</small></p>
+  `
+}
+  {
   id: 'jumanji-mundo-abierto-estreno-navidad',
   titulo: '‘Jumanji: Mundo abierto’ llegará a los cines en Navidad con una nueva aventura',
   categoria: 'Noticias',
