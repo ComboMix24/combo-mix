@@ -115,20 +115,20 @@
         </div>
         <div class="resena-cuerpo">${resena.texto}</div>
 
-        <!-- SECCIÓN DE INTERACCIÓN -->
+       <!-- SECCIÓN DE INTERACCIÓN: LIKES Y COMENTARIOS -->
         <section class="interaction-container">
           <div class="like-section">
             <button id="likeBtn" class="like-button" onclick="toggleLike('${id}')">
               <span class="like-icon">♥</span>
               <span class="like-text">Me gusta</span>
-              <span id="likeCount" class="like-counter">14</span>
+              <span id="likeCount" class="like-counter">0</span>
             </button>
           </div>
 
           <hr class="divider">
 
           <div class="comments-section">
-            <h3 class="comments-title">Comentarios (<span id="commentsCount">2</span>)</h3>
+            <h3 class="comments-title">Comentarios (<span id="commentsCount">0</span>)</h3>
 
             <form id="commentForm" class="comment-form" onsubmit="agregarComentario(event, '${id}')">
               <input type="text" id="authorInput" placeholder="Tu nombre..." required class="input-field">
@@ -136,29 +136,8 @@
               <button type="submit" class="submit-comment-btn">Publicar comentario</button>
             </form>
 
-            <div id="commentsList" class="comments-list">
-              <div class="comment-item">
-                <div class="comment-avatar">L</div>
-                <div class="comment-content">
-                  <div class="comment-header">
-                    <strong class="comment-author">Luisa F.</strong>
-                    <span class="comment-date">Hace 2 días</span>
-                  </div>
-                  <p class="comment-text">Gran análisis. El cierre y la evolución del personaje aportan un mensaje que se sostiene muy bien.</p>
-                </div>
-              </div>
-
-              <div class="comment-item">
-                <div class="comment-avatar">C</div>
-                <div class="comment-content">
-                  <div class="comment-header">
-                    <strong class="comment-author">Carlos M.</strong>
-                    <span class="comment-date">Ayer</span>
-                  </div>
-                  <p class="comment-text">Totalmente de acuerdo con la calificación y lo que mencionas sobre la propuesta narrativa.</p>
-                </div>
-              </div>
-            </div>
+            <!-- Lista vacía esperando comentarios reales -->
+            <div id="commentsList" class="comments-list"></div>
           </div>
         </section>
 
