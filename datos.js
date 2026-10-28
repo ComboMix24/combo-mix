@@ -308,6 +308,34 @@ const RESENAS = [
 
 const NOTICIAS = [
   {
+  id: 'jumanji-mundo-abierto-estreno-navidad',
+  titulo: '‘Jumanji: Mundo abierto’ llegará a los cines en Navidad con una nueva aventura',
+  categoria: 'Noticias',
+  fecha: '28 de octubre de 2026',
+  autor: 'Liz Flores',
+  corresponsal: 'Liz Flores',
+  resumen: 'La tercera entrega de la saga llegará a los cines el 25 de diciembre de 2026 con Dwayne Johnson, Kevin Hart, Jack Black y Karen Gillan de regreso.',
+  imagen: 'imagenes/jumanji-estreno.jpg',
+  poster: 'imagenes/jumanji-estreno.jpg',
+  texto: `
+    <p class="lead-paragraph">La aventura está por llegar a su última partida. <em>Jumanji: Mundo abierto</em> (<em>Jumanji: Open World</em>) estrenará en cines el próximo 25 de diciembre de 2026, con una historia que marcará el cierre de la trilogía moderna de la franquicia, iniciada en 2017.</p>
+    
+    <p>Dirigida nuevamente por Jake Kasdan, la película apostará por un giro en la trama: a diferencia de las entregas anteriores, en esta ocasión los personajes y elementos del videojuego saldrán al mundo real, provocando situaciones caóticas fuera de sus límites habituales.</p>
+    
+    <h3>El regreso del elenco y el salto a la realidad</h3>
+    
+    <p>El elenco principal volverá a estar encabezado por Dwayne Johnson, Kevin Hart, Jack Black y Karen Gillan, acompañados por Nick Jonas, Alex Wolff, Morgan Turner, Madison Iseman, Ser’Darius Blain, Rhys Darby y Danny DeVito, entre otros actores.</p>
+    
+    <p>La franquicia, que retomó el universo de la película original de 1995 protagonizada por Robin Williams, combinó aventura, humor y nostalgia para conquistar a una nueva audiencia.</p>
+    
+    <h3>El cierre de una saga millonaria</h3>
+    
+    <p>La nueva entrega busca cerrar una etapa que logró conectar con distintas generaciones de espectadores. <em>Jumanji: Bienvenidos a la jungla</em> (2017) recaudó más de 950 millones de dólares en todo el mundo, mientras que <em>Jumanji: Siguiente nivel</em> (2019) superó los 800 millones de dólares.</p>
+    
+    <p>Con su estreno programado para Navidad, <em>Jumanji: Mundo abierto</em> promete llevar la acción más allá de la consola y despedir la trilogía con una última partida que reunirá nuevamente a sus personajes más conocidos.</p>
+  `
+},
+  {
     id: 'avengers-doomsday-entre-rumores-y-expectativas',
     titulo: 'Avengers Doomsday: Entre rumores y expectativas',
     categoria: 'Opinión',
