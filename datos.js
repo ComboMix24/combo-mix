@@ -308,6 +308,62 @@ const RESENAS = [
 
 const NOTICIAS = [
   {
+  id: 'the-batman-ii-la-espera-mas-larga-del-cine-valdra-la-pena',
+  titulo: 'La espera más larga del cine… THE BATMAN II ¿Valdrá la pena?',
+  categoria: 'Artículo de opinión',
+  fecha: '28 de octubre de 2026',
+  autor: 'José Pablo Espinoza',
+  corresponsal: 'José Pablo Espinoza',
+  resumen: 'Entre múltiples retrasos, reescrituras de guion y contingencias en pleno rodaje, la secuela de Matt Reeves apunta a estrenarse casi seis años después de la original. Analizamos la accidentada travesía de la producción y si la promesa creativa compensará el largo camino.',
+  imagen: 'imagenes/batman-dos.jpg',
+  alt: 'Claquetazo y producción de The Batman Part II',
+  contenido: `
+    <p class="lead">
+      La primera parte fue un éxito rotundo en 2022: debutó con 134 millones de dólares en la taquilla estadounidense —convirtiéndose en el segundo mejor estreno post-pandemia— y cerró con cerca de 770 millones a nivel global. Con ese precedente, en enero de 2023 James Gunn y Peter Safran confirmaron el proyecto ya al frente de DC Studios y fijaron su estreno para el 3 de octubre de 2025 bajo el sello <strong>DC Elseworlds</strong>, reservado para historias ajenas a la continuidad principal.
+    </p>
+
+    <h3>El laberinto del guion y los calendarios rotos</h3>
+
+    <p>
+      El camino comenzó a complicarse con las huelgas de Hollywood en 2023, que paralizaron los avances de Matt Reeves con el libreto. Para marzo de 2024 se anunció el primer aplazamiento formal de un año exacto: la fecha se recorrió del 3 de octubre de 2025 al 2 de octubre de 2026.
+    </p>
+
+    <p>
+      Hacia 2025, el nudo central seguía siendo el guion. El propio James Gunn aclaró en Threads que la única causa de la pausa era la ausencia de un texto definitivo, argumentando que los tiempos de escritura no se pueden forzar y que estos márgenes entre secuelas son habituales en grandes producciones. Esa falta de certezas postergó el llamado a rodaje —planeado inicialmente para finales de 2025 y luego movido al arranque de 2026— debido también a la agenda de Robert Pattinson con <em>La Odisea</em> y <em>Dune: Part Three</em>. No fue sino hasta el 27 de junio de 2025 cuando Reeves confirmó en Instagram que el guion estaba concluido.
+    </p>
+
+    <blockquote class="opinion-quote">
+      "Nadie puede calcular cuánto tarda en escribirse un guion; estos huecos entre secuela y secuela son bastante comunes en superproducciones."
+    </blockquote>
+
+    <p>
+      Poco después llegó el segundo ajuste: el estreno saltó al 1 de octubre de 2027, estableciendo la primavera de 2026 como ventana para prender cámaras. Con el texto cerrado, se reveló un elenco que incorporaba a Scarlett Johansson, Sebastian Stan y Charles Dance, junto a los retornos de Jeffrey Wright, Colin Farrell, Andy Serkis, Jayme Lawson y Gil Perez-Abraham.
+    </p>
+
+    <h3>Cámaras en marcha, relevos y la meta en 2028</h3>
+
+    <p>
+      Tras librar un cruce de agenda de Serkis con <em>The Hunt for Gollum</em>, el rodaje arrancó finalmente en junio de 2026 en locaciones de Inglaterra y Escocia, con una primera fotografía de claqueta en lo que aparentaba ser una morgue. No obstante, el 15 de julio de 2026 se oficializó un tercer movimiento: la cita en cines se reprogramó para el <strong>18 de febrero de 2028</strong>, otorgándole mayor margen a la postproducción y espaciando la secuela casi seis años respecto a la cinta original.
+    </p>
+
+    <p>
+      El último giro imprevisto ocurrió el 5 de octubre de 2026, cuando DC Studios pausó las grabaciones debido a un asunto familiar de Reeves. En una maniobra poco habitual pero respaldada por la producción, Steven Soderbergh asumió el rodaje de las últimas semanas por iniciativa propia. Reeves confirmó que mantiene la autoría total y la dirección de la postproducción, mientras que el calendario apunta a concluir la fotografía principal en diciembre de 2026.
+    </p>
+
+    <hr class="article-divider" />
+
+    <h3>Veredicto: La recompensa detrás de la paciencia</h3>
+
+    <p>
+      Si bien acumular tres retrasos sucesivos resulta frustrante para el público, todo indica que Matt Reeves y DC Studios priorizaron la solidez narrativa por encima de la prisa corporativa. Gunn comprende el valor crítico y comercial que tiene esta encarnación del personaje dentro de su catálogo alterno, lo que blinda al proyecto de presiones apresuradas.
+    </p>
+
+    <p>
+      Las declaraciones del equipo respaldan esa ambición: Pattinson anticipa un perfil de Batman distante al de la entrega inicial, mientras que Mattson Tomlin ha descrito el libreto como una historia peligrosa y exigente que los llevó al límite. Si el resultado en pantalla honra esa gestación tan meticulosa, la prolongada espera de seis años habrá valido la pena para entregar una secuela a la altura del mito de Gotham.
+    </p>
+  `
+},
+  {
   id: 'la-asistencia-al-cine-en-mexico-cae-durante-2025',
   titulo: 'La asistencia al cine en México cae 6.86% durante 2025 y permanece por debajo de los niveles prepandemia',
   categoria: 'Noticias',
